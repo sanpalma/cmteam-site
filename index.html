@@ -4,191 +4,275 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CMTeam</title>
-  <meta name="description" content="CMTeam — Endurance coaching com método, constância e clareza." />
-  <style>
-    :root{
-      --bg:#0b0c10;
-      --card:#11131a;
-      --text:#f4f5f7;
-      --muted:#b7bcc7;
-      --line:#232634;
-      --accent:#ffffff;
-      --radius:18px;
-      --max:980px;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      background: radial-gradient(1200px 700px at 20% -10%, #1a1f2d 0%, var(--bg) 55%);
-      color:var(--text);
-    }
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 60px;}
-    .nav{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:10px 0 26px;
-    }
-    .brand{font-weight:800; letter-spacing:0.4px}
-    .pill{
-      border:1px solid var(--line);
-      padding:10px 14px; border-radius:999px;
-      color:var(--muted); font-size:14px;
-    }
-    .hero{
-      border:1px solid var(--line);
-      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
-      border-radius:var(--radius);
-      padding:28px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
-    }
-    h1{margin:0 0 6px; font-size:44px; line-height:1.05}
-    .sub{margin:0 0 18px; color:var(--muted); font-size:16px; line-height:1.5; max-width:58ch;}
-    .cta{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:12px 14px; border-radius:12px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,0.04);
-      font-weight:650; font-size:14px;
-    }
-    .btn.primary{background:rgba(255,255,255,0.12); border-color:rgba(255,255,255,0.18)}
-    .grid{display:grid; gap:14px; margin-top:18px}
-    @media(min-width:840px){ .grid{grid-template-columns:1.2fr 0.8fr;} }
-    .section{margin-top:18px}
-    .card{
-      border:1px solid var(--line);
-      background:rgba(255,255,255,0.03);
-      border-radius:var(--radius);
-      padding:18px;
-    }
-    .title{font-size:18px; font-weight:800; margin:0 0 8px}
-    .text{color:var(--muted); margin:0; line-height:1.6}
-    .motto{
-      margin-top:10px;
-      padding:12px 14px;
-      border-radius:14px;
-      border:1px dashed rgba(255,255,255,0.22);
-      color:#e9ebf0;
-      font-weight:750;
-      text-align:center;
-      letter-spacing:0.3px;
-    }
-    .cards{
-      display:grid; gap:12px;
-      grid-template-columns:1fr;
-      margin-top:12px;
-    }
-    @media(min-width:840px){ .cards{grid-template-columns:repeat(2,1fr);} }
-    ul{margin:10px 0 0; padding-left:18px; color:var(--muted); line-height:1.7}
-    .footer{
-      margin-top:22px;
-      padding-top:18px;
-      border-top:1px solid var(--line);
-      color:var(--muted);
-      display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
-      font-size:13px;
-    }
-    .photo{
-      width:100%;
-      aspect-ratio: 4/3;
-      background: linear-gradient(135deg, rgba(255,255,255,0.10), rgba(255,255,255,0.02));
-      border:1px solid var(--line);
-      border-radius:16px;
-      display:flex; align-items:center; justify-content:center;
-      color:rgba(255,255,255,0.55);
-      font-weight:700;
-      margin-top:10px;
-    }
-    .small{font-size:13px}
-  </style>
+  <meta name="description" content="CMTeam — triathlon, corrida e endurance com método, acompanhamento e visão de longo prazo. bePatient | beHumble | beStrong." />
+
+  <!-- Fonts (system default; leve e rápido) -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Favicons (opcional – depois na Opção B) -->
+  <!-- <link rel="icon" href="assets/favicon.png" /> -->
 </head>
+
 <body>
-  <div class="wrap">
-    <div class="nav">
-      <div class="brand">CMTeam</div>
-      <div class="pill">bePatient | beHumble | beStrong</div>
-    </div>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#top" aria-label="CMTeam Home">
+        <!-- Troque pelo seu logo depois (Opção B). Enquanto isso, texto funciona bem. -->
+        <span class="brand__mark">CMTeam</span>
+      </a>
 
-    <div class="hero">
-      <h1>CMTeam</h1>
-      <p class="sub">Endurance coaching com método, constância e clareza. Treino que o atleta abre e entende — com intenção, execução e visão de ciclo.</p>
+      <nav class="nav">
+        <a class="nav__link" href="#como">Como trabalhamos</a>
+        <a class="nav__link" href="#cultura">Cultura</a>
+        <a class="nav__link" href="#contato">Contato</a>
+      </nav>
 
-      <div class="cta">
-        <a class="btn primary" href="mailto:info@cmteam.us?subject=CMTeam%20|%20Contact">Email</a>
-        <a class="btn" href="https://wa.me/12017243197" target="_blank" rel="noopener">WhatsApp</a>
-        <a class="btn" href="https://instagram.com/cmteam" target="_blank" rel="noopener">Instagram</a>
+      <div class="topbar__cta">
+        <a class="btn btn--ghost" href="https://instagram.com/cmteam" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn btn--primary" href="https://wa.me/12017243197" target="_blank" rel="noopener">WhatsApp</a>
       </div>
+    </div>
+  </header>
 
-      <div class="grid">
-        <div class="section">
-          <div class="card">
-            <p class="title">Quem somos</p>
-            <p class="text">
-              A CMTeam é um time de atletas que treinam com um objetivo simples: evoluir com consistência.
-              Nosso trabalho une planejamento, fisiologia aplicada e prática de campo — para que cada sessão faça sentido dentro do ciclo.
-            </p>
-            <div class="motto">bePatient | beHumble | beStrong</div>
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <div class="badge">
+            <span class="badge__dot"></span>
+            triathlon • corrida • endurance
           </div>
 
-          <div class="card" style="margin-top:14px;">
-            <p class="title">Como a CMTeam trabalha</p>
-            <div class="cards">
-              <div class="card">
-                <p class="title" style="font-size:16px;">Clareza no treino</p>
-                <p class="text small">Estrutura + objetivo + dica extra. O atleta entende o “o quê” e o “por quê”.</p>
-              </div>
-              <div class="card">
-                <p class="title" style="font-size:16px;">Visão de ciclo</p>
-                <p class="text small">Base, intensidade e recuperação com lógica — sem viver no impulso do dia.</p>
-              </div>
-              <div class="card">
-                <p class="title" style="font-size:16px;">Consistência</p>
-                <p class="text small">O que muda performance é repetir o treino certo, semana após semana.</p>
-              </div>
-              <div class="card">
-                <p class="title" style="font-size:16px;">Feedback & ajustes</p>
-                <p class="text small">Acompanhamento com leitura real do atleta e ajuste fino no processo.</p>
-              </div>
-            </div>
+          <h1 class="hero__title">
+            Treinar bem é mais do que cumprir uma planilha.
+          </h1>
+
+          <p class="hero__sub">
+            É entender o processo, respeitar o tempo e evoluir com constância.
+            Na <strong>CMTeam</strong>, cada treino tem <strong>contexto</strong>, <strong>propósito</strong> e <strong>motivo</strong> —
+            sempre conectado ao seu momento de vida e evolução.
+          </p>
+
+          <div class="motto">
+            <span>bePatient</span><span class="motto__sep">|</span><span>beHumble</span><span class="motto__sep">|</span><span>beStrong</span>
           </div>
+
+          <div class="hero__buttons">
+            <a class="btn btn--primary btn--large" href="https://wa.me/12017243197" target="_blank" rel="noopener">
+              Falar com a CMTeam no WhatsApp
+            </a>
+            <a class="btn btn--ghost btn--large" href="mailto:info@cmteam.us?subject=CMTeam%20|%20Contato" aria-label="Enviar e-mail para CMTeam">
+              Enviar e-mail
+            </a>
+          </div>
+
+          <p class="hero__note">
+            Sem preços no site. A conversa vem antes de qualquer plano.
+          </p>
         </div>
 
-        <div class="section">
-          <div class="card">
-            <p class="title">Carla Moreno</p>
-            <p class="text">
-              Ex-atleta de elite, com uma carreira marcada por resultados internacionais no triathlon e experiência prática na formação de atletas.
+        <!-- Card lateral (aquecendo o visual sem poluir) -->
+        <aside class="hero__card" aria-label="Resumo CMTeam">
+          <h2 class="card__title">Um time para evoluir junto</h2>
+          <p class="card__text">
+            Método, acompanhamento e visão de longo prazo.
+            Sem atalhos. Sem planilha genérica. Com presença.
+          </p>
+
+          <div class="card__grid">
+            <div class="mini">
+              <p class="mini__kicker">Foco</p>
+              <p class="mini__value">Processo</p>
+            </div>
+            <div class="mini">
+              <p class="mini__kicker">Estilo</p>
+              <p class="mini__value">Consistência</p>
+            </div>
+            <div class="mini">
+              <p class="mini__kicker">Entrega</p>
+              <p class="mini__value">Clareza</p>
+            </div>
+            <div class="mini">
+              <p class="mini__kicker">Ambiente</p>
+              <p class="mini__value">Aprendizado</p>
+            </div>
+          </div>
+
+          <div class="card__cta">
+            <a class="btn btn--accent" href="#contato">Ver contato</a>
+            <a class="btn btn--ghost" href="#como">Entender como trabalhamos</a>
+          </div>
+        </aside>
+      </div>
+
+      <div class="hero__glow" aria-hidden="true"></div>
+    </section>
+
+    <!-- MANIFESTO / CALOR -->
+    <section class="section section--light" aria-label="Manifesto CMTeam">
+      <div class="container section__inner">
+        <div class="section__headline">
+          <h2 class="h2">Performance real não nasce no dia da prova.</h2>
+          <p class="lead">
+            Ela é construída no dia a dia — na constância, na leitura correta do corpo e no respeito ao processo físico e mental.
+            A CMTeam existe para atletas que querem <strong>entender</strong> o que fazem e evoluir com <strong>consciência</strong>.
+          </p>
+        </div>
+
+        <div class="quote">
+          <p class="quote__text">
+            “Aqui, o atleta não é um número. É alguém que treina, trabalha, erra, aprende — e evolui ao longo do tempo.”
+          </p>
+          <p class="quote__tag">CMTeam</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO TRABALHAMOS -->
+    <section id="como" class="section" aria-label="Como trabalhamos">
+      <div class="container section__inner">
+        <div class="section__headline">
+          <h2 class="h2">Como trabalhamos</h2>
+          <p class="lead lead--muted">
+            Sem complicar. Sem gritar. Com método, contexto e decisões conscientes ao longo do ciclo.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3 class="h3"><span class="mark">Planejamento com lógica</span></h3>
+            <p class="p">
+              Treinos organizados por ciclo, respeitando o momento do atleta e o tempo de adaptação.
             </p>
-            <ul>
-              <li>Campeã Mundial Júnior (1996)</li>
-              <li>Prata Pan-Americano (1999)</li>
-              <li>Campeã Mundial de Aquathlon (2003)</li>
-              <li>Campeã IRONMAN 70.3 Brasil (2007)</li>
+          </article>
+
+          <article class="card">
+            <h3 class="h3"><span class="mark">Treinos explicados</span></h3>
+            <p class="p">
+              Cada sessão tem objetivo claro, orientação prática e motivo dentro da semana.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3 class="h3"><span class="mark">Acompanhamento real</span></h3>
+            <p class="p">
+              Ajustes frequentes, leitura do que aconteceu no treino e contato direto com os treinadores.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3 class="h3"><span class="mark">Vida real no planejamento</span></h3>
+            <p class="p">
+              Consideramos rotina, trabalho, família e recuperação — porque evolução precisa caber na vida.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CULTURA -->
+    <section id="cultura" class="section section--light" aria-label="Cultura CMTeam">
+      <div class="container section__inner">
+        <div class="section__headline">
+          <h2 class="h2">Cultura de aprendizado</h2>
+          <p class="lead">
+            A CMTeam é mais do que treino. É <strong>ambiente de aprendizado</strong>.
+            Ao longo da semana, os atletas recebem conteúdo e reflexão que conectam treino, mentalidade e processo.
+            <strong>Treinar bem também é aprender a treinar.</strong>
+          </p>
+        </div>
+
+        <div class="pillars">
+          <div class="pillar">
+            <p class="pillar__kicker">Segunda</p>
+            <p class="pillar__value">Texto reflexivo e conceitual</p>
+          </div>
+          <div class="pillar">
+            <p class="pillar__kicker">Quarta</p>
+            <p class="pillar__value">Infográficos técnicos e educativos</p>
+          </div>
+          <div class="pillar">
+            <p class="pillar__kicker">Sexta</p>
+            <p class="pillar__value">Textos diretos e aplicáveis</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILTRO -->
+    <section class="section" aria-label="Para quem faz sentido">
+      <div class="container section__inner">
+        <div class="split">
+          <div class="split__left">
+            <h2 class="h2">Para quem a CMTeam faz sentido</h2>
+            <p class="lead lead--muted">
+              A CMTeam não é para quem busca atalhos, fórmulas prontas ou motivação vazia.
+            </p>
+
+            <ul class="list">
+              <li>Quer <strong>entender</strong> o que está fazendo</li>
+              <li>Valoriza <strong>processo</strong> mais do que picos</li>
+              <li>Reconhece que evolução real exige <strong>tempo</strong> e <strong>constância</strong></li>
+              <li>Busca performance sem abrir mão de <strong>saúde</strong> e <strong>longevidade</strong></li>
             </ul>
-            <div class="photo">Foto da Carla (substituir)</div>
-            <p class="text small" style="margin-top:10px;">
-              (Podemos colocar uma página/área “Sobre a Carla” mais completa depois.)
-            </p>
           </div>
 
-          <div class="card" style="margin-top:14px;">
-            <p class="title">Contato</p>
-            <p class="text">Quer falar com a gente? Envia uma mensagem e a gente te orienta no melhor caminho.</p>
-            <div class="cta" style="margin-top:12px;">
-              <a class="btn primary" href="mailto:info@cmteam.us?subject=CMTeam%20|%20Contact">Email</a>
-              <a class="btn" href="https://wa.me/12017243197" target="_blank" rel="noopener">WhatsApp</a>
-              <a class="btn" href="https://instagram.com/cmteam" target="_blank" rel="noopener">Instagram</a>
+          <div class="split__right">
+            <div class="panel">
+              <p class="panel__title">Se isso conversa com você, o próximo passo é simples.</p>
+              <p class="panel__text">
+                A conversa é o começo — para entender seu momento e ver se a CMTeam faz sentido.
+              </p>
+              <div class="panel__buttons">
+                <a class="btn btn--primary btn--large" href="https://wa.me/12017243197" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+                <a class="btn btn--ghost btn--large" href="https://instagram.com/cmteam" target="_blank" rel="noopener">Ver Instagram</a>
+              </div>
+              <p class="panel__fine">
+                *Treinos presenciais existem em períodos e encontros — mas a CMTeam é construída para funcionar forte online.*
+              </p>
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="footer">
-        <div>© CMTeam</div>
-        <div>bePatient | beHumble | beStrong</div>
+    <!-- CONTATO FINAL -->
+    <section id="contato" class="section section--cta" aria-label="Contato">
+      <div class="container section__inner">
+        <div class="cta">
+          <h2 class="cta__title">Quer conversar com a CMTeam?</h2>
+          <p class="cta__text">
+            Se fizer sentido, fala com a gente. Sem pressão, sem atalho — só clareza sobre seu momento e o processo.
+          </p>
+
+          <div class="cta__buttons">
+            <a class="btn btn--primary btn--large" href="https://wa.me/12017243197" target="_blank" rel="noopener">WhatsApp (principal)</a>
+            <a class="btn btn--ghost btn--large" href="mailto:info@cmteam.us?subject=CMTeam%20|%20Contato">Email</a>
+            <a class="btn btn--ghost btn--large" href="https://instagram.com/cmteam" target="_blank" rel="noopener">Instagram</a>
+          </div>
+
+          <div class="cta__motto">
+            bePatient <span>•</span> beHumble <span>•</span> beStrong
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" aria-label="Rodapé">
+    <div class="container footer__inner">
+      <div class="footer__left">
+        <p class="footer__brand">CMTeam</p>
+        <p class="footer__small">Triathlon • Corrida • Endurance</p>
+      </div>
+
+      <div class="footer__right">
+        <a class="footer__link" href="mailto:info@cmteam.us?subject=CMTeam%20|%20Contato">info@cmteam.us</a>
+        <a class="footer__link" href="https://instagram.com/cmteam" target="_blank" rel="noopener">@cmteam</a>
+        <a class="footer__link" href="https://wa.me/12017243197" target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </div>
-  </div>
+  </footer>
 </body>
 </html>
