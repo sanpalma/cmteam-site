@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CMTeam</title>
+  <meta name="description" content="CMTeam — Endurance coaching com método, constância e clareza." />
+  <style>
+    :root{
+      --bg:#0b0c10;
+      --card:#11131a;
+      --text:#f4f5f7;
+      --muted:#b7bcc7;
+      --line:#232634;
+      --accent:#ffffff;
+      --radius:18px;
+      --max:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background: radial-gradient(1200px 700px at 20% -10%, #1a1f2d 0%, var(--bg) 55%);
+      color:var(--text);
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 60px;}
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:10px 0 26px;
+    }
+    .brand{font-weight:800; letter-spacing:0.4px}
+    .pill{
+      border:1px solid var(--line);
+      padding:10px 14px; border-radius:999px;
+      color:var(--muted); font-size:14px;
+    }
+    .hero{
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+    }
+    h1{margin:0 0 6px; font-size:44px; line-height:1.05}
+    .sub{margin:0 0 18px; color:var(--muted); font-size:16px; line-height:1.5; max-width:58ch;}
+    .cta{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 14px; border-radius:12px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,0.04);
+      font-weight:650; font-size:14px;
+    }
+    .btn.primary{background:rgba(255,255,255,0.12); border-color:rgba(255,255,255,0.18)}
+    .grid{display:grid; gap:14px; margin-top:18px}
+    @media(min-width:840px){ .grid{grid-template-columns:1.2fr 0.8fr;} }
+    .section{margin-top:18px}
+    .card{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,0.03);
+      border-radius:var(--radius);
+      padding:18px;
+    }
+    .title{font-size:18px; font-weight:800; margin:0 0 8px}
+    .text{color:var(--muted); margin:0; line-height:1.6}
+    .motto{
+      margin-top:10px;
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px dashed rgba(255,255,255,0.22);
+      color:#e9ebf0;
+      font-weight:750;
+      text-align:center;
+      letter-spacing:0.3px;
+    }
+    .cards{
+      display:grid; gap:12px;
+      grid-template-columns:1fr;
+      margin-top:12px;
+    }
+    @media(min-width:840px){ .cards{grid-template-columns:repeat(2,1fr);} }
+    ul{margin:10px 0 0; padding-left:18px; color:var(--muted); line-height:1.7}
+    .footer{
+      margin-top:22px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+      font-size:13px;
+    }
+    .photo{
+      width:100%;
+      aspect-ratio: 4/3;
+      background: linear-gradient(135deg, rgba(255,255,255,0.10), rgba(255,255,255,0.02));
+      border:1px solid var(--line);
+      border-radius:16px;
+      display:flex; align-items:center; justify-content:center;
+      color:rgba(255,255,255,0.55);
+      font-weight:700;
+      margin-top:10px;
+    }
+    .small{font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand">CMTeam</div>
+      <div class="pill">bePatient | beHumble | beStrong</div>
+    </div>
+
+    <div class="hero">
+      <h1>CMTeam</h1>
+      <p class="sub">Endurance coaching com método, constância e clareza. Treino que o atleta abre e entende — com intenção, execução e visão de ciclo.</p>
+
+      <div class="cta">
+        <a class="btn primary" href="mailto:info@cmteam.us?subject=CMTeam%20|%20Contact">Email</a>
+        <a class="btn" href="https://wa.me/12017243197" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn" href="https://instagram.com/cmteam" target="_blank" rel="noopener">Instagram</a>
+      </div>
+
+      <div class="grid">
+        <div class="section">
+          <div class="card">
+            <p class="title">Quem somos</p>
+            <p class="text">
+              A CMTeam é um time de atletas que treinam com um objetivo simples: evoluir com consistência.
+              Nosso trabalho une planejamento, fisiologia aplicada e prática de campo — para que cada sessão faça sentido dentro do ciclo.
+            </p>
+            <div class="motto">bePatient | beHumble | beStrong</div>
+          </div>
+
+          <div class="card" style="margin-top:14px;">
+            <p class="title">Como a CMTeam trabalha</p>
+            <div class="cards">
+              <div class="card">
+                <p class="title" style="font-size:16px;">Clareza no treino</p>
+                <p class="text small">Estrutura + objetivo + dica extra. O atleta entende o “o quê” e o “por quê”.</p>
+              </div>
+              <div class="card">
+                <p class="title" style="font-size:16px;">Visão de ciclo</p>
+                <p class="text small">Base, intensidade e recuperação com lógica — sem viver no impulso do dia.</p>
+              </div>
+              <div class="card">
+                <p class="title" style="font-size:16px;">Consistência</p>
+                <p class="text small">O que muda performance é repetir o treino certo, semana após semana.</p>
+              </div>
+              <div class="card">
+                <p class="title" style="font-size:16px;">Feedback & ajustes</p>
+                <p class="text small">Acompanhamento com leitura real do atleta e ajuste fino no processo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="card">
+            <p class="title">Carla Moreno</p>
+            <p class="text">
+              Ex-atleta de elite, com uma carreira marcada por resultados internacionais no triathlon e experiência prática na formação de atletas.
+            </p>
+            <ul>
+              <li>Campeã Mundial Júnior (1996)</li>
+              <li>Prata Pan-Americano (1999)</li>
+              <li>Campeã Mundial de Aquathlon (2003)</li>
+              <li>Campeã IRONMAN 70.3 Brasil (2007)</li>
+            </ul>
+            <div class="photo">Foto da Carla (substituir)</div>
+            <p class="text small" style="margin-top:10px;">
+              (Podemos colocar uma página/área “Sobre a Carla” mais completa depois.)
+            </p>
+          </div>
+
+          <div class="card" style="margin-top:14px;">
+            <p class="title">Contato</p>
+            <p class="text">Quer falar com a gente? Envia uma mensagem e a gente te orienta no melhor caminho.</p>
+            <div class="cta" style="margin-top:12px;">
+              <a class="btn primary" href="mailto:info@cmteam.us?subject=CMTeam%20|%20Contact">Email</a>
+              <a class="btn" href="https://wa.me/12017243197" target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn" href="https://instagram.com/cmteam" target="_blank" rel="noopener">Instagram</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div>© CMTeam</div>
+        <div>bePatient | beHumble | beStrong</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
