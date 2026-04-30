@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>THE WALL – CMTeam Energy Box</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section id="start-screen" class="screen active">
+      <h1>THE WALL</h1>
+      <h2>CMTeam Energy Box</h2>
+      <p class="motto">bePatient | beHumble | beStrong</p>
+      <button id="start-btn">START</button>
+      <p class="hint">Arrows to move • Keys 1–5 to change zone</p>
+    </section>
+
+    <section id="game-screen" class="screen">
+      <header class="hud">
+        <div class="hud-item">
+          <span>Energy</span>
+          <div class="energy-bar-wrap">
+            <div id="energy-bar" class="energy-bar"></div>
+          </div>
+          <strong id="energy-value">100%</strong>
+        </div>
+        <div class="hud-item"><span>Zone</span><strong id="zone-label">A0</strong></div>
+        <div class="hud-item"><span>Time</span><strong id="time-label">0.0s</strong></div>
+      </header>
+      <canvas id="game-canvas" width="880" height="520" aria-label="THE WALL game board"></canvas>
+      <p class="legend">Zones: 1=A0, 2=A1, 3=A2, 4=A3, 5=Vo2</p>
+    </section>
+
+    <section id="result-screen" class="screen">
+      <h2>Session Complete</h2>
+      <div id="result-summary" class="summary"></div>
+      <button id="restart-btn">PLAY AGAIN</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
