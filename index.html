@@ -38,6 +38,7 @@ a{color:#CB333B}a:hover{color:#F9423A}
 .g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
 .g6{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
 .bookrow{display:flex;gap:32px;align-items:center}
+.bookcover{flex-shrink:0;width:190px;height:auto;border-radius:3px 8px 8px 3px;box-shadow:0 24px 40px rgba(0,0,0,0.28);display:block}
 .book{flex-shrink:0;width:190px;aspect-ratio:3 / 4.4;border-radius:3px 10px 10px 3px;box-shadow:0 24px 40px rgba(0,0,0,0.22),inset 6px 0 0 rgba(0,0,0,0.18);box-sizing:border-box;padding:22px 18px 18px 26px;display:flex;flex-direction:column;justify-content:space-between}
 @media (max-width:900px){
 .wrap{padding-left:20px;padding-right:20px}
@@ -51,6 +52,7 @@ a{color:#CB333B}a:hover{color:#F9423A}
 .g6{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
 .bookrow{flex-direction:column;align-items:flex-start;gap:24px}
 .book{width:160px}
+.bookcover{width:160px}
 .deco{display:none}
 }
 </style>
@@ -270,33 +272,21 @@ a{color:#CB333B}a:hover{color:#F9423A}
 
 <div class="g2">
 <div class="bookrow" style="background: #FFFFFF; border-radius: 20px; padding: 40px">
-<div class="book" style="background: #FFC72C">
-<img loading="lazy" decoding="async" src="img/cmteam-logo-preto.png" alt="" aria-hidden="true" style="width: 84px; height: auto; display: block">
-<div style="display: flex; flex-direction: column; gap: 6px">
-<div class="disp" style="font-size: 34px; line-height: 0.9; color: #1A1A1A">A Nossa Jornada</div>
-<div style="font-size: 13px; font-weight: 700; letter-spacing: 2px; color: #1A1A1A">2025</div>
-</div>
-</div>
+<img class="bookcover" loading="lazy" decoding="async" src="img/livro-nossa-jornada-2025.jpg" alt="Capa do livro Nossa Jornada 2025, de San Palma">
 <div style="display: flex; flex-direction: column; gap: 14px">
 <div style="align-self: flex-start; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; background: #1A1A1A; color: #FFFFFF; padding: 6px 12px; border-radius: 999px">Publicado</div>
-<h3 class="disp" style="margin: 0; font-size: 34px; line-height: 1">A Nossa Jornada</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #4A4A4A">O primeiro livro da CMTeam reúne os textos escritos para o time ao longo de 2025: treino, processo e mentalidade a partir da vivência real de quem treina e compete.</p>
-<a href="https://wa.me/13053959104?text=Ol%C3%A1!%20Quero%20saber%20como%20adquirir%20o%20livro%20A%20Nossa%20Jornada." style="align-self: flex-start; font-size: 16px; font-weight: 700; color: #CB333B; text-decoration: none; padding: 10px 0">Quero o livro →</a>
+<h3 class="disp" style="margin: 0; font-size: 34px; line-height: 1">Nossa Jornada 2025</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #4A4A4A">Reflexões, aprendizados e os pilares que moldaram um ano de treinos. O primeiro livro da CMTeam reúne os textos escritos para o time ao longo de 2025.</p>
+<a href="https://wa.me/13053959104?text=Ol%C3%A1!%20Quero%20saber%20como%20adquirir%20o%20livro%20Nossa%20Jornada%202025." style="align-self: flex-start; font-size: 16px; font-weight: 700; color: #CB333B; text-decoration: none; padding: 10px 0">Quero o livro →</a>
 </div>
 </div>
 <div class="bookrow" style="background: #1A1A1A; border-radius: 20px; padding: 40px">
-<div class="book" style="background: #CB333B">
-<img loading="lazy" decoding="async" src="img/cmteam-logo-branco.png" alt="" aria-hidden="true" style="width: 84px; height: auto; display: block">
-<div style="display: flex; flex-direction: column; gap: 6px">
-<div class="disp" style="font-size: 34px; line-height: 0.9; color: #FFFFFF">Edição 2026</div>
-<div style="font-size: 13px; font-weight: 700; letter-spacing: 2px; color: #FFFFFF">EM BREVE</div>
-</div>
-</div>
+<img class="bookcover" loading="lazy" decoding="async" src="img/livro-nossa-jornada-2026.jpg" alt="Capa do livro Nossa Jornada 2026, de San Palma">
 <div style="display: flex; flex-direction: column; gap: 14px">
 <div style="align-self: flex-start; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; background: #FFC72C; color: #1A1A1A; padding: 6px 12px; border-radius: 999px">Saindo do forno</div>
-<h3 class="disp" style="margin: 0; font-size: 34px; line-height: 1; color: #FFFFFF">O segundo livro</h3>
+<h3 class="disp" style="margin: 0; font-size: 34px; line-height: 1; color: #FFFFFF">Nossa Jornada 2026</h3>
 <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #C9C9C9">Construído semana a semana a partir dos textos de segunda de 2026. Cada texto que o time recebe hoje é uma página do próximo livro.</p>
-<a href="https://wa.me/13053959104?text=Ol%C3%A1!%20Quero%20ser%20avisado%20do%20lan%C3%A7amento%20do%20livro%202026%20da%20CMTeam." style="align-self: flex-start; font-size: 16px; font-weight: 700; color: #FFC72C; text-decoration: none; padding: 10px 0">Quero ser avisado →</a>
+<a href="https://wa.me/13053959104?text=Ol%C3%A1!%20Quero%20ser%20avisado%20do%20lan%C3%A7amento%20do%20livro%20Nossa%20Jornada%202026." style="align-self: flex-start; font-size: 16px; font-weight: 700; color: #FFC72C; text-decoration: none; padding: 10px 0">Quero ser avisado →</a>
 </div>
 </div>
 </div>
