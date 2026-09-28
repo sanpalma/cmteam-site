@@ -392,19 +392,32 @@ a{color:#CB333B}a:hover{color:#F9423A}
   function esc(t){return String(t||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
   fetch('https://feeds.behold.so/'+FEED).then(function(r){ if(!r.ok) throw 0; return r.json(); }).then(function(d){
     var posts=(d&&d.posts)||[]; if(!posts.length) throw 0;
-    function item(p){
-      var sz=p.sizes||{}, m=sz.medium||sz.large||sz.small||{}, img=m.mediaUrl||p.thumbnailUrl||p.mediaUrl;
-      if(!img) return null;
-      var r=(m.width&&m.height)?(m.width/m.height):0.8;
+    function src(p){
+      var sz=p.sizes||{};
+      if(p.mediaType==='VIDEO') return p.thumbnailUrl||(sz.large&&sz.large.mediaUrl)||(sz.medium&&sz.medium.mediaUrl);
+      return p.mediaUrl||(sz.full&&sz.full.mediaUrl)||(sz.large&&sz.large.mediaUrl)||(sz.medium&&sz.medium.mediaUrl);
+    }
+    var its=posts.slice(0,6).map(function(p){
+      var img=src(p); if(!img) return '';
       var cap=(p.caption||'').split('\n')[0].slice(0,120);
       var tag=p.mediaType==='VIDEO'?'<span class="igtag">▶</span>':(p.mediaType==='CAROUSEL_ALBUM'?'<span class="igtag">❐</span>':'');
-      return {r:r,html:'<a class="igpost" style="flex:'+r.toFixed(4)+' 1 0;aspect-ratio:'+r.toFixed(4)+'" href="'+esc(p.permalink)+'" target="_blank" rel="noopener"><img src="'+esc(img)+'" alt="'+esc(p.altText||cap||'Post do @cmteam no Instagram')+'" loading="lazy" decoding="async">'+tag+'</a>'};
-    }
-    var its=posts.slice(0,6).map(item).filter(Boolean), rows=[its.slice(0,3),its.slice(3,6)].filter(function(x){return x.length;});
-    box.innerHTML=rows.map(function(row){
-      var sum=row.reduce(function(a,b){return a+b.r;},0);
-      return '<div class="igrow" style="flex:'+sum.toFixed(4)+' 1 0">'+row.map(function(x){return x.html;}).join('')+'</div>';
+      return '<a class="igpost" style="flex:0.8 1 0;aspect-ratio:0.8" href="'+esc(p.permalink)+'" target="_blank" rel="noopener"><img src="'+esc(img)+'" alt="'+esc(p.altText||cap||'Post do @cmteam no Instagram')+'" decoding="async">'+tag+'</a>';
+    }).filter(Boolean);
+    box.innerHTML=[its.slice(0,3),its.slice(3,6)].filter(function(x){return x.length;}).map(function(row){
+      return '<div class="igrow" style="flex:'+(0.8*row.length)+' 1 0">'+row.join('')+'</div>';
     }).join('');
+    /* ajusta cada post à proporção real da imagem original, depois que ela carrega */
+    function relayout(){
+      [].forEach.call(box.querySelectorAll('.igrow'),function(row){
+        var sum=0;
+        [].forEach.call(row.querySelectorAll('.igpost'),function(a){
+          var im=a.querySelector('img'), r=(im.naturalWidth&&im.naturalHeight)?im.naturalWidth/im.naturalHeight:0.8;
+          a.style.flex=r.toFixed(4)+' 1 0'; a.style.aspectRatio=r.toFixed(4); sum+=r;
+        });
+        row.style.flex=sum.toFixed(4)+' 1 0';
+      });
+    }
+    [].forEach.call(box.querySelectorAll('img'),function(im){ if(im.complete) relayout(); else im.addEventListener('load',relayout); });
   }).catch(fallback);
 })();
 </script>
