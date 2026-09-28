@@ -1,278 +1,428 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CMTeam</title>
-  <meta name="description" content="CMTeam — triathlon, corrida e endurance com método, acompanhamento e visão de longo prazo. bePatient | beHumble | beStrong." />
-
-  <!-- Fonts (system default; leve e rápido) -->
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- Favicons (opcional – depois na Opção B) -->
-  <!-- <link rel="icon" href="assets/favicon.png" /> -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CMTeam — Triathlon, Corrida e Endurance</title>
+<meta name="description" content="Assessoria de triathlon, corrida e esportes de endurance. Metodologia ECO, acompanhamento próximo e visão de longo prazo — do iniciante ao competitivo. Miami e online.">
+<link rel="canonical" href="https://cmteam.us/">
+<meta name="theme-color" content="#111111">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CMTeam">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://cmteam.us/">
+<meta property="og:title" content="CMTeam — Aqui, cada treino tem motivo.">
+<meta property="og:description" content="Assessoria de triathlon, corrida e esportes de endurance. Metodologia ECO, acompanhamento próximo e visão de longo prazo — do iniciante ao competitivo. Miami e online.">
+<meta property="og:image" content="https://cmteam.us/img/og-cmteam.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SportsOrganization","name":"CMTeam","url":"https://cmteam.us","logo":"https://cmteam.us/img/icon-512.png","sport":["Triathlon","Running"],"telephone":"+1-305-395-9104","sameAs":["https://instagram.com/cmteam"],"address":{"@type":"PostalAddress","addressLocality":"Miami","addressRegion":"FL","addressCountry":"US"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;1,800;1,900&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#FFFFFF;color:#1A1A1A;-webkit-font-smoothing:antialiased}
+a{color:#CB333B}a:hover{color:#F9423A}
+.wrap{max-width:1200px;margin:0 auto;padding-left:40px;padding-right:40px;box-sizing:border-box}
+.disp{font-family:'Barlow Condensed',Arial,sans-serif;font-weight:800;font-style:italic;text-transform:uppercase}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px}
+.split{display:grid;grid-template-columns:5fr 7fr;gap:72px;align-items:start}
+.split-img{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.navlinks{display:flex;gap:28px;align-items:center}
+.hero-title{font-size:104px;line-height:0.92;letter-spacing:-1px}
+.sec-title{font-size:64px;line-height:0.95;letter-spacing:-0.5px}
+.sched{display:grid;grid-template-columns:160px 1fr;gap:0}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.g6{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
+.bookrow{display:flex;gap:32px;align-items:center}
+.book{flex-shrink:0;width:190px;aspect-ratio:3 / 4.4;border-radius:3px 10px 10px 3px;box-shadow:0 24px 40px rgba(0,0,0,0.22),inset 6px 0 0 rgba(0,0,0,0.18);box-sizing:border-box;padding:22px 18px 18px 26px;display:flex;flex-direction:column;justify-content:space-between}
+@media (max-width:900px){
+.wrap{padding-left:20px;padding-right:20px}
+.g4{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.g2,.split,.split-img{grid-template-columns:minmax(0,1fr);gap:32px}
+.navlinks{display:none}
+.hero-title{font-size:58px}
+.sec-title{font-size:42px}
+.sched{grid-template-columns:110px 1fr}
+.g3{grid-template-columns:minmax(0,1fr);gap:16px}
+.g6{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.bookrow{flex-direction:column;align-items:flex-start;gap:24px}
+.book{width:160px}
+.deco{display:none}
+}
+</style>
+<style>html{scroll-behavior:smooth}html,body{overflow-x:hidden}img{max-width:100%}</style>
 </head>
-
 <body>
-  <header class="topbar">
-    <div class="container topbar__inner">
-      <a class="brand" href="#top" aria-label="CMTeam Home">
-        <!-- Troque pelo seu logo depois (Opção B). Enquanto isso, texto funciona bem. -->
-        <span class="brand__mark">CMTeam</span>
-      </a>
+<div style="width: 100%; background: #FFFFFF; display: flex; flex-direction: column">
 
-      <nav class="nav">
-        <a class="nav__link" href="#como">Como trabalhamos</a>
-        <a class="nav__link" href="#cultura">Cultura</a>
-        <a class="nav__link" href="#contato">Contato</a>
-      </nav>
+<header style="background: #111111">
+<div class="wrap" style="height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 16px">
+<a href="#topo" aria-label="CMTeam — início" style="display: flex; align-items: center">
+<img src="img/cmteam-logo-branco.png" alt="CMTeam" style="height: 30px; width: auto; display: block">
+</a>
+<nav class="navlinks" aria-label="Principal">
+<a href="#filosofia" style="color: #D6D6D6; text-decoration: none; font-size: 15px">Filosofia</a>
+<a href="#eco" style="color: #D6D6D6; text-decoration: none; font-size: 15px">Método ECO</a>
+<a href="#coaches" style="color: #D6D6D6; text-decoration: none; font-size: 15px">Coaches</a>
+<a href="#conteudo" style="color: #D6D6D6; text-decoration: none; font-size: 15px">Livros e textos</a>
+<a href="#miami" style="color: #D6D6D6; text-decoration: none; font-size: 15px">Treinos em Miami</a>
+</nav>
+<a href="https://wa.me/13053959104?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20CMTeam." style="background: #CB333B; color: #FFFFFF; text-decoration: none; font-size: 15px; font-weight: 700; padding: 0 22px; border-radius: 999px; min-height: 44px; display: flex; align-items: center">Fale com a gente</a>
+</div>
+</header>
 
-      <div class="topbar__cta">
-        <a class="btn btn--ghost" href="https://instagram.com/cmteam" target="_blank" rel="noopener">Instagram</a>
-        <a class="btn btn--primary" href="https://wa.me/12017243197" target="_blank" rel="noopener">WhatsApp</a>
-      </div>
-    </div>
-  </header>
+<section id="topo" style="position: relative; background: #111111; color: #FFFFFF; overflow: hidden">
+<img src="img/hero-bike-noite.jpg" alt="Atletas da CMTeam pedalando à noite em Miami" style="position: absolute; top: 0; right: 0; width: 72%; height: 100%; object-fit: cover; object-position: center 40%; opacity: 0.9">
+<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(90deg, #111111 30%, rgba(17,17,17,0.75) 55%, rgba(17,17,17,0.15) 100%)"></div>
+<div class="wrap" style="position: relative; padding-top: 140px; padding-bottom: 140px; display: flex; flex-direction: column; gap: 28px">
+<div style="font-size: 14px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #FFC72C">Triathlon · Corrida · Endurance</div>
+<h1 class="disp hero-title" style="margin: 0; max-width: 760px; color: #FFFFFF">Aqui, cada treino tem motivo.</h1>
+<p style="margin: 0; font-size: 20px; line-height: 1.55; color: #D0D0D0; max-width: 560px">Assessoria especializada em triathlon, corrida e esportes de endurance. Metodologia própria, acompanhamento próximo e visão de longo prazo — do iniciante ao competitivo.</p>
+<div style="display: flex; gap: 14px; flex-wrap: wrap; padding-top: 8px">
+<a href="https://wa.me/13053959104?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20CMTeam." style="background: #CB333B; color: #FFFFFF; text-decoration: none; font-size: 17px; font-weight: 700; padding: 18px 30px; border-radius: 999px">Falar no WhatsApp</a>
+<a href="#eco" style="border: 1.5px solid #8A8A8A; color: #FFFFFF; text-decoration: none; font-size: 17px; font-weight: 700; padding: 18px 30px; border-radius: 999px">Conheça o método</a>
+</div>
+</div>
+</section>
 
-  <main id="top">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero__inner">
-        <div class="hero__content">
-          <div class="badge">
-            <span class="badge__dot"></span>
-            triathlon • corrida • endurance
-          </div>
+<section style="background: #1A1A1A; color: #FFFFFF">
+<div class="wrap" style="padding-top: 48px; padding-bottom: 48px">
+<div class="g4">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div class="disp" style="font-size: 60px; line-height: 1; color: #FFFFFF">18+</div>
+<div style="font-size: 15px; color: #B5B5B5">anos de CMTeam</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div class="disp" style="font-size: 60px; line-height: 1; color: #FFFFFF">5.000+</div>
+<div style="font-size: 15px; color: #B5B5B5">atletas treinados</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div class="disp" style="font-size: 60px; line-height: 1; color: #FFFFFF">25+</div>
+<div style="font-size: 15px; color: #B5B5B5">países</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div class="disp" style="font-size: 60px; line-height: 1; color: #FFFFFF">5</div>
+<div style="font-size: 15px; color: #B5B5B5">continentes</div>
+</div>
+</div>
+</div>
+</section>
 
-          <h1 class="hero__title">
-            Treinar bem é mais do que cumprir uma planilha.
-          </h1>
+<section id="filosofia" style="background: #FFFFFF">
+<div class="wrap split" style="padding-top: 120px; padding-bottom: 72px">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<div style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #CB333B">A filosofia CMTeam</div>
+<h2 class="disp sec-title" style="margin: 0">O treino não é um produto. É processo.</h2>
+</div>
+<div style="display: flex; flex-direction: column; gap: 22px; font-size: 19px; line-height: 1.65; color: #3A3A3A">
+<p style="margin: 0">Na CMTeam, cada sessão tem contexto, propósito e motivo, sempre conectada ao seu momento de vida, de treino e de evolução. Performance real não nasce no dia da prova: ela é construída na constância, na leitura correta do processo e no respeito ao tempo de adaptação — física e mental.</p>
+<p style="margin: 0">Trabalhamos com método, mas também com escuta. Com dados, mas também com contexto. Com performance, sem abrir mão de saúde, equilíbrio e longevidade esportiva. Aqui, não buscamos atalhos: buscamos clareza, consistência e maturidade no treinamento.</p>
+<div class="disp" style="font-size: 30px; line-height: 1.1; color: #1A1A1A; padding-top: 8px">bePatient <span style="color: #CB333B">|</span> beHumble <span style="color: #CB333B">|</span> beStrong</div>
+</div>
+</div>
+<div class="wrap" style="padding-bottom: 120px">
+<img loading="lazy" decoding="async" src="img/time-treino.jpg" alt="Atletas da CMTeam reunidos após o treino em Miami" style="width: 100%; aspect-ratio: 16 / 8; object-fit: cover; object-position: center 30%; border-radius: 20px; display: block">
+</div>
+</section>
 
-          <p class="hero__sub">
-            É entender o processo, respeitar o tempo e evoluir com constância.
-            Na <strong>CMTeam</strong>, cada treino tem <strong>contexto</strong>, <strong>propósito</strong> e <strong>motivo</strong> —
-            sempre conectado ao seu momento de vida e evolução.
-          </p>
+<section id="eco" style="position: relative; background: #111111; color: #FFFFFF; overflow: hidden">
+<img class="deco" loading="lazy" decoding="async" src="img/cmteam-simbolo-vermelho.png" alt="" aria-hidden="true" style="position: absolute; right: -120px; top: 60px; width: 620px; height: auto; opacity: 0.07">
+<div class="wrap" style="position: relative; padding-top: 120px; padding-bottom: 120px; display: flex; flex-direction: column; gap: 56px">
+<div class="split">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<div style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #FFC72C">Metodologia própria</div>
+<h2 class="disp sec-title" style="margin: 0; color: #FFFFFF">ECO <span style="color: #CB333B">|</span> Esforço Contínuo Ondulatório</h2>
+</div>
+<p style="margin: 0; font-size: 19px; line-height: 1.65; color: #C9C9C9">O ECO parte de um princípio claro: o corpo evolui melhor quando o esforço é bem distribuído, respeita o momento do atleta e evita o desgaste silencioso causado por excesso de intensidade mal aplicada.</p>
+</div>
+<div class="g4">
+<div style="border-top: 3px solid #CB333B; padding-top: 24px; display: flex; flex-direction: column; gap: 12px">
+<div class="disp" style="font-size: 20px; color: #CB333B">01</div>
+<h3 style="margin: 0; font-size: 21px; font-weight: 700; color: #FFFFFF">Base aeróbia sólida</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #B5B5B5">A base é prioridade. É ela que sustenta toda a evolução.</p>
+</div>
+<div style="border-top: 3px solid #CB333B; padding-top: 24px; display: flex; flex-direction: column; gap: 12px">
+<div class="disp" style="font-size: 20px; color: #CB333B">02</div>
+<h3 style="margin: 0; font-size: 21px; font-weight: 700; color: #FFFFFF">Intensidade estratégica</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #B5B5B5">Intensidade usada de forma estratégica, não emocional.</p>
+</div>
+<div style="border-top: 3px solid #CB333B; padding-top: 24px; display: flex; flex-direction: column; gap: 12px">
+<div class="disp" style="font-size: 20px; color: #CB333B">03</div>
+<h3 style="margin: 0; font-size: 21px; font-weight: 700; color: #FFFFFF">Ciclos com lógica</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #B5B5B5">Ciclos organizados para construir, consolidar e realizar.</p>
+</div>
+<div style="border-top: 3px solid #CB333B; padding-top: 24px; display: flex; flex-direction: column; gap: 12px">
+<div class="disp" style="font-size: 20px; color: #CB333B">04</div>
+<h3 style="margin: 0; font-size: 21px; font-weight: 700; color: #FFFFFF">Carga da vida real</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #B5B5B5">Carga ajustada ao treino, ao trabalho, à família e à recuperação.</p>
+</div>
+</div>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #9A9A9A; max-width: 820px">Tudo é individualizado, respeitando os princípios do treinamento: individualidade biológica, adaptação, relação volume × intensidade, sobrecarga e especificidade.</p>
+</div>
+</section>
 
-          <div class="motto">
-            <span>bePatient</span><span class="motto__sep">|</span><span>beHumble</span><span class="motto__sep">|</span><span>beStrong</span>
-          </div>
+<section style="background: #FFFFFF">
+<div class="wrap split-img" style="padding-top: 120px; padding-bottom: 120px">
+<img loading="lazy" decoding="async" src="img/coach-treino.jpg" alt="Coach da CMTeam orientando atletas antes do treino" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 20px; display: block">
+<div style="display: flex; flex-direction: column; gap: 28px">
+<div style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #CB333B">Como trabalhamos</div>
+<h2 class="disp sec-title" style="margin: 0">Planejamento claro. Acompanhamento de perto.</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.65; color: #3A3A3A">Todos os treinos são prescritos e acompanhados pelo TrainingPeaks. O feedback pós-treino faz parte ativa do processo e orienta as decisões semana a semana.</p>
+<div style="display: flex; flex-direction: column; gap: 0; border-top: 1px solid #E4E1DD">
+<div style="padding: 16px 0; border-bottom: 1px solid #E4E1DD; font-size: 17px; font-weight: 700">Planejamento semanal claro e organizado</div>
+<div style="padding: 16px 0; border-bottom: 1px solid #E4E1DD; font-size: 17px; font-weight: 700">Treinos explicados, com objetivo e orientação prática</div>
+<div style="padding: 16px 0; border-bottom: 1px solid #E4E1DD; font-size: 17px; font-weight: 700">Acompanhamento contínuo e ajustes frequentes</div>
+<div style="padding: 16px 0; border-bottom: 1px solid #E4E1DD; font-size: 17px; font-weight: 700">Feedback direto dentro do aplicativo</div>
+</div>
+</div>
+</div>
+</section>
 
-          <div class="hero__buttons">
-            <a class="btn btn--primary btn--large" href="https://wa.me/12017243197" target="_blank" rel="noopener">
-              Falar com a CMTeam no WhatsApp
-            </a>
-            <a class="btn btn--ghost btn--large" href="mailto:info@cmteam.us?subject=CMTeam%20|%20Contato" aria-label="Enviar e-mail para CMTeam">
-              Enviar e-mail
-            </a>
-          </div>
+<section id="modalidades" style="background: #F6F4F1">
+<div class="wrap" style="padding-top: 112px; padding-bottom: 112px; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 760px">
+<div style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #CB333B">Modalidades</div>
+<h2 class="disp sec-title" style="margin: 0">Do primeiro 5 km ao Ironman.</h2>
+</div>
+<div class="g4">
+<div style="background: #FFFFFF; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<h3 class="disp" style="margin: 0; font-size: 30px">Triathlon</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #4A4A4A">Do sprint ao Ironman, com natação, bike e corrida integradas num só plano.</p>
+</div>
+<div style="background: #FFFFFF; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<h3 class="disp" style="margin: 0; font-size: 30px">Corrida de rua</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #4A4A4A">Do 5 km à maratona, com foco em ritmo, economia e consistência.</p>
+</div>
+<div style="background: #FFFFFF; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<h3 class="disp" style="margin: 0; font-size: 30px">Trail e montanha</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #4A4A4A">Subidas, descidas e terreno técnico, com preparação específica para cada prova.</p>
+</div>
+<div style="background: #FFFFFF; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<h3 class="disp" style="margin: 0; font-size: 30px">Ultramaratona</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #4A4A4A">Longas distâncias com estratégia de ritmo, nutrição e resistência mental.</p>
+</div>
+</div>
+</div>
+</section>
 
-          <p class="hero__note">
-            Sem preços no site. A conversa vem antes de qualquer plano.
-          </p>
-        </div>
+<section id="coaches" style="background: #FFFFFF">
+<div class="wrap" style="padding-top: 120px; padding-bottom: 120px; display: flex; flex-direction: column; gap: 56px">
+<div class="split">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<div style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #CB333B">Coaches</div>
+<h2 class="disp sec-title" style="margin: 0">Duas trajetórias. Uma convicção.</h2>
+</div>
+<p style="margin: 0; font-size: 19px; line-height: 1.65; color: #3A3A3A">Por trás da CMTeam existem duas trajetórias construídas no esporte de alto rendimento, guiadas pela mesma ideia: performance só faz sentido quando vem acompanhada de processo, consciência e longevidade.</p>
+</div>
+<div class="g2">
+<div style="display: flex; flex-direction: column; gap: 22px">
+<img loading="lazy" decoding="async" src="img/san-palma.jpg" alt="San Palma, head coach da CMTeam" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: center 20%; border-radius: 20px; display: block">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<h3 class="disp" style="margin: 0; font-size: 40px; line-height: 1">San Palma</h3>
+<div style="font-size: 15px; font-weight: 700; color: #CB333B">Co-fundador e Head Coach</div>
+</div>
+<p style="margin: 0; font-size: 17px; line-height: 1.65; color: #4A4A4A">Mais de 30 anos de vivência no esporte e mais de 20 como treinador, com certificações USA Triathlon, IRONMAN e TrainingPeaks. Trabalhou com atletas do iniciante ao alto rendimento, em projetos nacionais e internacionais, incluindo Campeonatos Mundiais, Jogos Pan-Americanos e ciclos de formação de elite. Criador do Método ECO, segue em formação contínua em fisiologia do exercício, prescrição de treinamento e corrida de montanha.</p>
+<p style="margin: 0; font-size: 19px; line-height: 1.5; font-style: italic; color: #1A1A1A; border-left: 3px solid #CB333B; padding-left: 18px">“O contato com a ciência não substitui o campo. Ele qualifica o olhar sobre o campo.”</p>
+<div style="font-size: 13px; color: #6B6B6B">CREF 038340-G/SP</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 22px">
+<img loading="lazy" decoding="async" src="img/carla-moreno.jpg" alt="Carla Moreno em prova de triathlon" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: center 25%; border-radius: 20px; display: block">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<h3 class="disp" style="margin: 0; font-size: 40px; line-height: 1">Carla Moreno</h3>
+<div style="font-size: 15px; font-weight: 700; color: #CB333B">Co-fundadora e Coach</div>
+</div>
+<p style="margin: 0; font-size: 17px; line-height: 1.65; color: #4A4A4A">Campeã Mundial Júnior de Triathlon, integrou a Seleção Brasileira por 14 anos consecutivos e representou o Brasil em dois Jogos Olímpicos — Sydney 2000 e Atenas 2004 —, com títulos mundiais, pan-americanos e vitórias em Copas do Mundo. Hoje atua diretamente no atendimento e na orientação dos atletas, traduzindo o treinamento em decisões práticas, estratégia de prova e equilíbrio entre esporte e vida pessoal.</p>
+<p style="margin: 0; font-size: 19px; line-height: 1.5; font-style: italic; color: #1A1A1A; border-left: 3px solid #CB333B; padding-left: 18px">“Contato direto, humano e próximo. Exatamente como acreditamos que o esporte deve ser vivido.”</p>
+</div>
+</div>
+</div>
+</section>
 
-        <!-- Card lateral (aquecendo o visual sem poluir) -->
-        <aside class="hero__card" aria-label="Resumo CMTeam">
-          <h2 class="card__title">Um time para evoluir junto</h2>
-          <p class="card__text">
-            Método, acompanhamento e visão de longo prazo.
-            Sem atalhos. Sem planilha genérica. Com presença.
-          </p>
+<section id="conteudo" style="background: #F6F4F1">
+<div class="wrap" style="padding-top: 120px; padding-bottom: 120px; display: flex; flex-direction: column; gap: 64px">
+<div class="split">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<div style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #CB333B">Livros e textos</div>
+<h2 class="disp sec-title" style="margin: 0">Ensinar o atleta também é treino.</h2>
+</div>
+<div style="display: flex; flex-direction: column; gap: 28px">
+<p style="margin: 0; font-size: 19px; line-height: 1.65; color: #3A3A3A">Nossa missão vai além da planilha: queremos que cada atleta entenda o que está fazendo e por quê. Por isso, o conhecimento do time circula toda semana — e, ao fim de cada ano, vira livro, registrando a vivência real do que é treinado e aprendido dentro da CMTeam.</p>
+<div class="g3" style="gap: 12px">
+<div style="background: #FFFFFF; border-radius: 12px; padding: 18px 20px; display: flex; flex-direction: column; gap: 4px">
+<div class="disp" style="font-size: 20px; color: #CB333B">Segunda</div>
+<div style="font-size: 15px; line-height: 1.45; color: #3A3A3A">Texto reflexivo sobre treino, processo e mentalidade</div>
+</div>
+<div style="background: #FFFFFF; border-radius: 12px; padding: 18px 20px; display: flex; flex-direction: column; gap: 4px">
+<div class="disp" style="font-size: 20px; color: #CB333B">Quarta</div>
+<div style="font-size: 15px; line-height: 1.45; color: #3A3A3A">Infográficos técnicos e educativos</div>
+</div>
+<div style="background: #FFFFFF; border-radius: 12px; padding: 18px 20px; display: flex; flex-direction: column; gap: 4px">
+<div class="disp" style="font-size: 20px; color: #CB333B">Sexta</div>
+<div style="font-size: 15px; line-height: 1.45; color: #3A3A3A">Textos diretos, aplicáveis ao treino do dia a dia</div>
+</div>
+</div>
+</div>
+</div>
 
-          <div class="card__grid">
-            <div class="mini">
-              <p class="mini__kicker">Foco</p>
-              <p class="mini__value">Processo</p>
-            </div>
-            <div class="mini">
-              <p class="mini__kicker">Estilo</p>
-              <p class="mini__value">Consistência</p>
-            </div>
-            <div class="mini">
-              <p class="mini__kicker">Entrega</p>
-              <p class="mini__value">Clareza</p>
-            </div>
-            <div class="mini">
-              <p class="mini__kicker">Ambiente</p>
-              <p class="mini__value">Aprendizado</p>
-            </div>
-          </div>
+<div class="g2">
+<div class="bookrow" style="background: #FFFFFF; border-radius: 20px; padding: 40px">
+<div class="book" style="background: #FFC72C">
+<img loading="lazy" decoding="async" src="img/cmteam-logo-preto.png" alt="" aria-hidden="true" style="width: 84px; height: auto; display: block">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div class="disp" style="font-size: 34px; line-height: 0.9; color: #1A1A1A">A Nossa Jornada</div>
+<div style="font-size: 13px; font-weight: 700; letter-spacing: 2px; color: #1A1A1A">2025</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px">
+<div style="align-self: flex-start; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; background: #1A1A1A; color: #FFFFFF; padding: 6px 12px; border-radius: 999px">Publicado</div>
+<h3 class="disp" style="margin: 0; font-size: 34px; line-height: 1">A Nossa Jornada</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #4A4A4A">O primeiro livro da CMTeam reúne os textos escritos para o time ao longo de 2025: treino, processo e mentalidade a partir da vivência real de quem treina e compete.</p>
+<a href="https://wa.me/13053959104?text=Ol%C3%A1!%20Quero%20saber%20como%20adquirir%20o%20livro%20A%20Nossa%20Jornada." style="align-self: flex-start; font-size: 16px; font-weight: 700; color: #CB333B; text-decoration: none; padding: 10px 0">Quero o livro →</a>
+</div>
+</div>
+<div class="bookrow" style="background: #1A1A1A; border-radius: 20px; padding: 40px">
+<div class="book" style="background: #CB333B">
+<img loading="lazy" decoding="async" src="img/cmteam-logo-branco.png" alt="" aria-hidden="true" style="width: 84px; height: auto; display: block">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div class="disp" style="font-size: 34px; line-height: 0.9; color: #FFFFFF">Edição 2026</div>
+<div style="font-size: 13px; font-weight: 700; letter-spacing: 2px; color: #FFFFFF">EM BREVE</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px">
+<div style="align-self: flex-start; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; background: #FFC72C; color: #1A1A1A; padding: 6px 12px; border-radius: 999px">Saindo do forno</div>
+<h3 class="disp" style="margin: 0; font-size: 34px; line-height: 1; color: #FFFFFF">O segundo livro</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #C9C9C9">Construído semana a semana a partir dos textos de segunda de 2026. Cada texto que o time recebe hoje é uma página do próximo livro.</p>
+<a href="https://wa.me/13053959104?text=Ol%C3%A1!%20Quero%20ser%20avisado%20do%20lan%C3%A7amento%20do%20livro%202026%20da%20CMTeam." style="align-self: flex-start; font-size: 16px; font-weight: 700; color: #FFC72C; text-decoration: none; padding: 10px 0">Quero ser avisado →</a>
+</div>
+</div>
+</div>
 
-          <div class="card__cta">
-            <a class="btn btn--accent" href="#contato">Ver contato</a>
-            <a class="btn btn--ghost" href="#como">Entender como trabalhamos</a>
-          </div>
-        </aside>
-      </div>
+<div style="display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap">
+<h3 class="disp" style="margin: 0; font-size: 40px; line-height: 1">Textos de segunda</h3>
+<a href="https://instagram.com/cmteam" style="font-size: 16px; font-weight: 700; color: #CB333B; text-decoration: none; padding: 10px 0">Ver todos no Instagram →</a>
+</div>
+<div class="g3">
+<a href="https://instagram.com/cmteam" style="background: #FFFFFF; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: #1A1A1A">
+<div style="font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #CB333B">Processo</div>
+<div class="disp" style="font-size: 30px; line-height: 1; color: #1A1A1A">Você nunca treinou sozinho</div>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #4A4A4A">A planilha não conta tudo. Por trás do despertador de madrugada e do treino solitário existe um time inteiro — e é por isso que o esporte precisa caber na sua vida, e não o contrário.</p>
+<div style="font-size: 15px; font-weight: 700; color: #1A1A1A; padding-top: 6px">Ler resumo →</div>
+</a>
+<a href="https://instagram.com/cmteam" style="background: #FFFFFF; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: #1A1A1A">
+<div style="font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #CB333B">Dados e leitura</div>
+<div class="disp" style="font-size: 30px; line-height: 1; color: #1A1A1A">Não é a plataforma que treina</div>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #4A4A4A">A tecnologia processa números melhor que qualquer treinador. O que ela não percebe é quando o dado diz uma coisa e o atleta diz outra. O treino está na leitura.</p>
+<div style="font-size: 15px; font-weight: 700; color: #1A1A1A; padding-top: 6px">Ler resumo →</div>
+</a>
+<a href="https://instagram.com/cmteam" style="background: #FFFFFF; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: #1A1A1A">
+<div style="font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #CB333B">Time</div>
+<div class="disp" style="font-size: 30px; line-height: 1; color: #1A1A1A">Cuido dos meus</div>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #4A4A4A">Atleta não é um treino na planilha. É alguém que a gente observa, ajusta e por quem torce. Um texto sobre gratidão a quem confia, veste a camisa e escolhe caminhar junto.</p>
+<div style="font-size: 15px; font-weight: 700; color: #1A1A1A; padding-top: 6px">Ler resumo →</div>
+</a>
+</div>
+</div>
+</div>
+</section>
 
-      <div class="hero__glow" aria-hidden="true"></div>
-    </section>
+<section id="miami" style="background: #111111; color: #FFFFFF">
+<div class="wrap" style="padding-top: 120px; padding-bottom: 120px; display: flex; flex-direction: column; gap: 56px">
+<div class="split">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<div style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #FFC72C">Treinos presenciais</div>
+<h2 class="disp sec-title" style="margin: 0; color: #FFFFFF">Miami · Tribeach, Key Biscayne</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #B5B5B5">Eventualmente, também realizamos treinos de transição e simulações de prova.</p>
+</div>
+<div class="sched" style="border-top: 1px solid #333333">
+<div class="disp" style="font-size: 24px; padding: 20px 0; border-bottom: 1px solid #333333; color: #CB333B">Terça</div>
+<div style="font-size: 17px; line-height: 1.5; padding: 22px 0; border-bottom: 1px solid #333333; color: #E6E6E6">Corrida 6h00–7h20 · Natação 7h20–8h00</div>
+<div class="disp" style="font-size: 24px; padding: 20px 0; border-bottom: 1px solid #333333; color: #CB333B">Quarta</div>
+<div style="font-size: 17px; line-height: 1.5; padding: 22px 0; border-bottom: 1px solid #333333; color: #E6E6E6">Bike 6h00–8h00</div>
+<div class="disp" style="font-size: 24px; padding: 20px 0; border-bottom: 1px solid #333333; color: #CB333B">Quinta</div>
+<div style="font-size: 17px; line-height: 1.5; padding: 22px 0; border-bottom: 1px solid #333333; color: #E6E6E6">Corrida 6h00–7h20 · Natação 7h20–8h00</div>
+<div class="disp" style="font-size: 24px; padding: 20px 0; border-bottom: 1px solid #333333; color: #CB333B">Sábado</div>
+<div style="font-size: 17px; line-height: 1.5; padding: 22px 0; border-bottom: 1px solid #333333; color: #E6E6E6">Longo de corrida · Natação em águas abertas</div>
+</div>
+</div>
+</div>
+</section>
 
-    <!-- MANIFESTO / CALOR -->
-    <section class="section section--light" aria-label="Manifesto CMTeam">
-      <div class="container section__inner">
-        <div class="section__headline">
-          <h2 class="h2">Performance real não nasce no dia da prova.</h2>
-          <p class="lead">
-            Ela é construída no dia a dia — na constância, na leitura correta do corpo e no respeito ao processo físico e mental.
-            A CMTeam existe para atletas que querem <strong>entender</strong> o que fazem e evoluir com <strong>consciência</strong>.
-          </p>
-        </div>
+<section id="instagram" style="background: #FFFFFF">
+<div class="wrap" style="padding-top: 112px; padding-bottom: 40px; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<div style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #CB333B">No Instagram</div>
+<h2 class="disp sec-title" style="margin: 0">@cmteam</h2>
+</div>
+<a href="https://instagram.com/cmteam" style="background: #1A1A1A; color: #FFFFFF; text-decoration: none; font-size: 16px; font-weight: 700; padding: 0 26px; min-height: 48px; border-radius: 999px; display: flex; align-items: center; gap: 10px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.8"></circle></svg>
+Seguir no Instagram</a>
+</div>
+<div class="g6">
+<a href="https://instagram.com/cmteam" aria-label="Ver no Instagram"><img loading="lazy" decoding="async" src="img/bike-grupo-dia.jpg" alt="Pedal do time em Miami" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 10px; display: block"></a>
+<a href="https://instagram.com/cmteam" aria-label="Ver no Instagram"><img loading="lazy" decoding="async" src="img/natacao-silhueta.jpg" alt="Natação em águas abertas ao nascer do sol" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 10px; display: block"></a>
+<a href="https://instagram.com/cmteam" aria-label="Ver no Instagram"><img loading="lazy" decoding="async" src="img/ironman-texas.jpg" alt="Chegada do Ironman Texas" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: center 30%; border-radius: 10px; display: block"></a>
+<a href="https://instagram.com/cmteam" aria-label="Ver no Instagram"><img loading="lazy" decoding="async" src="img/bike-por-do-sol.jpg" alt="Atleta com a bike ao nascer do sol" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 10px; display: block"></a>
+<a href="https://instagram.com/cmteam" aria-label="Ver no Instagram"><img loading="lazy" decoding="async" src="img/natacao-2.jpg" alt="Triatleta antes da natação na Tribeach" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 10px; display: block"></a>
+<a href="https://instagram.com/cmteam" aria-label="Ver no Instagram"><img loading="lazy" decoding="async" src="img/natacao-3.jpg" alt="Atleta na água ao amanhecer em Key Biscayne" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: 65% center; border-radius: 10px; display: block"></a>
+</div>
+</div>
+</section>
 
-        <div class="quote">
-          <p class="quote__text">
-            “Aqui, o atleta não é um número. É alguém que treina, trabalha, erra, aprende — e evolui ao longo do tempo.”
-          </p>
-          <p class="quote__tag">CMTeam</p>
-        </div>
-      </div>
-    </section>
+<section style="background: #FFFFFF">
+<div class="wrap split" style="padding-top: 120px; padding-bottom: 120px">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<div style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #CB333B">Para quem é</div>
+<h2 class="disp sec-title" style="margin: 0">A CMTeam faz sentido para quem…</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4A4A4A">Não é para quem busca atalhos, fórmulas prontas ou motivação vazia.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 0; border-top: 1px solid #E4E1DD">
+<div style="display: flex; gap: 20px; align-items: baseline; padding: 22px 0; border-bottom: 1px solid #E4E1DD">
+<span class="disp" style="font-size: 22px; color: #CB333B">01</span>
+<span style="font-size: 19px; line-height: 1.5; color: #1A1A1A">quer entender o que está fazendo</span>
+</div>
+<div style="display: flex; gap: 20px; align-items: baseline; padding: 22px 0; border-bottom: 1px solid #E4E1DD">
+<span class="disp" style="font-size: 22px; color: #CB333B">02</span>
+<span style="font-size: 19px; line-height: 1.5; color: #1A1A1A">valoriza processo mais do que picos</span>
+</div>
+<div style="display: flex; gap: 20px; align-items: baseline; padding: 22px 0; border-bottom: 1px solid #E4E1DD">
+<span class="disp" style="font-size: 22px; color: #CB333B">03</span>
+<span style="font-size: 19px; line-height: 1.5; color: #1A1A1A">aceita que evolução real exige tempo, consistência e leitura correta do treino</span>
+</div>
+<div style="display: flex; gap: 20px; align-items: baseline; padding: 22px 0; border-bottom: 1px solid #E4E1DD">
+<span class="disp" style="font-size: 22px; color: #CB333B">04</span>
+<span style="font-size: 19px; line-height: 1.5; color: #1A1A1A">busca performance sem abrir mão de saúde, equilíbrio e longevidade esportiva</span>
+</div>
+</div>
+</div>
+</section>
 
-    <!-- COMO TRABALHAMOS -->
-    <section id="como" class="section" aria-label="Como trabalhamos">
-      <div class="container section__inner">
-        <div class="section__headline">
-          <h2 class="h2">Como trabalhamos</h2>
-          <p class="lead lead--muted">
-            Sem complicar. Sem gritar. Com método, contexto e decisões conscientes ao longo do ciclo.
-          </p>
-        </div>
+<section id="contato" style="background: #CB333B; color: #FFFFFF; position: relative; overflow: hidden">
+<img loading="lazy" decoding="async" src="img/cmteam-simbolo-branco.png" alt="" aria-hidden="true" style="position: absolute; right: 40px; bottom: -60px; width: 420px; height: auto; opacity: 0.12">
+<div class="wrap" style="position: relative; padding-top: 112px; padding-bottom: 112px; display: flex; flex-direction: column; gap: 28px; align-items: flex-start">
+<h2 class="disp sec-title" style="margin: 0; color: #FFFFFF; max-width: 820px">Provavelmente estamos falando a mesma língua.</h2>
+<p style="margin: 0; font-size: 20px; line-height: 1.55; color: #FFFFFF; max-width: 620px">Se você procura um trabalho consciente, estruturado e com visão de longo prazo, conte o seu objetivo para a gente.</p>
+<div style="display: flex; gap: 14px; flex-wrap: wrap">
+<a href="https://wa.me/13053959104?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20CMTeam." style="background: #FFFFFF; color: #111111; text-decoration: none; font-size: 17px; font-weight: 700; padding: 18px 30px; border-radius: 999px">Falar no WhatsApp</a>
+<a href="https://instagram.com/cmteam" style="border: 2px solid #FFFFFF; color: #FFFFFF; text-decoration: none; font-size: 17px; font-weight: 700; padding: 17px 30px; border-radius: 999px">Seguir @cmteam</a>
+</div>
+<div style="font-size: 15px; color: #FFFFFF">+1 305.395.9104</div>
+</div>
+</section>
 
-        <div class="cards">
-          <article class="card">
-            <h3 class="h3"><span class="mark">Planejamento com lógica</span></h3>
-            <p class="p">
-              Treinos organizados por ciclo, respeitando o momento do atleta e o tempo de adaptação.
-            </p>
-          </article>
+<footer style="background: #111111; color: #9A9A9A">
+<div class="wrap" style="padding-top: 48px; padding-bottom: 48px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap">
+<img loading="lazy" decoding="async" src="img/cmteam-logo-branco.png" alt="CMTeam" style="height: 26px; width: auto; display: block">
+<div style="font-size: 14px; font-weight: 700; letter-spacing: 1px; color: #D6D6D6">bePatient | beHumble | beStrong</div>
+<div style="font-size: 14px; color: #9A9A9A">cmteam.us · @cmteam · © 2026 CMTeam</div>
+</div>
+</footer>
 
-          <article class="card">
-            <h3 class="h3"><span class="mark">Treinos explicados</span></h3>
-            <p class="p">
-              Cada sessão tem objetivo claro, orientação prática e motivo dentro da semana.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3 class="h3"><span class="mark">Acompanhamento real</span></h3>
-            <p class="p">
-              Ajustes frequentes, leitura do que aconteceu no treino e contato direto com os treinadores.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3 class="h3"><span class="mark">Vida real no planejamento</span></h3>
-            <p class="p">
-              Consideramos rotina, trabalho, família e recuperação — porque evolução precisa caber na vida.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CULTURA -->
-    <section id="cultura" class="section section--light" aria-label="Cultura CMTeam">
-      <div class="container section__inner">
-        <div class="section__headline">
-          <h2 class="h2">Cultura de aprendizado</h2>
-          <p class="lead">
-            A CMTeam é mais do que treino. É <strong>ambiente de aprendizado</strong>.
-            Ao longo da semana, os atletas recebem conteúdo e reflexão que conectam treino, mentalidade e processo.
-            <strong>Treinar bem também é aprender a treinar.</strong>
-          </p>
-        </div>
-
-        <div class="pillars">
-          <div class="pillar">
-            <p class="pillar__kicker">Segunda</p>
-            <p class="pillar__value">Texto reflexivo e conceitual</p>
-          </div>
-          <div class="pillar">
-            <p class="pillar__kicker">Quarta</p>
-            <p class="pillar__value">Infográficos técnicos e educativos</p>
-          </div>
-          <div class="pillar">
-            <p class="pillar__kicker">Sexta</p>
-            <p class="pillar__value">Textos diretos e aplicáveis</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FILTRO -->
-    <section class="section" aria-label="Para quem faz sentido">
-      <div class="container section__inner">
-        <div class="split">
-          <div class="split__left">
-            <h2 class="h2">Para quem a CMTeam faz sentido</h2>
-            <p class="lead lead--muted">
-              A CMTeam não é para quem busca atalhos, fórmulas prontas ou motivação vazia.
-            </p>
-
-            <ul class="list">
-              <li>Quer <strong>entender</strong> o que está fazendo</li>
-              <li>Valoriza <strong>processo</strong> mais do que picos</li>
-              <li>Reconhece que evolução real exige <strong>tempo</strong> e <strong>constância</strong></li>
-              <li>Busca performance sem abrir mão de <strong>saúde</strong> e <strong>longevidade</strong></li>
-            </ul>
-          </div>
-
-          <div class="split__right">
-            <div class="panel">
-              <p class="panel__title">Se isso conversa com você, o próximo passo é simples.</p>
-              <p class="panel__text">
-                A conversa é o começo — para entender seu momento e ver se a CMTeam faz sentido.
-              </p>
-              <div class="panel__buttons">
-                <a class="btn btn--primary btn--large" href="https://wa.me/12017243197" target="_blank" rel="noopener">Chamar no WhatsApp</a>
-                <a class="btn btn--ghost btn--large" href="https://instagram.com/cmteam" target="_blank" rel="noopener">Ver Instagram</a>
-              </div>
-              <p class="panel__fine">
-                *Treinos presenciais existem em períodos e encontros — mas a CMTeam é construída para funcionar forte online.*
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTATO FINAL -->
-    <section id="contato" class="section section--cta" aria-label="Contato">
-      <div class="container section__inner">
-        <div class="cta">
-          <h2 class="cta__title">Quer conversar com a CMTeam?</h2>
-          <p class="cta__text">
-            Se fizer sentido, fala com a gente. Sem pressão, sem atalho — só clareza sobre seu momento e o processo.
-          </p>
-
-          <div class="cta__buttons">
-            <a class="btn btn--primary btn--large" href="https://wa.me/12017243197" target="_blank" rel="noopener">WhatsApp (principal)</a>
-            <a class="btn btn--ghost btn--large" href="mailto:info@cmteam.us?subject=CMTeam%20|%20Contato">Email</a>
-            <a class="btn btn--ghost btn--large" href="https://instagram.com/cmteam" target="_blank" rel="noopener">Instagram</a>
-          </div>
-
-          <div class="cta__motto">
-            bePatient <span>•</span> beHumble <span>•</span> beStrong
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer" aria-label="Rodapé">
-    <div class="container footer__inner">
-      <div class="footer__left">
-        <p class="footer__brand">CMTeam</p>
-        <p class="footer__small">Triathlon • Corrida • Endurance</p>
-      </div>
-
-      <div class="footer__right">
-        <a class="footer__link" href="mailto:info@cmteam.us?subject=CMTeam%20|%20Contato">info@cmteam.us</a>
-        <a class="footer__link" href="https://instagram.com/cmteam" target="_blank" rel="noopener">@cmteam</a>
-        <a class="footer__link" href="https://wa.me/12017243197" target="_blank" rel="noopener">WhatsApp</a>
-      </div>
-    </div>
-  </footer>
+</div>
 </body>
 </html>
