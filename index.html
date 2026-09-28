@@ -38,6 +38,11 @@ a{color:#CB333B}a:hover{color:#F9423A}
 .g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
 .g6{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
 .bookrow{display:flex;gap:32px;align-items:center}
+.igfeed{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
+.igpost{position:relative;display:block;aspect-ratio:4 / 5;border-radius:10px;overflow:hidden;background:#EDEAE6}
+.igpost img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.igpost:hover img{transform:scale(1.04)}
+.igtag{position:absolute;top:8px;right:10px;color:#FFFFFF;font-size:15px;text-shadow:0 1px 4px rgba(0,0,0,.6)}
 .bookcover{flex-shrink:0;width:190px;height:auto;border-radius:3px 8px 8px 3px;box-shadow:0 24px 40px rgba(0,0,0,0.28);display:block}
 .book{flex-shrink:0;width:190px;aspect-ratio:3 / 4.4;border-radius:3px 10px 10px 3px;box-shadow:0 24px 40px rgba(0,0,0,0.22),inset 6px 0 0 rgba(0,0,0,0.18);box-sizing:border-box;padding:22px 18px 18px 26px;display:flex;flex-direction:column;justify-content:space-between}
 @media (max-width:900px){
@@ -53,6 +58,7 @@ a{color:#CB333B}a:hover{color:#F9423A}
 .bookrow{flex-direction:column;align-items:flex-start;gap:24px}
 .book{width:160px}
 .bookcover{width:160px}
+.igfeed{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
 .deco{display:none}
 }
 </style>
@@ -370,14 +376,29 @@ a{color:#CB333B}a:hover{color:#F9423A}
 <h3 class="disp" style="margin: 0; font-size: 32px; line-height: 1">Últimos posts do @cmteam</h3>
 <a href="https://www.instagram.com/cmteam/" target="_blank" rel="noopener" style="font-size: 16px; font-weight: 700; color: #CB333B; text-decoration: none; padding: 10px 0">Ver tudo no Instagram →</a>
 </div>
-<behold-widget feed-id="SiTluHOHlUbMrfE5BYuh"></behold-widget>
+<div id="igfeed" class="igfeed" aria-live="polite"></div>
 </div>
 <script>
-  (() => {
-    if(window.__bhldScript)return;window.__bhldScript=true;
-    const d=document,s=d.createElement("script");s.type="module";
-    s.src="https://w.behold.so/widget.js";setTimeout(()=>{d.head.append(s);},0);
-  })();
+(function(){
+  var FEED='SiTluHOHlUbMrfE5BYuh', box=document.getElementById('igfeed');
+  if(!box) return;
+  function fallback(){
+    box.classList.remove('igfeed');
+    box.innerHTML='<behold-widget feed-id="'+FEED+'"></behold-widget>';
+    var sc=document.createElement('script'); sc.type='module'; sc.src='https://w.behold.so/widget.js'; document.head.appendChild(sc);
+  }
+  function esc(t){return String(t||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  fetch('https://feeds.behold.so/'+FEED).then(function(r){ if(!r.ok) throw 0; return r.json(); }).then(function(d){
+    var posts=(d&&d.posts)||[]; if(!posts.length) throw 0;
+    box.innerHTML=posts.slice(0,6).map(function(p){
+      var sz=p.sizes||{}, img=(sz.medium&&sz.medium.mediaUrl)||(sz.large&&sz.large.mediaUrl)||p.thumbnailUrl||p.mediaUrl;
+      if(!img) return '';
+      var cap=(p.caption||'').split('\n')[0].slice(0,120);
+      var tag=p.mediaType==='VIDEO'?'<span class="igtag">▶</span>':(p.mediaType==='CAROUSEL_ALBUM'?'<span class="igtag">❐</span>':'');
+      return '<a class="igpost" href="'+esc(p.permalink)+'" target="_blank" rel="noopener"><img src="'+esc(img)+'" alt="'+esc(p.altText||cap||'Post do @cmteam no Instagram')+'" loading="lazy" decoding="async">'+tag+'</a>';
+    }).join('');
+  }).catch(fallback);
+})();
 </script>
 </div>
 </section>
