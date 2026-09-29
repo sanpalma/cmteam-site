@@ -38,6 +38,12 @@ a{color:#CB333B}a:hover{color:#F9423A}
 .g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
 .g6{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
 .bookrow{display:flex;gap:32px;align-items:center}
+.hdr-cta{display:flex;gap:10px;align-items:center}
+.hdr-cta a{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:999px;font-size:15px;font-weight:700;text-decoration:none}
+.btn-wa{background:#25D366;color:#0B3D1F}
+.btn-wa:hover{background:#3BE07A;color:#0B3D1F}
+.btn-form{background:transparent;color:#FFFFFF;border:1.5px solid #5A5A5A}
+.btn-form:hover{border-color:#FFFFFF;color:#FFFFFF}
 .closing{font-size:52px;line-height:1.02}
 .loc{line-height:0.95}.loc1{font-size:88px}.loc2{font-size:56px}.loc3{font-size:36px}
 .freebook{background:#1A1A1A;border-radius:20px;padding:40px;display:flex;gap:40px;align-items:center}
@@ -96,6 +102,8 @@ a{color:#CB333B}a:hover{color:#F9423A}
 .contact-grid{grid-template-columns:minmax(0,1fr);gap:40px}
 .freebook{flex-direction:column;align-items:flex-start;padding:28px;gap:24px}
 .closing{font-size:32px !important}
+.hdr-cta a{padding:0 14px}
+.hdr-cta a span{display:none}
 .loc1{font-size:56px !important}.loc2{font-size:38px !important}.loc3{font-size:26px !important}
 .cform{padding:24px}
 .igrow{width:100%;gap:6px}
@@ -119,7 +127,10 @@ a{color:#CB333B}a:hover{color:#F9423A}
 <a href="#conteudo" style="color: #D6D6D6; text-decoration: none; font-size: 15px">Livros e textos</a>
 <a href="#miami" style="color: #D6D6D6; text-decoration: none; font-size: 15px">Treinos em Miami</a>
 </nav>
-<a href="https://wa.me/13053959104?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20CMTeam." style="background: #CB333B; color: #FFFFFF; text-decoration: none; font-size: 15px; font-weight: 700; padding: 0 22px; border-radius: 999px; min-height: 44px; display: flex; align-items: center">Fale com a gente</a>
+<div class="hdr-cta">
+<a class="btn-wa" href="https://wa.me/13053959104?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20CMTeam." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.3z"></path><path d="M9 8.6c0 3.3 3 6.4 6.4 6.4l1.3-1.5-2-1-1 .9c-1-.4-2.2-1.6-2.6-2.6l.9-1-1-2z" fill="currentColor" stroke="none"></path></svg><span>WhatsApp</span></a>
+<a class="btn-form" href="#formulario" aria-label="Formulário de contato"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg><span>Formulário</span></a>
+</div>
 </div>
 </header>
 
@@ -131,7 +142,7 @@ a{color:#CB333B}a:hover{color:#F9423A}
 <h1 class="disp hero-title" style="margin: 0; max-width: 760px; color: #FFFFFF">Aqui, cada treino tem motivo.</h1>
 <p style="margin: 0; font-size: 20px; line-height: 1.55; color: #D0D0D0; max-width: 560px">Assessoria especializada em triathlon, corrida e esportes de endurance. Metodologia própria, acompanhamento próximo e visão de longo prazo — do iniciante ao competitivo.</p>
 <div style="display: flex; gap: 14px; flex-wrap: wrap; padding-top: 8px">
-<a href="https://wa.me/13053959104?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20CMTeam." style="background: #CB333B; color: #FFFFFF; text-decoration: none; font-size: 17px; font-weight: 700; padding: 18px 30px; border-radius: 999px">Falar no WhatsApp</a>
+<a href="https://wa.me/13053959104?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20CMTeam." style="background: #CB333B; color: #FFFFFF; text-decoration: none; font-size: 17px; font-weight: 700; padding: 18px 30px; border-radius: 999px"><span style="display:inline-flex;align-items:center;gap:10px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.3z"></path><path d="M9 8.6c0 3.3 3 6.4 6.4 6.4l1.3-1.5-2-1-1 .9c-1-.4-2.2-1.6-2.6-2.6l.9-1-1-2z" fill="currentColor" stroke="none"></path></svg>Falar no WhatsApp</span></a>
 <a href="#eco" style="border: 1.5px solid #8A8A8A; color: #FFFFFF; text-decoration: none; font-size: 17px; font-weight: 700; padding: 18px 30px; border-radius: 999px">Conheça o método</a>
 </div>
 </div>
@@ -594,7 +605,7 @@ a{color:#CB333B}a:hover{color:#F9423A}
 <a href="mailto:info@cmteam.us" style="color: #FFFFFF; text-decoration: none">info@cmteam.us</a>
 </div>
 </div>
-<form id="contactForm" class="cform" action="https://formsubmit.co/info@cmteam.us" method="POST" novalidate>
+<div id="formulario" style="scroll-margin-top: 24px"><form id="contactForm" class="cform" action="https://formsubmit.co/info@cmteam.us" method="POST" novalidate>
 <h3 class="disp" style="margin: 0; font-size: 32px; line-height: 1; color: #1A1A1A">Peça mais informações</h3>
 <input type="hidden" name="_subject" value="Contato pelo site CMTeam">
 <input type="hidden" name="_template" value="table">
@@ -610,7 +621,7 @@ a{color:#CB333B}a:hover{color:#F9423A}
 <textarea id="cf-msg" name="Mensagem" rows="5" placeholder="Conte seu objetivo, sua prova-alvo e sua rotina de treinos." required></textarea>
 <button type="submit">Enviar mensagem</button>
 <p id="cf-status" class="cstatus" role="status" aria-live="polite"></p>
-</form>
+</form></div>
 </div>
 <script>
 (function(){
@@ -623,7 +634,7 @@ a{color:#CB333B}a:hover{color:#F9423A}
     fetch('https://formsubmit.co/ajax/info@cmteam.us',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
       .then(function(r){ return r.json().then(function(j){ if(!r.ok||j.success==='false'||j.success===false) throw j; return j; }); })
       .then(function(){ f.reset(); st.className='cstatus ok'; st.textContent='Mensagem enviada! Respondemos em breve.'; })
-      .catch(function(){ st.className='cstatus err'; st.innerHTML='Não foi possível enviar agora. Tente de novo ou fale com a gente pelo <a href="https://wa.me/13053959104">WhatsApp</a>.'; })
+      .catch(function(err){ if(window.console) console.warn('Formulário:',err); st.className='cstatus err'; st.innerHTML='Não foi possível enviar agora. Tente de novo ou fale com a gente pelo <a href="https://wa.me/13053959104">WhatsApp</a> ou por <a href="mailto:info@cmteam.us">info@cmteam.us</a>.'; })
       .then(function(){ btn.disabled=false; btn.textContent='Enviar mensagem'; });
   });
 })();
@@ -639,5 +650,16 @@ a{color:#CB333B}a:hover{color:#F9423A}
 </footer>
 
 </div>
+<script>
+/* âncoras: corrige a posição final depois que as imagens preguiçosas carregam no caminho */
+document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a[href^="#"]'); if(!a) return;
+  var id=a.getAttribute('href').slice(1), t=id&&document.getElementById(id); if(!t) return;
+  e.preventDefault(); history.replaceState(null,'','#'+id);
+  t.scrollIntoView({behavior:'smooth',block:'start'});
+  setTimeout(function(){ t.scrollIntoView({behavior:'smooth',block:'start'}); },900);
+  setTimeout(function(){ t.scrollIntoView({block:'start'}); },1800);
+});
+</script>
 </body>
 </html>
