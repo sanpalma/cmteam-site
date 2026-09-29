@@ -78,12 +78,14 @@ section[id],#formulario{scroll-margin-top:24px}
 .foot-free{color:#FFFFFF !important;font-weight:700}
 .free-badge{display:block;width:fit-content;margin-top:6px;line-height:1.3;background:#FFC72C;color:#1A1A1A;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 8px;border-radius:999px;flex-shrink:0}
 #ebook{scroll-margin-top:24px}
-.langsw{display:flex;align-items:center;gap:6px;margin-right:2px;font-size:13px;font-weight:700;letter-spacing:1.5px}
-.langsw a{color:#9A9A9A;text-decoration:none;padding:12px 2px}
-.langsw a:hover{color:#FFFFFF}
-.langsw a.on{color:#FFFFFF}
-.langsw span{color:#CB333B}
-.hdr-cta{display:flex;gap:10px;align-items:center}
+.langsw{display:flex;align-items:center;gap:2px;margin-right:2px}
+.langsw a{display:flex;align-items:center;justify-content:center;width:36px;height:44px;border-radius:8px;opacity:.45;filter:grayscale(.6);transition:opacity .2s,filter .2s}
+.langsw a:hover{opacity:1;filter:none}
+.langsw a.on{opacity:1;filter:none}
+@media (max-width:340px){.site-hdr .wrap{padding-left:12px;padding-right:12px}.hdr-cta{gap:4px}.hdr-cta a{padding:0 10px !important}.langsw a{width:28px !important}}
+@media (max-width:380px){.site-hdr img{height:24px !important}.hdr-cta a{padding:0 12px !important}.langsw a{width:32px}}
+.flag{width:28px;height:20px;display:block;border-radius:3px;box-shadow:0 0 0 1px rgba(255,255,255,.25)}
+.hdr-cta{display:flex;gap:8px;align-items:center}
 .hdr-cta a{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 15px;border-radius:999px;font-size:15px;font-weight:700;text-decoration:none}
 .btn-wa{background:#25D366;color:#0B3D1F}
 .btn-wa:hover{background:#3BE07A;color:#0B3D1F}
@@ -188,7 +190,7 @@ section[id],#formulario{scroll-margin-top:24px}
 <a href="#miami">Treinos</a>
 </nav>
 <div class="hdr-cta">
-<nav class="langsw" aria-label="Idioma / Language"><a href="./" class="on" aria-current="page" lang="pt-BR">PT</a><span aria-hidden="true">|</span><a href="en/" lang="en" hreflang="en">EN</a></nav>
+<nav class="langsw" aria-label="Idioma / Language"><a href="./" class="on" aria-current="page" lang="pt-BR" title="Português" aria-label="Português"><svg class="flag" viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="3" fill="#009C3B"></rect><path d="M14 3 25 10 14 17 3 10Z" fill="#FFDF00"></path><circle cx="14" cy="10" r="4.2" fill="#002776"></circle><path d="M10 9.2c2.6-.6 5.4-.3 7.9 1" stroke="#FFFFFF" stroke-width="1" fill="none"></path></svg></a><a href="en/" lang="en" hreflang="en" title="English" aria-label="English"><svg class="flag" viewBox="0 0 28 20" aria-hidden="true"><defs><clipPath id="fr"><rect width="28" height="20" rx="3"></rect></clipPath></defs><g clip-path="url(#fr)"><rect width="28" height="20" fill="#FFFFFF"></rect><g fill="#B22234"><rect y="0" width="28" height="1.54"></rect><rect y="3.08" width="28" height="1.54"></rect><rect y="6.15" width="28" height="1.54"></rect><rect y="9.23" width="28" height="1.54"></rect><rect y="12.31" width="28" height="1.54"></rect><rect y="15.38" width="28" height="1.54"></rect><rect y="18.46" width="28" height="1.54"></rect></g><rect width="12" height="10.77" fill="#3C3B6E"></rect></g></svg></a></nav>
 <a class="btn-wa" href="https://wa.me/13053959104?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20CMTeam." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.3z"></path><path d="M9 8.6c0 3.3 3 6.4 6.4 6.4l1.3-1.5-2-1-1 .9c-1-.4-2.2-1.6-2.6-2.6l.9-1-1-2z" fill="currentColor" stroke="none"></path></svg><span>WhatsApp</span></a>
 <a class="btn-form" href="#formulario" aria-label="Fale conosco"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg><span>Fale conosco</span></a>
 </div>
