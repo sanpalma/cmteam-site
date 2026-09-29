@@ -7,10 +7,8 @@
 <meta name="description" content="Assessoria de triathlon, corrida e esportes de endurance. Metodologia ECO, acompanhamento próximo e visão de longo prazo — do iniciante ao competitivo. Miami e online.">
 <link rel="canonical" href="https://cmteam.us/">
 <meta name="theme-color" content="#111111">
-<link rel="icon" href="favicon.ico" sizes="48x48">
-<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png?v=2">
-<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png?v=2">
-<link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=2">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png?v=3">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=3">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CMTeam">
 <meta property="og:locale" content="pt_BR">
@@ -49,8 +47,9 @@ a{color:#CB333B}a:hover{color:#F9423A}
 .totop.show{opacity:1;pointer-events:auto;transform:none}
 @media (max-width:1100px){.hdr-cta a{padding:0 14px}.hdr-cta a span{display:none}}
 .totop:hover{background:#F9423A;color:#FFFFFF}
-.site-hdr{position:sticky;top:0;z-index:40}
-section[id],#formulario{scroll-margin-top:84px}
+.site-hdr{position:sticky;top:0;z-index:40;transition:transform .3s ease}
+.site-hdr.hide{transform:translateY(-100%)}
+section[id],#formulario{scroll-margin-top:24px}
 .races{background:#161616;border-top:1px solid #262626}
 .races-label{flex-shrink:0;font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#FFC72C}
 .races-list{display:flex;flex-wrap:wrap;gap:6px 12px;font-size:15px;color:#D6D6D6}
@@ -61,6 +60,10 @@ section[id],#formulario{scroll-margin-top:84px}
 .foot-h{font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#FFFFFF;margin-bottom:8px}
 .foot-col a{color:#B5B5B5;text-decoration:none;font-size:15px;padding:6px 0}
 .foot-col a:hover{color:#FFFFFF}
+.transicao{grid-column:2;margin-top:-44px;background:#FFC72C;color:#1A1A1A;border-radius:14px;padding:20px 22px;display:flex;gap:18px;align-items:flex-start}
+.transicao-tag{flex-shrink:0;font-family:'Barlow Condensed',Arial,sans-serif;font-weight:800;font-style:italic;text-transform:uppercase;font-size:24px;line-height:1.1;color:#1A1A1A}
+.transicao strong{display:block;font-size:17px;margin-bottom:4px}
+.transicao span{font-size:16px;line-height:1.5;color:#2A2A2A}
 .hdr-cta{display:flex;gap:10px;align-items:center}
 .hdr-cta a{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:999px;font-size:15px;font-weight:700;text-decoration:none}
 .btn-wa{background:#25D366;color:#0B3D1F}
@@ -125,6 +128,7 @@ section[id],#formulario{scroll-margin-top:84px}
 .contact-grid{grid-template-columns:minmax(0,1fr);gap:40px}
 .freebook{flex-direction:column;align-items:flex-start;padding:28px;gap:24px}
 .closing{font-size:32px !important}
+.transicao{flex-direction:column;gap:6px;grid-column:1;margin-top:-8px}
 .races .wrap{flex-direction:column;align-items:flex-start;gap:12px}
 .foot{grid-template-columns:1fr 1fr;gap:32px}
 .foot-brand{grid-column:1 / -1}
@@ -499,7 +503,6 @@ section[id],#formulario{scroll-margin-top:84px}
 <span class="loc2">Key Biscayne</span>
 <span class="loc3" style="color: #CB333B">Tribeach</span>
 </h2>
-<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #B5B5B5">Eventualmente, também realizamos treinos de transição e simulações de prova.</p>
 </div>
 <div class="sched" style="border-top: 1px solid #333333">
 <div class="disp" style="font-size: 24px; padding: 20px 0; border-bottom: 1px solid #333333; color: #CB333B">Terça</div>
@@ -510,6 +513,13 @@ section[id],#formulario{scroll-margin-top:84px}
 <div style="font-size: 17px; line-height: 1.5; padding: 22px 0; border-bottom: 1px solid #333333; color: #E6E6E6">Corrida 6h00–7h20 · Natação 7h20–8h00</div>
 <div class="disp" style="font-size: 24px; padding: 20px 0; border-bottom: 1px solid #333333; color: #CB333B">Sábado</div>
 <div style="font-size: 17px; line-height: 1.5; padding: 22px 0; border-bottom: 1px solid #333333; color: #E6E6E6">Longo de corrida · Natação em águas abertas</div>
+</div>
+<div class="transicao">
+<div class="transicao-tag"># Transição</div>
+<div>
+<strong>Todo mês tem treino de transição.</strong>
+<span>Uma ou duas vezes por mês, bike e corrida na sequência, na Tribeach, com a data avisada no grupo. É o treino preferido do time.</span>
+</div>
 </div>
 </div>
 </div>
@@ -641,7 +651,7 @@ section[id],#formulario{scroll-margin-top:84px}
 <a href="mailto:info@cmteam.us" style="color: #FFFFFF; text-decoration: none">info@cmteam.us</a>
 </div>
 </div>
-<div id="formulario" style="scroll-margin-top: 84px"><form id="contactForm" class="cform" action="https://api.web3forms.com/submit" method="POST" novalidate>
+<div id="formulario" style="scroll-margin-top: 24px"><form id="contactForm" class="cform" action="https://api.web3forms.com/submit" method="POST" novalidate>
 <h3 class="disp" style="margin: 0; font-size: 32px; line-height: 1; color: #1A1A1A">Fale conosco</h3>
 <input type="hidden" name="access_key" value="4fbd40f7-9888-4961-8a3f-21586cd9a8e8">
 <input type="hidden" name="subject" value="Contato pelo site CMTeam">
@@ -723,6 +733,16 @@ document.addEventListener('click',function(e){
   setTimeout(function(){ t.scrollIntoView({behavior:'smooth',block:'start'}); },900);
   setTimeout(function(){ t.scrollIntoView({block:'start'}); },1800);
 });
+</script>
+<script>
+/* menu: some ao rolar para baixo, volta ao rolar para cima */
+(function(){ var h=document.querySelector('.site-hdr'), last=scrollY, lock=0;
+  document.addEventListener('click',function(e){ if(e.target.closest&&e.target.closest('a[href^="#"]')){ lock=Date.now()+2200; h.classList.add('hide'); } });
+  addEventListener('scroll',function(){ var y=scrollY;
+    if(Date.now()<lock){ last=y; return; }
+    if(y<120||y<last-6) h.classList.remove('hide'); else if(y>last+6) h.classList.add('hide');
+    last=y; },{passive:true});
+})();
 </script>
 </body>
 </html>
