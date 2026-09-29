@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Cadastro do atleta — CMTeam</title>
+<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png?v=3">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png?v=3">
+<meta name="theme-color" content="#111111">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;1,800&amp;display=swap" rel="stylesheet">
+<style>
+:root{--red:#CB333B;--ink:#1A1A1A;--dark:#111111;--sand:#F6F4F1;--line:#E4E1DD;--muted:#5A5A5A;--gold:#FFC72C}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--sand);color:var(--ink);-webkit-font-smoothing:antialiased}
+.disp{font-family:'Barlow Condensed',Arial,sans-serif;font-weight:800;font-style:italic;text-transform:uppercase}
+a{color:var(--red)}
+.top{background:var(--dark);color:#fff}
+.top .in{max-width:880px;margin:0 auto;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.top img{height:28px;width:auto;display:block}
+.lang{display:flex;border:1.5px solid #4A4A4A;border-radius:999px;overflow:hidden}
+.lang button{background:transparent;color:#D6D6D6;border:0;font:inherit;font-size:13px;font-weight:700;letter-spacing:1px;padding:0 14px;min-height:40px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:#fff;color:var(--dark)}
+.hero{background:var(--dark);color:#fff;padding:28px 20px 40px}
+.hero .in{max-width:880px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold)}
+.hero h1{margin:0;font-size:56px;line-height:.95}
+.hero p{margin:0;font-size:17px;line-height:1.6;color:#C9C9C9;max-width:680px}
+.hero .sig{font-size:15px;color:#fff;font-weight:700}
+.wrap{max-width:880px;margin:0 auto;padding:0 20px 80px}
+.progress{position:sticky;top:0;z-index:5;background:var(--sand);padding:18px 0 14px;border-bottom:1px solid var(--line)}
+.steps{display:flex;gap:6px}
+.steps span{flex:1;height:6px;border-radius:999px;background:#DDD8D2}
+.steps span.past{background:var(--red)}
+.steps span.cur{background:var(--ink)}
+.plabel{margin-top:10px;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+.card{background:#fff;border-radius:20px;padding:36px;margin-top:24px;box-shadow:0 1px 0 rgba(0,0,0,.03)}
+.card h2{margin:0 0 6px;font-size:40px;line-height:1}
+.card .lead{margin:0 0 8px;font-size:16px;line-height:1.6;color:var(--muted)}
+.sub{margin:34px 0 4px;font-size:13px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--red);padding-top:22px;border-top:1px solid var(--line)}
+.sub:first-of-type{border-top:0;padding-top:0}
+.subnote{margin:0 0 6px;font-size:14px;color:var(--muted);line-height:1.5}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 20px}
+.f{display:flex;flex-direction:column;gap:8px;margin-top:18px;min-width:0}
+.f.full{grid-column:1 / -1}
+.f>label,.f>.lbl{font-size:15px;font-weight:700;line-height:1.35}
+.req{color:var(--red)}
+.hint{font-size:13px;color:var(--muted);line-height:1.4;margin-top:-2px}
+input[type=text],input[type=email],input[type=tel],input[type=date],input[type=number],select,textarea{font:inherit;font-size:16px;color:var(--ink);background:var(--sand);border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;min-height:48px;width:100%}
+textarea{min-height:96px;resize:vertical;line-height:1.5}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--red);background:#fff}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;width:1px;height:1px}
+.opt span{display:flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid var(--line);background:var(--sand);font-size:15px;cursor:pointer;user-select:none}
+.opt input:checked+span{background:var(--ink);border-color:var(--ink);color:#fff}
+.opt input:focus-visible+span{outline:3px solid var(--gold);outline-offset:2px}
+.big .opt span{min-height:64px;padding:0 22px;font-size:17px;font-weight:700;border-radius:16px}
+.scale .opt span{width:48px;justify-content:center;padding:0}
+.scalelegend{display:flex;justify-content:space-between;max-width:288px;font-size:12px;color:var(--muted)}
+.matrix{overflow-x:auto;margin-top:6px}
+.matrix table{border-collapse:separate;border-spacing:0;width:100%;min-width:560px}
+.matrix th,.matrix td{padding:8px 6px;text-align:center;font-size:14px}
+.matrix th{font-weight:700;color:var(--muted);font-size:12px;letter-spacing:1px;text-transform:uppercase}
+.matrix td:first-child,.matrix th:first-child{text-align:left;font-weight:700;color:var(--ink);font-size:14px;letter-spacing:0;text-transform:none;white-space:nowrap;padding-right:14px}
+.matrix tr+tr td{border-top:1px solid var(--line)}
+.cb{display:inline-flex;width:40px;height:40px;align-items:center;justify-content:center;cursor:pointer}
+.cb input{width:22px;height:22px;accent-color:var(--red);cursor:pointer}
+.race{border:1.5px solid var(--line);border-radius:14px;padding:4px 18px 18px;margin-top:14px;position:relative}
+.race .rm{position:absolute;top:10px;right:10px;background:transparent;border:0;color:var(--muted);font-size:14px;cursor:pointer;min-height:36px;padding:0 10px;border-radius:8px}
+.race .rm:hover{background:var(--sand);color:var(--red)}
+.addbtn{margin-top:14px;background:transparent;border:1.5px dashed #BDB7B0;border-radius:12px;min-height:48px;font:inherit;font-size:15px;font-weight:700;color:var(--ink);cursor:pointer;width:100%}
+.addbtn:hover{border-color:var(--red);color:var(--red)}
+.alert{margin-top:18px;background:#FFF4D6;border:1.5px solid var(--gold);border-radius:14px;padding:16px 18px;font-size:15px;line-height:1.5}
+.consent{display:flex;gap:12px;align-items:flex-start;margin-top:18px;font-size:15px;line-height:1.5;cursor:pointer}
+.consent input{width:22px;height:22px;margin-top:1px;accent-color:var(--red);flex-shrink:0}
+.nav{display:flex;justify-content:space-between;gap:12px;margin-top:28px}
+.btn{font:inherit;font-size:16px;font-weight:700;border-radius:999px;min-height:54px;padding:0 28px;cursor:pointer;border:0}
+.btn.pri{background:var(--red);color:#fff;margin-left:auto}
+.btn.pri:hover{background:#B02A31}
+.btn.sec{background:transparent;color:var(--ink);border:1.5px solid #BDB7B0}
+.btn:disabled{opacity:.6;cursor:wait}
+.err{color:#B3261E;font-size:14px;margin-top:10px;min-height:1em}
+.f.invalid input,.f.invalid select,.f.invalid textarea{border-color:#B3261E}
+.f.invalid .opts .opt span{border-color:#E7A5A1}
+.saved{font-size:13px;color:var(--muted);text-align:center;margin-top:18px}
+.done{text-align:center;padding:56px 36px}
+.done h2{font-size:48px}
+.foot{text-align:center;font-size:13px;color:var(--muted);padding:24px 20px 40px}
+@media (max-width:700px){
+.hero h1{font-size:40px}
+.card{padding:24px 18px;border-radius:16px}
+.card h2{font-size:32px}
+.grid{grid-template-columns:minmax(0,1fr)}
+.btn{padding:0 20px}
+.matrix table{min-width:0}
+.matrix th,.matrix td{padding:6px 1px;font-size:11px}
+.matrix td:first-child,.matrix th:first-child{white-space:normal;font-size:13px;padding-right:6px}
+.cb{width:30px;height:36px}
+.cb input{width:20px;height:20px}
+}
+</style>
+</head>
+<body>
+<div class="top"><div class="in">
+<a href="../" aria-label="CMTeam"><img src="../img/cmteam-logo-branco.png" alt="CMTeam"></a>
+<div class="lang" role="group" aria-label="Idioma / Language">
+<button type="button" data-lang="pt" aria-pressed="true">PT</button>
+<button type="button" data-lang="en" aria-pressed="false">EN</button>
+</div>
+</div></div>
+<header class="hero"><div class="in">
+<div class="eyebrow" data-t="eyebrow"></div>
+<h1 class="disp" data-t="title"></h1>
+<p data-t="intro"></p>
+<p class="sig" data-t="sig"></p>
+</div></header>
+
+<main class="wrap">
+<div class="progress" id="progress"><div class="steps" id="bars"></div><div class="plabel" id="plabel"></div></div>
+<form id="form" novalidate autocomplete="on">
+<div class="card" id="card"></div>
+<div class="nav">
+<button type="button" class="btn sec" id="back"></button>
+<button type="submit" class="btn pri" id="next"></button>
+</div>
+<p class="err" id="err" role="alert"></p>
+<p class="saved" data-t="saved"></p>
+</form>
+</main>
+<div class="foot">CMTeam · cmteam.us · bePatient | beHumble | beStrong</div>
+
+<script>
+(function(){
+var ACCESS_KEY='4fbd40f7-9888-4961-8a3f-21586cd9a8e8';
+var STORE='cmteam-cadastro-v1';
+
+/* ---------- textos de interface ---------- */
+var UI={
+ pt:{eyebrow:'CMTeam · Ficha do atleta',title:'Bem-vindo(a) ao time',
+  intro:'Este cadastro é o ponto de partida do seu plano. Quanto mais a gente conhecer da sua rotina, do seu histórico e dos seus objetivos, mais preciso será cada treino. Leva cerca de 10 minutos, e seu progresso fica salvo neste aparelho — pode parar e continuar depois.',
+  sig:'San Palma e Carla Moreno',saved:'Seu progresso é salvo automaticamente neste aparelho.',
+  back:'Voltar',next:'Continuar',send:'Enviar cadastro',sending:'Enviando…',step:'Etapa',of:'de',
+  required:'Preencha os campos obrigatórios destacados.',sendErr:'Não foi possível enviar agora. Tente de novo em instantes ou fale com a gente pelo WhatsApp +1 305.395.9104.',
+  doneT:'Cadastro recebido!',doneP:'Obrigado pela confiança. Vamos ler tudo com atenção e entrar em contato para os próximos passos.',doneS:'bePatient | beHumble | beStrong',
+  add:'+ Adicionar prova',remove:'Remover',race:'Prova',yes:'Sim',no:'Não',opt:'opcional',
+  scaleLo:'1 · fraco',scaleHi:'5 · excelente',parqAlert:'Como você respondeu “sim” a pelo menos uma pergunta, recomendamos uma avaliação médica antes de iniciar ou aumentar a carga de treinos. Isso não impede o cadastro — só nos ajuda a planejar com segurança.'},
+ en:{eyebrow:'CMTeam · Athlete intake',title:'Welcome to the team',
+  intro:'This form is the starting point of your plan. The more we know about your routine, your background and your goals, the more precise every session will be. It takes about 10 minutes, and your progress is saved on this device — you can stop and come back later.',
+  sig:'San Palma & Carla Moreno',saved:'Your progress is saved automatically on this device.',
+  back:'Back',next:'Continue',send:'Submit',sending:'Sending…',step:'Step',of:'of',
+  required:'Please fill in the highlighted required fields.',sendErr:'We could not send it right now. Please try again in a moment or reach us on WhatsApp +1 305.395.9104.',
+  doneT:'All set!',doneP:'Thank you for your trust. We will read everything carefully and get in touch with the next steps.',doneS:'bePatient | beHumble | beStrong',
+  add:'+ Add a race',remove:'Remove',race:'Race',yes:'Yes',no:'No',opt:'optional',
+  scaleLo:'1 · poor',scaleHi:'5 · excellent',parqAlert:'Since you answered “yes” to at least one question, we recommend a medical evaluation before starting or increasing your training load. It does not stop your registration — it just helps us plan safely.'}
+};
+
+/* ---------- helpers de opções ---------- */
+function o(v,pt,en){return{v:v,pt:pt,en:en||pt};}
+var YN=[o('sim','Sim','Yes'),o('nao','Não','No')];
+var DAYS=[o('seg','Seg','Mon'),o('ter','Ter','Tue'),o('qua','Qua','Wed'),o('qui','Qui','Thu'),o('sex','Sex','Fri'),o('sab','Sáb','Sat'),o('dom','Dom','Sun')];
+function T(pt,en){return{pt:pt,en:en};}
+var isTri=function(s){return s.perfil==='triathlon';};
+var isTrail=function(s){return s.perfil==='trail';};
+var hasPerfil=function(s){return !!s.perfil;};
+function U(s){var imp=s.unidades==='imperial';return{d:imp?'mi':'km',w:imp?'lb':'kg',h:imp?'ft/in':'cm',sw:imp?'yd':'m'};}
+
+function runFields(){return[
+ {id:'run_anos',type:'number',label:T('Há quantos anos você corre?','How many years have you been running?')},
+ {id:'run_km',type:'text',label:T('Volume semanal atual ({d})','Current weekly volume ({d})')},
+ {id:'run_freq',type:'select',label:T('Frequência semanal','Runs per week'),opts:[o('0','0'),o('1-2','1–2'),o('3','3'),o('4','4'),o('5','5'),o('6+','6+')]},
+ {id:'run_longa',type:'text',label:T('Corrida mais longa até hoje (distância e tempo)','Longest run so far (distance and time)')},
+ {id:'run_limite',type:'text',label:T('O que você consegue correr hoje com conforto?','What can you comfortably run today?'),hint:T('Ex.: 10 {d} em 1h','E.g. 10 {d} in 1h')},
+ {id:'run_acesso',type:'chips',label:T('Onde você corre','Where you run'),opts:[o('rua','Rua','Road'),o('parque','Parque / trilha leve','Park / light trail'),o('pista','Pista de atletismo','Track'),o('esteira','Esteira','Treadmill')]},
+ {id:'run_equip',type:'chips',full:1,label:T('Equipamentos de corrida','Running gear'),opts:[o('gps','Relógio GPS','GPS watch'),o('cinta','Cinta cardíaca','Chest strap HR'),o('stryd','Stryd / potência','Stryd / power'),o('placa','Tênis de placa','Carbon-plate shoes')]},
+ {id:'run_limitacoes',type:'textarea',full:1,label:T('Suas maiores limitações na corrida','Your biggest limitations in running')},
+ {id:'run_fortes',type:'textarea',full:1,label:T('Seus pontos fortes na corrida','Your strengths in running')},
+ {id:'run_recente',type:'textarea',full:1,label:T('O que você treinou nas últimas 2 semanas?','What have you trained in the last 2 weeks?')}
+];}
+
+/* ---------- etapas ---------- */
+var STEPS=[
+{key:'voce',title:T('Você','You'),lead:T('Seus dados e o tipo de treino que você procura.','Your details and the type of training you are looking for.'),blocks:[
+ {sub:T('Modalidade','Discipline'),fields:[
+  {id:'perfil',type:'radio',big:1,full:1,req:1,label:T('Para qual modalidade é o seu plano?','Which discipline is your plan for?'),opts:[o('triathlon','Triathlon'),o('corrida','Corrida de rua','Road running'),o('trail','Trail running')]}
+ ]},
+ {sub:T('Informações pessoais','Personal information'),fields:[
+  {id:'nome',type:'text',req:1,ac:'name',label:T('Nome completo','Full name')},
+  {id:'apelido',type:'text',label:T('Como gostaria de ser chamado(a)','What should we call you?')},
+  {id:'nascimento',type:'date',req:1,ac:'bday',label:T('Data de nascimento','Date of birth')},
+  {id:'sexo',type:'radio',label:T('Sexo','Sex'),opts:[o('feminino','Feminino','Female'),o('masculino','Masculino','Male'),o('nao-informar','Prefiro não informar','Prefer not to say')]},
+  {id:'email',type:'email',req:1,ac:'email',label:T('E-mail','Email')},
+  {id:'telefone',type:'tel',req:1,ac:'tel',label:T('Celular / WhatsApp','Mobile / WhatsApp'),hint:T('Com código do país, ex.: +55 11 99999-9999','Include country code, e.g. +1 305 555 0000')},
+  {id:'cidade',type:'text',req:1,ac:'address-level2',label:T('Cidade','City')},
+  {id:'pais',type:'text',req:1,ac:'country-name',label:T('País','Country')},
+  {id:'idioma',type:'radio',label:T('Idioma preferido para a comunicação','Preferred language'),opts:[o('pt','Português','Portuguese'),o('en','Inglês','English'),o('es','Espanhol','Spanish')]},
+  {id:'unidades',type:'radio',label:T('Você treina em','You train in'),opts:[o('metrico','Métrico (km, kg)','Metric (km, kg)'),o('imperial','Imperial (mi, lb)','Imperial (mi, lb)')]}
+ ]},
+ {sub:T('Contato de emergência','Emergency contact'),fields:[
+  {id:'emerg_nome',type:'text',req:1,label:T('Nome','Name')},
+  {id:'emerg_parentesco',type:'text',label:T('Parentesco / relação','Relationship')},
+  {id:'emerg_tel',type:'tel',req:1,label:T('Telefone','Phone')}
+ ]},
+ {sub:T('Plataformas e time','Platforms & team'),fields:[
+  {id:'relogio',type:'select',label:T('Relógio / dispositivo','Watch / device'),opts:[o('garmin','Garmin'),o('coros','Coros'),o('apple','Apple Watch'),o('polar','Polar'),o('suunto','Suunto'),o('outro','Outro','Other'),o('nenhum','Nenhum','None')]},
+  {id:'strava',type:'text',label:T('Usuário no Strava ou TrainingPeaks','Strava or TrainingPeaks username'),hint:T('opcional','optional')},
+  {id:'instagram',type:'text',label:T('Instagram','Instagram'),hint:T('opcional','optional')},
+  {id:'camiseta',type:'select',label:T('Tamanho de camiseta','T-shirt size'),opts:[o('PP','PP / XS'),o('P','P / S'),o('M','M / M'),o('G','G / L'),o('GG','GG / XL'),o('XG','XG / XXL')]},
+  {id:'origem',type:'select',full:1,label:T('Como conheceu a CMTeam?','How did you hear about CMTeam?'),opts:[o('indicacao','Indicação de amigo / atleta','Friend / athlete referral'),o('instagram','Instagram'),o('site','Site / Google','Website / Google'),o('treino','Treino ou prova','Training session or race'),o('livro','Livro','Book'),o('outro','Outro','Other')]}
+ ]}
+]},
+{key:'saude',title:T('Saúde','Health'),lead:T('Perguntas de prontidão para a atividade física e seu histórico. Suas respostas ficam só com os treinadores.','Physical activity readiness questions and your history. Your answers stay with the coaches only.'),blocks:[
+ {sub:T('Prontidão para a atividade física','Physical activity readiness'),fields:[
+  {id:'parq1',type:'radio',req:1,full:1,opts:YN,label:T('Algum médico já disse que você tem problema cardíaco ou pressão alta?','Has a doctor ever said you have a heart condition or high blood pressure?')},
+  {id:'parq2',type:'radio',req:1,full:1,opts:YN,label:T('Você sente dor no peito em repouso, no dia a dia ou durante atividade física?','Do you feel chest pain at rest, in daily life or during physical activity?')},
+  {id:'parq3',type:'radio',req:1,full:1,opts:YN,label:T('Nos últimos 12 meses, perdeu o equilíbrio por tontura ou perdeu a consciência?','In the past 12 months, have you lost balance due to dizziness or lost consciousness?')},
+  {id:'parq4',type:'radio',req:1,full:1,opts:YN,label:T('Você tem alguma outra condição crônica diagnosticada?','Have you been diagnosed with any other chronic condition?')},
+  {id:'parq5',type:'radio',req:1,full:1,opts:YN,label:T('Toma medicamentos prescritos para alguma condição crônica?','Do you take prescribed medication for a chronic condition?')},
+  {id:'parq6',type:'radio',req:1,full:1,opts:YN,label:T('Tem problema ósseo, articular ou muscular que pode piorar com atividade física?','Do you have a bone, joint or muscle problem that could get worse with physical activity?')},
+  {id:'parq7',type:'radio',req:1,full:1,opts:YN,label:T('Algum médico já disse que você só deve fazer atividade física com supervisão médica?','Has a doctor ever said you should only do medically supervised physical activity?')},
+  {id:'parq_alert',type:'alert',show:function(s){for(var i=1;i<=7;i++)if(s['parq'+i]==='sim')return true;return false;}},
+  {id:'cardio',type:'radio',full:1,label:T('Fez avaliação cardiológica ou teste de esforço nos últimos 12 meses?','Have you had a cardiology check-up or stress test in the past 12 months?'),opts:[o('sim','Sim','Yes'),o('nao','Não','No'),o('nunca','Nunca fiz','Never had one')]},
+  {id:'familia_cardio',type:'radio',full:1,label:T('Algum parente próximo teve problema cardíaco antes dos 50 anos?','Has a close relative had a heart problem before age 50?'),opts:[o('sim','Sim','Yes'),o('nao','Não','No'),o('nao-sei','Não sei','Not sure')]}
+ ]},
+ {sub:T('Histórico médico','Medical history'),fields:[
+  {id:'doencas',type:'textarea',full:1,label:T('Doenças crônicas ou pré-existentes','Chronic or pre-existing conditions')},
+  {id:'cirurgias',type:'textarea',label:T('Cirurgias','Surgeries')},
+  {id:'medicamentos',type:'textarea',label:T('Medicamentos em uso','Current medication')},
+  {id:'alergias',type:'text',label:T('Alergias','Allergies')},
+  {id:'lesoes',type:'textarea',full:1,label:T('Lesões (ossos, articulações, músculos) e tratamentos','Injuries (bones, joints, muscles) and treatments')},
+  {id:'interfere',type:'textarea',full:1,label:T('Algum problema que interfira no seu treino?','Anything that could interfere with your training?')}
+ ]},
+ {sub:T('Medidas (se souber)','Measurements (if known)'),note:T('Todas opcionais. Usamos apenas para calibrar zonas e cargas.','All optional. We only use them to calibrate zones and loads.'),fields:[
+  {id:'peso',type:'text',label:T('Peso ({w})','Weight ({w})')},
+  {id:'altura',type:'text',label:T('Altura ({h})','Height ({h})')},
+  {id:'fc_rep',type:'text',label:T('FC de repouso (bpm)','Resting heart rate (bpm)')},
+  {id:'fc_max',type:'text',label:T('FC máxima (bpm)','Max heart rate (bpm)')},
+  {id:'pa',type:'text',label:T('Pressão arterial em repouso','Resting blood pressure'),hint:T('Ex.: 12x8','E.g. 120/80')},
+  {id:'peso_ok',type:'select',label:T('Seu peso atual é o que você considera adequado?','Is your current weight what you consider right for you?'),opts:[o('sim','Sim','Yes'),o('reduzir','Gostaria de reduzir','I would like to lose some'),o('aumentar','Gostaria de aumentar','I would like to gain some'),o('conversar','Prefiro conversar','I prefer to talk about it')]}
+ ]}
+]},
+{key:'rotina',title:T('Rotina','Routine'),lead:T('O plano precisa caber na sua vida — trabalho, família, sono e recuperação contam tanto quanto o treino.','The plan has to fit your life — work, family, sleep and recovery matter as much as training.'),blocks:[
+ {sub:T('Estilo de vida','Lifestyle'),fields:[
+  {id:'trabalho',type:'text',label:T('Profissão / trabalho','Occupation')},
+  {id:'rotina_trab',type:'chips',label:T('Sua rotina de trabalho','Your work routine'),opts:[o('fixo','Horário fixo','Fixed hours'),o('flex','Flexível','Flexible'),o('turnos','Turnos','Shifts'),o('home','Home office','Remote')]},
+  {id:'viagens',type:'radio',label:T('Viaja a trabalho?','Do you travel for work?'),opts:[o('nao','Não','No'),o('as-vezes','Às vezes','Sometimes'),o('frequente','Com frequência','Often')]},
+  {id:'sono',type:'select',label:T('Horas de sono por noite','Hours of sleep per night'),opts:[o('<6','Menos de 6','Less than 6'),o('6-7','6 a 7','6 to 7'),o('7-8','7 a 8','7 to 8'),o('8+','Mais de 8','More than 8')]},
+  {id:'estresse',type:'scale',label:T('Nível de estresse no dia a dia','Everyday stress level'),lo:T('1 · baixo','1 · low'),hi:T('5 · alto','5 · high')},
+  {id:'familia',type:'text',label:T('Família (filhos, rotina da casa)','Family (children, home routine)')},
+  {id:'hobbies',type:'text',full:1,label:T('Hobbies e outras atividades','Hobbies and other activities')}
+ ]},
+ {sub:T('Disponibilidade','Availability'),fields:[
+  {id:'horas',type:'select',req:1,label:T('Horas por semana para treinar','Hours per week for training'),opts:[o('3-5','3 a 5','3 to 5'),o('5-8','5 a 8','5 to 8'),o('8-12','8 a 12','8 to 12'),o('12-16','12 a 16','12 to 16'),o('16+','Mais de 16','More than 16')]},
+  {id:'descanso',type:'select',label:T('Melhor dia para descanso','Best rest day'),opts:DAYS},
+  {id:'periodo',type:'chips',full:1,label:T('Horários que funcionam para você','Times that work for you'),opts:[o('madrugada','Antes das 6h','Before 6am'),o('manha','Manhã','Morning'),o('almoco','Horário de almoço','Lunch time'),o('tarde','Tarde','Afternoon'),o('noite','Noite','Evening')]},
+  {id:'dispo',type:'matrix',full:1,label:T('Em quais dias você pode treinar cada modalidade?','Which days can you train each discipline?'),rows:function(s){var r=[];if(isTri(s)){r.push(o('natacao','Natação','Swim'));r.push(o('ciclismo','Ciclismo','Bike'));}r.push(o('corrida',isTrail(s)?'Corrida / trilha':'Corrida',isTrail(s)?'Run / trail':'Run'));r.push(o('forca','Musculação','Strength'));return r;}}
+ ]}
+]},
+{key:'modal',title:T('Seu treino','Your training'),lead:T('Sua experiência e seus equipamentos em cada modalidade.','Your experience and gear in each discipline.'),blocks:[
+ {sub:T('Natação','Swim'),show:isTri,fields:[
+  {id:'swim_anos',type:'number',label:T('Há quantos anos você nada?','How many years have you been swimming?')},
+  {id:'swim_vol',type:'text',label:T('Volume semanal atual ({sw})','Current weekly volume ({sw})')},
+  {id:'swim_freq',type:'select',label:T('Frequência semanal','Swims per week'),opts:[o('0','0'),o('1','1'),o('2','2'),o('3','3'),o('4+','4+')]},
+  {id:'swim_longa',type:'text',label:T('Natação mais longa até hoje','Longest swim so far')},
+  {id:'swim_limite',type:'text',full:1,label:T('O que você consegue nadar hoje sem parar?','What can you swim today without stopping?')},
+  {id:'swim_acesso',type:'chips',full:1,label:T('Acesso','Access'),opts:[o('coberta','Piscina coberta','Indoor pool'),o('descoberta','Piscina descoberta','Outdoor pool'),o('aberta','Águas abertas','Open water')]},
+  {id:'swim_ow',type:'scale',label:T('Conforto em águas abertas','Comfort in open water'),lo:T('1 · baixo','1 · low'),hi:T('5 · alto','5 · high')},
+  {id:'swim_equip',type:'chips',full:1,label:T('Equipamentos','Gear'),opts:[o('palmar','Palmar','Paddles'),o('nadadeira','Nadadeira','Fins'),o('prancha','Prancha','Kickboard'),o('pullbuoy','Pullbuoy'),o('snorkel','Snorkel'),o('neoprene','Roupa de neoprene','Wetsuit')]},
+  {id:'swim_limitacoes',type:'textarea',label:T('Maiores limitações','Biggest limitations')},
+  {id:'swim_fortes',type:'textarea',label:T('Pontos fortes','Strengths')},
+  {id:'swim_recente',type:'textarea',full:1,label:T('O que treinou nas últimas 2 semanas?','What have you trained in the last 2 weeks?')}
+ ]},
+ {sub:T('Ciclismo','Bike'),show:isTri,fields:[
+  {id:'bike_anos',type:'number',label:T('Há quantos anos você pedala?','How many years have you been cycling?')},
+  {id:'bike_vol',type:'text',label:T('Volume semanal atual ({d})','Current weekly volume ({d})')},
+  {id:'bike_freq',type:'select',label:T('Frequência semanal','Rides per week'),opts:[o('0','0'),o('1','1'),o('2','2'),o('3','3'),o('4+','4+')]},
+  {id:'bike_longo',type:'text',label:T('Pedal mais longo até hoje','Longest ride so far')},
+  {id:'bike_limite',type:'text',full:1,label:T('O que você consegue pedalar hoje com conforto?','What can you comfortably ride today?')},
+  {id:'bike_acesso',type:'chips',label:T('Onde você pedala','Where you ride'),opts:[o('rua','Rua / estrada','Road'),o('indoor','Rolo / indoor','Indoor trainer')]},
+  {id:'bike_grupo',type:'radio',label:T('Pedala em grupo?','Do you ride in groups?'),opts:YN},
+  {id:'bike_equip',type:'chips',full:1,label:T('Equipamentos','Gear'),opts:[o('estrada','Bike de estrada','Road bike'),o('tt','Bike de triathlon / TT','Tri / TT bike'),o('potencia','Medidor de potência','Power meter'),o('smart','Rolo smart','Smart trainer'),o('rolo','Rolo simples','Basic trainer'),o('cadencia','Sensor de cadência','Cadence sensor'),o('cinta','Cinta cardíaca','Chest strap HR')]},
+  {id:'bike_limitacoes',type:'textarea',label:T('Maiores limitações','Biggest limitations')},
+  {id:'bike_fortes',type:'textarea',label:T('Pontos fortes','Strengths')},
+  {id:'bike_recente',type:'textarea',full:1,label:T('O que treinou nas últimas 2 semanas?','What have you trained in the last 2 weeks?')}
+ ]},
+ {sub:T('Corrida','Run'),show:hasPerfil,fields:runFields()},
+ {sub:T('Trail running','Trail running'),show:isTrail,note:T('Perguntas específicas de montanha e trilha.','Mountain and trail specific questions.'),fields:[
+  {id:'trail_anos',type:'number',label:T('Há quantos anos corre em trilha?','How many years have you been trail running?')},
+  {id:'trail_maior',type:'text',label:T('Maior prova de trail (distância e D+)','Longest trail race (distance and elevation gain)')},
+  {id:'trail_dplus',type:'text',label:T('Maior desnível positivo num treino','Biggest elevation gain in one session'),hint:T('Ex.: 1.200 m D+','E.g. 4,000 ft')},
+  {id:'trail_ultra',type:'radio',label:T('Já completou ultramaratona?','Have you finished an ultramarathon?'),opts:YN},
+  {id:'trail_sobe',type:'scale',label:T('Confiança nas subidas','Confidence on climbs')},
+  {id:'trail_desce',type:'scale',label:T('Confiança nas descidas técnicas','Confidence on technical descents')},
+  {id:'trail_bastao',type:'radio',label:T('Usa bastões?','Do you use poles?'),opts:[o('sim','Sim','Yes'),o('aprendendo','Estou aprendendo','Learning'),o('nao','Não','No')]},
+  {id:'trail_noite',type:'radio',label:T('Já correu à noite, com lanterna?','Have you run at night with a headlamp?'),opts:YN},
+  {id:'trail_equip',type:'chips',full:1,label:T('Equipamentos de trail','Trail gear'),opts:[o('tenis','Tênis de trail','Trail shoes'),o('colete','Colete de hidratação','Hydration vest'),o('bastoes','Bastões','Poles'),o('frontal','Lanterna de cabeça','Headlamp'),o('corta-vento','Corta-vento / impermeável','Wind / rain jacket'),o('manta','Manta térmica','Emergency blanket'),o('navegacao','Relógio com mapa / navegação','Watch with maps / navigation')]},
+  {id:'trail_terreno',type:'chips',full:1,label:T('Onde você consegue treinar subida','Where you can train climbing'),opts:[o('montanha','Montanha / serra','Mountains'),o('morros','Morros','Hills'),o('ponte','Pontes / viadutos','Bridges / overpasses'),o('escadas','Escadas','Stairs'),o('esteira','Esteira com inclinação','Incline treadmill'),o('nenhum','Pouco ou nenhum acesso','Little or no access')]},
+  {id:'trail_altitude',type:'radio',full:1,label:T('Sua próxima prova tem altitude acima de 2.000 m?','Is your next race above 2,000 m / 6,500 ft?'),opts:[o('sim','Sim','Yes'),o('nao','Não','No'),o('nao-sei','Não sei','Not sure')]}
+ ]}
+]},
+{key:'provas',title:T('Provas e histórico','Races & history'),lead:T('Onde você quer chegar e o que já construiu até aqui.','Where you want to go and what you have built so far.'),blocks:[
+ {sub:T('Objetivo','Goal'),fields:[
+  {id:'objetivo',type:'textarea',full:1,req:1,label:T('Seu principal objetivo, numa frase','Your main goal, in one sentence'),hint:T('Ex.: completar meu primeiro 70.3 inteiro e sorrindo.','E.g. finish my first 70.3 strong and smiling.')}
+ ]},
+ {sub:T('Provas da temporada','Races this season'),note:T('Prioridade A = prova principal · B = importante · C = preparação','Priority A = main race · B = important · C = tune-up'),fields:[
+  {id:'provas',type:'races',full:1}
+ ]},
+ {sub:T('Histórico','History'),fields:[
+  {id:'tri_primeiro',type:'text',show:isTri,label:T('Ano do seu 1º triathlon','Year of your first triathlon')},
+  {id:'tri_num',type:'number',show:isTri,label:T('Quantos triathlons completou','Triathlons completed')},
+  {id:'maior_prova',type:'text',full:1,label:T('Sua maior prova (qual, tempo total e parciais)','Your longest race (which one, total time and splits)')},
+  {id:'ultimas',type:'textarea',full:1,label:T('Últimas provas completadas (tipo, tempo, parciais)','Recent races completed (type, time, splits)'),hint:T('Ex.: Meia maratona de Miami, fev/2026, 1h52','E.g. Miami Half Marathon, Feb 2026, 1:52')},
+  {id:'resultados',type:'textarea',full:1,label:T('Colocações e premiações','Placings and awards')}
+ ]}
+]},
+{key:'mente',title:T('Mente','Mind'),lead:T('A cabeça corre primeiro. Avalie de 1 (fraco) a 5 (excelente) — não existe resposta certa.','The mind runs first. Rate from 1 (poor) to 5 (excellent) — there are no wrong answers.'),blocks:[
+ {sub:T('Autoavaliação','Self-assessment'),fields:[
+  {id:'m_confianca',type:'scale',label:T('Autoconfiança','Self-confidence')},
+  {id:'m_prova',type:'scale',label:T('Confiança para completar a prova-alvo','Confidence to finish your target race')},
+  {id:'m_metas',type:'scale',label:T('Capacidade de definir objetivos e metas','Ability to set goals')},
+  {id:'m_persistir',type:'scale',label:T('Capacidade de persistir nos objetivos','Ability to stick to your goals')},
+  {id:'m_pressao',type:'scale',label:T('Foco e decisões sob pressão','Focus and decisions under pressure')},
+  {id:'m_visual',type:'scale',label:T('Uso de visualização antes das provas','Use of visualization before races')},
+  {id:'m_consistencia',type:'scale',label:T('Consistência','Consistency')},
+  {id:'m_descanso',type:'scale',label:T('Capacidade de descansar sem culpa','Ability to rest without guilt')},
+  {id:'m_coment',type:'textarea',full:1,label:T('Quer comentar algo sobre esses pontos?','Anything to add about these?')}
+ ]},
+ {sub:T('Para finalizar','To finish'),fields:[
+  {id:'comentarios',type:'textarea',full:1,label:T('Qualquer outra informação importante para nós','Anything else we should know')},
+  {id:'consent_dados',type:'consent',req:1,key:'Consentimento de uso dos dados',label:T('Autorizo a CMTeam a usar estas informações, inclusive os dados de saúde, exclusivamente para planejar e acompanhar meus treinos. Elas não serão compartilhadas com terceiros.','I authorize CMTeam to use this information, including health data, exclusively to plan and monitor my training. It will not be shared with third parties.')},
+  {id:'consent_verdade',type:'consent',req:1,key:'Declaração de veracidade',label:T('Declaro que as informações acima são verdadeiras e que avisarei os treinadores sobre qualquer mudança na minha saúde.','I confirm the information above is accurate and I will let the coaches know about any change in my health.')}
+ ]}
+]}
+];
+
+/* ---------- estado ---------- */
+var lang='pt',step=0,state={provas:[{}]};
+try{var sv=JSON.parse(localStorage.getItem(STORE)||'null');if(sv){state=sv.state||state;step=Math.min(sv.step||0,STEPS.length-1);lang=sv.lang||lang;}}catch(e){}
+var qp=new URLSearchParams(location.search);if(qp.get('lang')==='en'||qp.get('lang')==='pt')lang=qp.get('lang');
+
+function localStorageHas(){try{return !!localStorage.getItem(STORE);}catch(e){return false;}}
+if(!state.provas||!state.provas.length)state.provas=[{}];
+function save(){try{localStorage.setItem(STORE,JSON.stringify({state:state,step:step,lang:lang}));}catch(e){}}
+
+function tx(t){if(!t)return'';var s=typeof t==='string'?t:(t[lang]||t.pt);var u=U(state);return s.replace('{d}',u.d).replace('{w}',u.w).replace('{h}',u.h).replace('{sw}',u.sw);}
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function vis(x){return !x.show||x.show(state);}
+
+/* ---------- renderização ---------- */
+var card=document.getElementById('card');
+function fieldHTML(f){
+ var id='f_'+f.id,L=UI[lang],lbl=tx(f.label)+(f.req?' <span class="req" aria-hidden="true">*</span>':''),h='';
+ var hint=f.hint?'<div class="hint">'+esc(tx(f.hint))+'</div>':'';
+ var cls='f'+(f.full?' full':'');
+ var v=state[f.id];
+ if(f.type==='alert')return '<div class="alert full" style="grid-column:1/-1">'+esc(L.parqAlert)+'</div>';
+ if(f.type==='consent')return '<label class="consent f full" data-f="'+f.id+'"><input type="checkbox" data-id="'+f.id+'"'+(v?' checked':'')+'><span>'+esc(tx(f.label))+' <span class="req">*</span></span></label>';
+ if(['text','email','tel','date','number'].indexOf(f.type)>-1){
+  h='<label for="'+id+'">'+lbl+'</label>'+hint+'<input id="'+id+'" type="'+f.type+'" data-id="'+f.id+'" value="'+esc(v)+'"'+(f.ac?' autocomplete="'+f.ac+'"':'')+(f.type==='number'?' inputmode="numeric" min="0"':'')+'>';
+ }else if(f.type==='textarea'){
+  h='<label for="'+id+'">'+lbl+'</label>'+hint+'<textarea id="'+id+'" data-id="'+f.id+'" rows="3">'+esc(v)+'</textarea>';
+ }else if(f.type==='select'){
+  h='<label for="'+id+'">'+lbl+'</label>'+hint+'<select id="'+id+'" data-id="'+f.id+'"><option value="">—</option>'+f.opts.map(function(x){return '<option value="'+x.v+'"'+(v===x.v?' selected':'')+'>'+esc(x[lang])+'</option>';}).join('')+'</select>';
+ }else if(f.type==='radio'||f.type==='chips'){
+  var multi=f.type==='chips';var arr=multi?(v||[]):[];
+  h='<div class="lbl" id="'+id+'_l">'+lbl+'</div>'+hint+'<div class="opts'+(f.big?' big':'')+'" role="'+(multi?'group':'radiogroup')+'" aria-labelledby="'+id+'_l">'+f.opts.map(function(x){var ck=multi?arr.indexOf(x.v)>-1:v===x.v;return '<label class="opt"><input type="'+(multi?'checkbox':'radio')+'" name="'+id+'" data-id="'+f.id+'" value="'+x.v+'"'+(ck?' checked':'')+'><span>'+esc(x[lang])+'</span></label>';}).join('')+'</div>';
+ }else if(f.type==='scale'){
+  h='<div class="lbl" id="'+id+'_l">'+lbl+'</div>'+hint+'<div class="opts scale" role="radiogroup" aria-labelledby="'+id+'_l">'+[1,2,3,4,5].map(function(n){return '<label class="opt"><input type="radio" name="'+id+'" data-id="'+f.id+'" value="'+n+'"'+(String(v)===String(n)?' checked':'')+'><span>'+n+'</span></label>';}).join('')+'</div><div class="scalelegend"><span>'+esc(tx(f.lo)||L.scaleLo)+'</span><span>'+esc(tx(f.hi)||L.scaleHi)+'</span></div>';
+ }else if(f.type==='matrix'){
+  var rows=f.rows(state),m=v||{};
+  h='<div class="lbl">'+lbl+'</div><div class="matrix"><table><thead><tr><th></th>'+DAYS.map(function(d){return '<th scope="col">'+d[lang]+'</th>';}).join('')+'</tr></thead><tbody>'+rows.map(function(r){return '<tr><td>'+esc(r[lang])+'</td>'+DAYS.map(function(d){var k=r.v+'_'+d.v;return '<td><label class="cb"><input type="checkbox" data-mx="'+f.id+'" data-k="'+k+'"'+(m[k]?' checked':'')+' aria-label="'+esc(r[lang]+' '+d[lang])+'"></label></td>';}).join('')+'</tr>';}).join('')+'</tbody></table></div>';
+ }else if(f.type==='races'){
+  h=state.provas.map(function(p,i){return '<div class="race"><div class="grid">'+
+   '<div class="f"><div class="lbl">'+L.race+' '+(i+1)+' · '+(lang==='pt'?'Prioridade':'Priority')+'</div><div class="opts" role="radiogroup">'+['A','B','C'].map(function(pr){return '<label class="opt"><input type="radio" name="pr'+i+'" data-race="'+i+'" data-k="prioridade" value="'+pr+'"'+(p.prioridade===pr?' checked':'')+'><span>'+pr+'</span></label>';}).join('')+'</div></div>'+
+   '<div class="f"><label for="rn'+i+'">'+(lang==='pt'?'Nome da prova':'Race name')+'</label><input id="rn'+i+'" type="text" data-race="'+i+'" data-k="nome" value="'+esc(p.nome)+'"></div>'+
+   '<div class="f"><label for="rd'+i+'">'+(lang==='pt'?'Data':'Date')+'</label><input id="rd'+i+'" type="date" data-race="'+i+'" data-k="data" value="'+esc(p.data)+'"></div>'+
+   '<div class="f"><label for="rk'+i+'">'+(lang==='pt'?'Distância':'Distance')+'</label><input id="rk'+i+'" type="text" data-race="'+i+'" data-k="distancia" value="'+esc(p.distancia)+'"></div>'+
+   '</div>'+(state.provas.length>1?'<button type="button" class="rm" data-rm="'+i+'">'+L.remove+'</button>':'')+'</div>';}).join('')+(state.provas.length<6?'<button type="button" class="addbtn" id="addRace">'+L.add+'</button>':'');
+  return '<div class="f full">'+h+'</div>';
+ }
+ return '<div class="'+cls+'" data-f="'+f.id+'">'+h+'</div>';
+}
+function render(){
+ var S=STEPS[step],L=UI[lang];
+ document.documentElement.lang=lang==='pt'?'pt-BR':'en';
+ document.querySelectorAll('[data-t]').forEach(function(e){e.textContent=L[e.getAttribute('data-t')];});
+ document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-lang')===lang?'true':'false');});
+ document.getElementById('bars').innerHTML=STEPS.map(function(_,i){return '<span class="'+(i<step?'past':i===step?'cur':'')+'"></span>';}).join('');
+ document.getElementById('plabel').textContent=L.step+' '+(step+1)+' '+L.of+' '+STEPS.length+' · '+tx(S.title);
+ var h='<h2 class="disp">'+esc(tx(S.title))+'</h2><p class="lead">'+esc(tx(S.lead))+'</p>';
+ S.blocks.forEach(function(b){if(!vis(b))return;var fs=b.fields.filter(vis);if(!fs.length)return;
+  h+='<div class="sub">'+esc(tx(b.sub))+'</div>'+(b.note?'<p class="subnote">'+esc(tx(b.note))+'</p>':'')+'<div class="grid">'+fs.map(fieldHTML).join('')+'</div>';});
+ card.innerHTML=h;
+ document.getElementById('back').style.visibility=step===0?'hidden':'visible';
+ document.getElementById('back').textContent=L.back;
+ document.getElementById('next').textContent=step===STEPS.length-1?L.send:L.next;
+ document.getElementById('err').textContent='';
+}
+
+/* ---------- eventos ---------- */
+function onChange(e){
+ var t=e.target,id=t.getAttribute('data-id');
+ if(t.hasAttribute('data-mx')){var m=state[t.getAttribute('data-mx')]||{};m[t.getAttribute('data-k')]=t.checked;state[t.getAttribute('data-mx')]=m;}
+ else if(t.hasAttribute('data-race')){state.provas[+t.getAttribute('data-race')][t.getAttribute('data-k')]=t.value;}
+ else if(id){
+  if(t.type==='checkbox'&&t.closest('.opts')){var a=state[id]||[];if(t.checked){if(a.indexOf(t.value)<0)a.push(t.value);}else a=a.filter(function(x){return x!==t.value;});state[id]=a;}
+  else if(t.type==='checkbox')state[id]=t.checked;
+  else state[id]=t.value;
+  var fw=t.closest('.f');if(fw)fw.classList.remove('invalid');
+  if(/^parq|^perfil$|^unidades$/.test(id)&&e.type==='change')render();
+ }
+ save();
+}
+card.addEventListener('input',onChange);card.addEventListener('change',onChange);
+card.addEventListener('click',function(e){
+ if(e.target.id==='addRace'){state.provas.push({});save();render();}
+ var rm=e.target.getAttribute&&e.target.getAttribute('data-rm');if(rm!=null){state.provas.splice(+rm,1);save();render();}
+});
+document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){lang=b.getAttribute('data-lang');save();render();});});
+document.getElementById('back').addEventListener('click',function(){if(step>0){step--;save();render();scrollTop();}});
+function scrollTop(){var y=document.querySelector('.wrap').getBoundingClientRect().top+scrollY;scrollTo({top:y,behavior:'smooth'});}
+
+function empty(v){return v==null||v===''||v===false||(Array.isArray(v)&&!v.length);}
+function validate(){
+ var S=STEPS[step],bad=[];
+ S.blocks.forEach(function(b){if(!vis(b))return;b.fields.forEach(function(f){if(!vis(f)||!f.req)return;var v=state[f.id];
+  var ok=!empty(v);if(ok&&f.type==='email')ok=/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v);
+  if(!ok)bad.push(f.id);});});
+ bad.forEach(function(id){var el=card.querySelector('[data-f="'+id+'"]');if(el)el.classList.add('invalid');});
+ if(bad.length){document.getElementById('err').textContent=UI[lang].required;var first=card.querySelector('[data-f="'+bad[0]+'"]');if(first)first.scrollIntoView({behavior:'smooth',block:'center'});}
+ return !bad.length;
+}
+
+/* ---------- envio ---------- */
+function label(f){return(f.label&&f.label.pt||f.id).replace('{d}',U(state).d).replace('{w}',U(state).w).replace('{h}',U(state).h).replace('{sw}',U(state).sw);}
+function human(f,v){
+ if(f.opts&&!Array.isArray(v)){var x=f.opts.filter(function(o){return o.v===v;})[0];return x?x.pt:v;}
+ if(f.opts&&Array.isArray(v))return v.map(function(val){var x=f.opts.filter(function(o){return o.v===val;})[0];return x?x.pt:val;}).join(', ');
+ if(f.type==='consent')return v?'Sim, concordo':'';
+ return v;
+}
+function payload(){
+ var fd=new FormData(),n=0;
+ var perfil={triathlon:'Triathlon',corrida:'Corrida de rua',trail:'Trail running'}[state.perfil]||'';
+ fd.append('access_key',ACCESS_KEY);
+ fd.append('subject','Cadastro de atleta — '+(state.nome||'')+' — '+perfil);
+ fd.append('from_name','Cadastro CMTeam');
+ fd.append('email',state.email||'');
+ fd.append('botcheck','');
+ fd.append('00 · Idioma do formulário',lang==='pt'?'Português':'Inglês');
+ fd.append('00 · Fuso horário do aparelho',(Intl.DateTimeFormat().resolvedOptions().timeZone)||'');
+ STEPS.forEach(function(S,si){S.blocks.forEach(function(b){if(!vis(b))return;b.fields.forEach(function(f){
+  if(!vis(f)||f.type==='alert'||f.id==='email')return;var v=state[f.id],key=(si+1)+' '+S.title.pt+' · '+(b.sub.pt===S.title.pt?'':b.sub.pt+' · ')+label(f);
+  if(f.type==='matrix'){var rows=f.rows(state),m=v||{};rows.forEach(function(r){var ds=DAYS.filter(function(d){return m[r.v+'_'+d.v];}).map(function(d){return d.pt;});if(ds.length)fd.append((si+1)+' '+S.title.pt+' · Disponibilidade · '+r.pt,ds.join(', '));});return;}
+  if(f.type==='races'){(state.provas||[]).forEach(function(p,i){if(p.nome||p.data||p.distancia)fd.append((si+1)+' Provas · Prova '+(i+1),[p.prioridade?'Prioridade '+p.prioridade:'',p.nome,p.data,p.distancia].filter(Boolean).join(' · '));});return;}
+  if(empty(v))return;
+  if(f.id==='nome')key='01 · Nome';
+  if(f.key)key=(si+1)+' '+S.title.pt+' · '+f.key;
+  fd.append(key,String(human(f,v)));n++;
+ });});});
+ return fd;
+}
+document.getElementById('form').addEventListener('submit',function(e){
+ e.preventDefault();
+ if(!validate())return;
+ if(step<STEPS.length-1){step++;save();render();scrollTop();return;}
+ var btn=document.getElementById('next'),L=UI[lang];btn.disabled=true;btn.textContent=L.sending;
+ fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:payload()})
+  .then(function(r){return r.json().then(function(j){if(!r.ok||j.success!==true)throw j;return j;});})
+  .then(function(){
+   try{localStorage.removeItem(STORE);}catch(e){}
+   document.getElementById('form').innerHTML='<div class="card done"><h2 class="disp">'+esc(L.doneT)+'</h2><p class="lead">'+esc(L.doneP)+'</p><p style="font-weight:700;margin-top:18px">'+esc(L.doneS)+'</p></div>';
+   document.getElementById('progress').style.display='none';scrollTop();
+  })
+  .catch(function(err){if(window.console)console.warn(err);document.getElementById('err').textContent=L.sendErr;btn.disabled=false;btn.textContent=L.send;});
+});
+render();
+})();
+</script>
+</body>
+</html>
