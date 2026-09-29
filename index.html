@@ -64,6 +64,17 @@ section[id],#formulario{scroll-margin-top:24px}
 .transicao-tag{flex-shrink:0;font-family:'Barlow Condensed',Arial,sans-serif;font-weight:800;font-style:italic;text-transform:uppercase;font-size:24px;line-height:1.1;color:#1A1A1A}
 .transicao strong{display:block;font-size:17px;margin-bottom:4px}
 .transicao span{font-size:16px;line-height:1.5;color:#2A2A2A}
+.promo{background:#FFC72C;color:#1A1A1A;position:relative}
+.promo-link{display:flex;align-items:center;justify-content:center;gap:12px;min-height:44px;padding:8px 52px;color:#1A1A1A;text-decoration:none;font-size:15px;text-align:center;flex-wrap:wrap}
+.promo-link:hover{color:#1A1A1A}
+.promo-link:hover .promo-cta{text-decoration:underline}
+.promo-tag{background:#CB333B;color:#FFFFFF;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;border-radius:999px}
+.promo-cta{font-weight:700}
+.promo-x{position:absolute;right:8px;top:50%;transform:translateY(-50%);width:36px;height:36px;border:0;background:transparent;font-size:24px;line-height:1;color:#1A1A1A;cursor:pointer;border-radius:999px}
+.promo-x:hover{background:rgba(0,0,0,.08)}
+.foot-free{display:flex !important;align-items:center;gap:8px;color:#FFFFFF !important;font-weight:700}
+.free-badge{background:#FFC72C;color:#1A1A1A;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 8px;border-radius:999px;flex-shrink:0}
+#ebook{scroll-margin-top:24px}
 .hdr-cta{display:flex;gap:10px;align-items:center}
 .hdr-cta a{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:999px;font-size:15px;font-weight:700;text-decoration:none}
 .btn-wa{background:#25D366;color:#0B3D1F}
@@ -128,6 +139,8 @@ section[id],#formulario{scroll-margin-top:24px}
 .contact-grid{grid-template-columns:minmax(0,1fr);gap:40px}
 .freebook{flex-direction:column;align-items:flex-start;padding:28px;gap:24px}
 .closing{font-size:32px !important}
+.promo-link{font-size:14px;gap:6px 10px;padding:8px 44px 8px 16px}
+.promo-txt{flex-basis:100%;order:2}.promo-by{display:none}.promo-cta{order:3}
 .transicao{flex-direction:column;gap:6px;grid-column:1;margin-top:-8px}
 .races .wrap{flex-direction:column;align-items:flex-start;gap:12px}
 .foot{grid-template-columns:1fr 1fr;gap:32px}
@@ -145,6 +158,11 @@ section[id],#formulario{scroll-margin-top:24px}
 <body>
 <div style="width: 100%; background: #FFFFFF; display: flex; flex-direction: column">
 
+<div class="promo" id="promo">
+<a href="#ebook" class="promo-link"><span class="promo-tag">Grátis</span><span class="promo-txt">Baixe o e-book <strong>A cabeça corre primeiro</strong><span class="promo-by">, de San Palma</span></span><span class="promo-cta">Baixar agora →</span></a>
+<button type="button" class="promo-x" aria-label="Fechar aviso" onclick="this.parentNode.remove();try{sessionStorage.setItem('promoX','1')}catch(e){}">×</button>
+</div>
+<script>try{if(sessionStorage.getItem('promoX'))document.getElementById('promo').remove()}catch(e){}</script>
 <header class="site-hdr" style="background: #111111">
 <div class="wrap" style="height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 16px">
 <a href="#topo" aria-label="CMTeam — início" style="display: flex; align-items: center; flex-shrink: 0">
@@ -410,7 +428,7 @@ section[id],#formulario{scroll-margin-top:24px}
 </div>
 </div>
 
-<div class="freebook">
+<div class="freebook" id="ebook">
 <img class="bookcover" loading="lazy" decoding="async" src="img/livro-a-cabeca-corre-primeiro.jpg" alt="Capa do livro A cabeça corre primeiro, de San Palma">
 <div style="display: flex; flex-direction: column; gap: 14px; min-width: 0">
 <div style="align-self: flex-start; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; background: #CB333B; color: #FFFFFF; padding: 6px 12px; border-radius: 999px">E-book gratuito</div>
@@ -677,7 +695,7 @@ section[id],#formulario{scroll-margin-top:24px}
 <div class="foot-h">Livros</div>
 <a href="https://www.amazon.com.br/dp/B0G6WQWGFF" target="_blank" rel="noopener">Nossa Jornada 2025</a>
 <a href="#conteudo">Nossa Jornada 2026</a>
-<a href="#conteudo">A cabeça corre primeiro — grátis</a>
+<a href="#ebook" class="foot-free"><span class="free-badge">Grátis</span>A cabeça corre primeiro</a>
 </div>
 <div class="foot-col">
 <div class="foot-h">Contato</div>
