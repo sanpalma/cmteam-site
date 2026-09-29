@@ -413,10 +413,10 @@ section[id],#formulario{scroll-margin-top:84px}
 <h3 class="disp" style="margin: 0; font-size: 40px; line-height: 1; color: #FFFFFF">A cabeça corre primeiro</h3>
 <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #C9C9C9">Lições rápidas para uma mente mais forte no esporte. Um livro de bolso sobre dor, disciplina, fracasso e os pilares da força mental, com um checklist de 8 hábitos para colocar em prática.</p>
 <form id="bookForm" class="bookform" novalidate>
-<input type="hidden" name="_subject" value="Download e-book: A cabeça corre primeiro">
-<input type="hidden" name="_template" value="table">
-<input type="hidden" name="Origem" value="Site CMTeam — e-book gratuito">
-<input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px">
+<input type="hidden" name="access_key" value="4fbd40f7-9888-4961-8a3f-21586cd9a8e8">
+<input type="hidden" name="subject" value="Download e-book: A cabeça corre primeiro">
+<input type="hidden" name="from_name" value="Site CMTeam — e-book gratuito">
+<input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px">
 <div class="bookform-row">
 <label class="sr" for="bf-nome">Nome</label>
 <input id="bf-nome" name="Nome" type="text" autocomplete="name" placeholder="Seu nome" required>
@@ -482,7 +482,7 @@ section[id],#formulario{scroll-margin-top:84px}
     if(!f.checkValidity()){ st.textContent='Preencha seu nome e um e-mail válido.'; f.reportValidity(); return; }
     btn.disabled=true; btn.textContent='Liberando…'; st.textContent='';
     var done=function(){ f.hidden=true; links.hidden=false; st.textContent=''; };
-    fetch('https://formsubmit.co/ajax/info@cmteam.us',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
+    fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
       .then(function(){ done(); }).catch(function(){ done(); });
   });
 })();
@@ -641,12 +641,12 @@ section[id],#formulario{scroll-margin-top:84px}
 <a href="mailto:info@cmteam.us" style="color: #FFFFFF; text-decoration: none">info@cmteam.us</a>
 </div>
 </div>
-<div id="formulario" style="scroll-margin-top: 84px"><form id="contactForm" class="cform" action="https://formsubmit.co/info@cmteam.us" method="POST" novalidate>
+<div id="formulario" style="scroll-margin-top: 84px"><form id="contactForm" class="cform" action="https://api.web3forms.com/submit" method="POST" novalidate>
 <h3 class="disp" style="margin: 0; font-size: 32px; line-height: 1; color: #1A1A1A">Fale conosco</h3>
-<input type="hidden" name="_subject" value="Contato pelo site CMTeam">
-<input type="hidden" name="_template" value="table">
-<input type="hidden" name="_captcha" value="false">
-<input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px">
+<input type="hidden" name="access_key" value="4fbd40f7-9888-4961-8a3f-21586cd9a8e8">
+<input type="hidden" name="subject" value="Contato pelo site CMTeam">
+<input type="hidden" name="from_name" value="Site CMTeam">
+<input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px">
 <label for="cf-nome">Nome</label>
 <input id="cf-nome" name="Nome" type="text" autocomplete="name" required>
 <label for="cf-email">E-mail</label>
@@ -667,8 +667,8 @@ section[id],#formulario{scroll-margin-top:84px}
     e.preventDefault();
     if(!f.checkValidity()){ st.className='cstatus err'; st.textContent='Preencha todos os campos, com um e-mail válido.'; f.reportValidity(); return; }
     btn.disabled=true; btn.textContent='Enviando…'; st.className='cstatus'; st.textContent='';
-    fetch('https://formsubmit.co/ajax/info@cmteam.us',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
-      .then(function(r){ return r.json().then(function(j){ if(!r.ok||j.success==='false'||j.success===false) throw j; return j; }); })
+    fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
+      .then(function(r){ return r.json().then(function(j){ if(!r.ok||j.success!==true) throw j; return j; }); })
       .then(function(){ f.reset(); st.className='cstatus ok'; st.textContent='Mensagem enviada! Respondemos em breve.'; })
       .catch(function(err){ if(window.console) console.warn('Formulário:',err); st.className='cstatus err'; st.innerHTML='Não foi possível enviar agora. Tente de novo ou fale com a gente pelo <a href="https://wa.me/13053959104">WhatsApp</a> ou por <a href="mailto:info@cmteam.us">info@cmteam.us</a>.'; })
       .then(function(){ btn.disabled=false; btn.textContent='Enviar mensagem'; });
