@@ -7,8 +7,10 @@
 <meta name="description" content="Assessoria de triathlon, corrida e esportes de endurance. Metodologia ECO, acompanhamento próximo e visão de longo prazo — do iniciante ao competitivo. Miami e online.">
 <link rel="canonical" href="https://cmteam.us/">
 <meta name="theme-color" content="#111111">
-<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
-<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png?v=2">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png?v=2">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=2">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CMTeam">
 <meta property="og:locale" content="pt_BR">
@@ -47,6 +49,18 @@ a{color:#CB333B}a:hover{color:#F9423A}
 .totop.show{opacity:1;pointer-events:auto;transform:none}
 @media (max-width:1100px){.hdr-cta a{padding:0 14px}.hdr-cta a span{display:none}}
 .totop:hover{background:#F9423A;color:#FFFFFF}
+.site-hdr{position:sticky;top:0;z-index:40}
+section[id],#formulario{scroll-margin-top:84px}
+.races{background:#161616;border-top:1px solid #262626}
+.races-label{flex-shrink:0;font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#FFC72C}
+.races-list{display:flex;flex-wrap:wrap;gap:6px 12px;font-size:15px;color:#D6D6D6}
+.races-list .dot{color:#CB333B;font-weight:700}
+.foot{display:grid;grid-template-columns:2fr 1fr 1fr 1.3fr;gap:40px}
+.foot-brand{display:flex;flex-direction:column;gap:18px}
+.foot-col{display:flex;flex-direction:column;gap:4px}
+.foot-h{font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#FFFFFF;margin-bottom:8px}
+.foot-col a{color:#B5B5B5;text-decoration:none;font-size:15px;padding:6px 0}
+.foot-col a:hover{color:#FFFFFF}
 .hdr-cta{display:flex;gap:10px;align-items:center}
 .hdr-cta a{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:999px;font-size:15px;font-weight:700;text-decoration:none}
 .btn-wa{background:#25D366;color:#0B3D1F}
@@ -111,6 +125,9 @@ a{color:#CB333B}a:hover{color:#F9423A}
 .contact-grid{grid-template-columns:minmax(0,1fr);gap:40px}
 .freebook{flex-direction:column;align-items:flex-start;padding:28px;gap:24px}
 .closing{font-size:32px !important}
+.races .wrap{flex-direction:column;align-items:flex-start;gap:12px}
+.foot{grid-template-columns:1fr 1fr;gap:32px}
+.foot-brand{grid-column:1 / -1}
 .hdr-cta a{padding:0 14px}
 .hdr-cta a span{display:none}
 .loc1{font-size:56px !important}.loc2{font-size:38px !important}.loc3{font-size:26px !important}
@@ -119,15 +136,15 @@ a{color:#CB333B}a:hover{color:#F9423A}
 .deco{display:none}
 }
 </style>
-<style>html{scroll-behavior:smooth}html,body{overflow-x:hidden}img{max-width:100%}</style>
+<style>html{scroll-behavior:smooth}html,body{overflow-x:clip}img{max-width:100%}</style>
 </head>
 <body>
 <div style="width: 100%; background: #FFFFFF; display: flex; flex-direction: column">
 
-<header style="background: #111111">
+<header class="site-hdr" style="background: #111111">
 <div class="wrap" style="height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 16px">
 <a href="#topo" aria-label="CMTeam — início" style="display: flex; align-items: center; flex-shrink: 0">
-<img src="img/cmteam-logo-branco.png" alt="CMTeam" style="height: 30px; width: auto; display: block">
+<img src="img/cmteam-logo-branco.png" alt="CMTeam" style="height: 30px; width: auto; display: block; align-self: flex-start">
 </a>
 <nav class="navlinks" aria-label="Principal">
 <a href="#filosofia">Manifesto</a>
@@ -181,6 +198,12 @@ a{color:#CB333B}a:hover{color:#F9423A}
 <div style="font-size: 15px; color: #B5B5B5">continentes</div>
 </div>
 </div>
+</div>
+</section>
+<section class="races" aria-label="Provas dos nossos atletas">
+<div class="wrap" style="padding-top: 28px; padding-bottom: 28px; display: flex; gap: 28px; align-items: center">
+<div class="races-label">Nossos atletas em</div>
+<div class="races-list"><span>Ironman Texas</span><span class="dot" aria-hidden="true">·</span><span>Ironman Itália — Emilia-Romagna</span><span class="dot" aria-hidden="true">·</span><span>Ironman 70.3 Augusta</span><span class="dot" aria-hidden="true">·</span><span>Ironman 70.3 São Paulo</span><span class="dot" aria-hidden="true">·</span><span>Boston Marathon</span><span class="dot" aria-hidden="true">·</span><span>Berlin Marathon</span><span class="dot" aria-hidden="true">·</span><span>Chicago Half Marathon</span><span class="dot" aria-hidden="true">·</span><span>Maratona de Buenos Aires</span><span class="dot" aria-hidden="true">·</span><span>Madrid Half Triathlon</span><span class="dot" aria-hidden="true">·</span><span>UTMB Grindstone</span></div>
 </div>
 </section>
 
@@ -618,7 +641,7 @@ a{color:#CB333B}a:hover{color:#F9423A}
 <a href="mailto:info@cmteam.us" style="color: #FFFFFF; text-decoration: none">info@cmteam.us</a>
 </div>
 </div>
-<div id="formulario" style="scroll-margin-top: 24px"><form id="contactForm" class="cform" action="https://formsubmit.co/info@cmteam.us" method="POST" novalidate>
+<div id="formulario" style="scroll-margin-top: 84px"><form id="contactForm" class="cform" action="https://formsubmit.co/info@cmteam.us" method="POST" novalidate>
 <h3 class="disp" style="margin: 0; font-size: 32px; line-height: 1; color: #1A1A1A">Fale conosco</h3>
 <input type="hidden" name="_subject" value="Contato pelo site CMTeam">
 <input type="hidden" name="_template" value="table">
@@ -655,10 +678,33 @@ a{color:#CB333B}a:hover{color:#F9423A}
 </section>
 
 <footer style="background: #111111; color: #9A9A9A">
-<div class="wrap" style="padding-top: 48px; padding-bottom: 48px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap">
-<img loading="lazy" decoding="async" src="img/cmteam-logo-branco.png" alt="CMTeam" style="height: 26px; width: auto; display: block">
+<div class="wrap foot" style="padding-top: 72px; padding-bottom: 40px">
+<div class="foot-brand">
+<img loading="lazy" decoding="async" src="img/cmteam-logo-branco.png" alt="CMTeam" style="height: 30px; width: auto; display: block; align-self: flex-start">
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #9A9A9A; max-width: 300px">Assessoria de triathlon, corrida e esportes de endurance. Carla Moreno Team — Miami e online, em mais de 25 países.</p>
 <div style="font-size: 14px; font-weight: 700; letter-spacing: 1px; color: #D6D6D6">bePatient | beHumble | beStrong</div>
-<div style="font-size: 14px; color: #9A9A9A">cmteam.us · @cmteam · © 2026 CMTeam</div>
+</div>
+<div class="foot-col">
+<div class="foot-h">Navegação</div>
+<a href="#filosofia">Manifesto</a><a href="#eco">Método ECO</a><a href="#treinadores">Treinadores</a><a href="#conteudo">Livros e textos</a><a href="#miami">Treinos em Miami</a>
+</div>
+<div class="foot-col">
+<div class="foot-h">Livros</div>
+<a href="https://www.amazon.com.br/dp/B0G6WQWGFF" target="_blank" rel="noopener">Nossa Jornada 2025</a>
+<a href="#conteudo">Nossa Jornada 2026</a>
+<a href="#conteudo">A cabeça corre primeiro — grátis</a>
+</div>
+<div class="foot-col">
+<div class="foot-h">Contato</div>
+<a href="https://wa.me/13053959104" target="_blank" rel="noopener">WhatsApp +1 305.395.9104</a>
+<a href="mailto:info@cmteam.us">info@cmteam.us</a>
+<a href="https://www.instagram.com/cmteam/" target="_blank" rel="noopener">@cmteam</a>
+<a href="https://www.instagram.com/sanpalma/" target="_blank" rel="noopener">@sanpalma</a>
+<a href="https://www.instagram.com/carlamorenotri/" target="_blank" rel="noopener">@carlamorenotri</a>
+</div>
+</div>
+<div class="wrap" style="padding-bottom: 32px">
+<div style="border-top: 1px solid #2A2A2A; padding-top: 24px; font-size: 13px; color: #8A8A8A">© 2026 CMTeam · cmteam.us · Miami, FL</div>
 </div>
 </footer>
 
