@@ -28,7 +28,7 @@ TEXT={
 'Nada grande nasce apressado. A consistência vale mais do que o talento, e cada adaptação precisa de tempo para se tornar parte de quem você é. Ser paciente é saber esperar enquanto se constrói.':'Nothing great is born in a hurry. Consistency is worth more than talent, and every adaptation needs time to become part of who you are. Being patient means waiting while you build.',
 'O aprendizado nunca termina. Humildade não é se diminuir: é ter a grandeza de continuar curioso, de ouvir, de respeitar — e entender que o sucesso individual só tem valor quando soma ao coletivo.':'Learning never ends. Humility is not making yourself smaller: it is having the greatness to stay curious, to listen, to respect — and to understand that individual success only matters when it adds to the team.',
 'Ser forte não é vencer sempre. É continuar quando não se tem mais certeza. A força verdadeira não se mede no FTP, no pace ou no ranking: se mede na capacidade de recomeçar.':'Being strong is not winning every time. It is carrying on when you are no longer sure. True strength is not measured in FTP, pace or rankings: it is measured by the ability to start again.',
-'Metodologia própria':'Our own methodology','Esforço Contínuo Ondulatório':'Continuous Undulating Effort',
+'Metodologia própria':'Our own methodology',
 'O ECO parte de um princípio claro: o corpo evolui melhor quando o esforço é bem distribuído, respeita o momento do atleta e evita o desgaste silencioso causado por excesso de intensidade mal aplicada.':'ECO starts from a clear principle: the body improves best when effort is well distributed, respects where the athlete is right now, and avoids the silent wear caused by too much poorly applied intensity.',
 'Base aeróbia sólida':'A solid aerobic base','A base é prioridade. É ela que sustenta toda a evolução.':'The base comes first. It supports every step of progress.',
 'Intensidade estratégica':'Strategic intensity','Intensidade usada de forma estratégica, não emocional.':'Intensity used strategically, not emotionally.',
@@ -125,6 +125,7 @@ for i,p in enumerate(parts):
 s=''.join(parts)
 # script / misc strings
 REP=[
+('ECO <span style="color: #CB333B">|</span> Esforço Contínuo Ondulatório</h2>','ECO <span style="color: #CB333B">|</span> Esforço Contínuo Ondulatório</h2>\n<p style="margin: 0; font-size: 17px; line-height: 1.5; color: #B5B5B5"><em>Continuous Undulating Effort</em> — the methodology keeps its original Portuguese name.</p>'),
 ('<a href="./" class="on" aria-current="page" lang="pt-BR">PT</a><span aria-hidden="true">|</span><a href="en/" lang="en" hreflang="en">EN</a>','<a href="../" lang="pt-BR" hreflang="pt-BR">PT</a><span aria-hidden="true">|</span><a href="./" class="on" aria-current="page" lang="en">EN</a>'),
 ('<a href="en/" lang="en" style="color: #B5B5B5">English version</a>','<a href="../" lang="pt-BR" style="color: #B5B5B5">Versão em português</a>'),
 ('<html lang="pt-BR">','<html lang="en">'),
