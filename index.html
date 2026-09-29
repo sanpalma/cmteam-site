@@ -38,6 +38,8 @@ a{color:#CB333B}a:hover{color:#F9423A}
 .g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
 .g6{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
 .bookrow{display:flex;gap:32px;align-items:center}
+.closing{font-size:52px;line-height:1.02}
+.loc{line-height:0.95}.loc1{font-size:88px}.loc2{font-size:56px}.loc3{font-size:36px}
 .freebook{background:#1A1A1A;border-radius:20px;padding:40px;display:flex;gap:40px;align-items:center}
 .bookform{display:flex;flex-direction:column;gap:8px;margin-top:6px}
 .bookform-row{display:flex;gap:10px;flex-wrap:wrap}
@@ -93,7 +95,8 @@ a{color:#CB333B}a:hover{color:#F9423A}
 .igfeed{flex-direction:column;gap:6px}
 .contact-grid{grid-template-columns:minmax(0,1fr);gap:40px}
 .freebook{flex-direction:column;align-items:flex-start;padding:28px;gap:24px}
-#closing-a,#closing-a+p{font-size:34px !important}
+.closing{font-size:32px !important}
+.loc1{font-size:56px !important}.loc2{font-size:38px !important}.loc3{font-size:26px !important}
 .cform{padding:24px}
 .igrow{width:100%;gap:6px}
 .deco{display:none}
@@ -445,7 +448,11 @@ a{color:#CB333B}a:hover{color:#F9423A}
 <div class="split">
 <div style="display: flex; flex-direction: column; gap: 20px">
 <div style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #FFC72C">Treinos presenciais</div>
-<h2 class="disp sec-title" style="margin: 0; color: #FFFFFF">Miami · Tribeach, Key Biscayne</h2>
+<h2 class="disp loc" style="margin: 0; color: #FFFFFF; display: flex; flex-direction: column; gap: 6px">
+<span class="loc1">Miami</span>
+<span class="loc2">Key Biscayne</span>
+<span class="loc3" style="color: #CB333B">Tribeach</span>
+</h2>
 <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #B5B5B5">Eventualmente, também realizamos treinos de transição e simulações de prova.</p>
 </div>
 <div class="sched" style="border-top: 1px solid #333333">
@@ -563,8 +570,12 @@ a{color:#CB333B}a:hover{color:#F9423A}
 
 <section style="background: #111111; color: #FFFFFF">
 <div class="wrap" style="padding-top: 104px; padding-bottom: 104px; display: flex; flex-direction: column; gap: 28px; align-items: center; text-align: center">
-<p class="disp" style="margin: 0; font-size: 52px; line-height: 1.02; color: #FFFFFF; max-width: 900px" id="closing-a">Não buscamos a perfeição, buscamos a <span style="color: #CB333B">constância.</span></p>
-<p class="disp" style="margin: 0; font-size: 52px; line-height: 1.02; color: #FFFFFF; max-width: 900px">Não corremos pra mostrar, corremos pra <span style="color: #CB333B">ser.</span></p>
+<p class="disp closing" id="closing-a" style="margin: 0; color: #FFFFFF; display: flex; flex-direction: column; gap: 4px">
+<span>Não buscamos a perfeição,</span>
+<span>buscamos a <span style="color: #CB333B">constância.</span></span>
+<span style="padding-top: 18px">Não corremos pra mostrar,</span>
+<span>corremos pra <span style="color: #CB333B">ser.</span></span>
+</p>
 <div style="font-size: 18px; font-weight: 700; letter-spacing: 1px; color: #D6D6D6; padding-top: 8px">bePatient | beHumble | beStrong</div>
 </div>
 </section>
