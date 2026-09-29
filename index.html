@@ -38,6 +38,23 @@ a{color:#CB333B}a:hover{color:#F9423A}
 .g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
 .g6{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
 .bookrow{display:flex;gap:32px;align-items:center}
+.freebook{background:#1A1A1A;border-radius:20px;padding:40px;display:flex;gap:40px;align-items:center}
+.bookform{display:flex;flex-direction:column;gap:8px;margin-top:6px}
+.bookform-row{display:flex;gap:10px;flex-wrap:wrap}
+.bookform input{flex:1 1 180px;font:inherit;font-size:16px;color:#1A1A1A;background:#FFFFFF;border:0;border-radius:999px;padding:0 20px;min-height:52px;box-sizing:border-box;min-width:0}
+.bookform input:focus{outline:3px solid #FFC72C}
+.bookform button{flex:0 0 auto;background:#CB333B;color:#FFFFFF;border:0;border-radius:999px;font:inherit;font-size:16px;font-weight:700;padding:0 26px;min-height:52px;cursor:pointer}
+.bookform button:hover{background:#F9423A}
+.bookform button:disabled{opacity:.6;cursor:wait}
+.bstatus{margin:0;font-size:15px;min-height:1em;color:#FFC72C}
+.booklinks{display:flex;gap:10px;flex-wrap:wrap}
+.booklinks[hidden],.bookform[hidden]{display:none}
+.booklinks a{background:#FFC72C;color:#1A1A1A;text-decoration:none;font-weight:700;font-size:16px;padding:0 22px;min-height:48px;border-radius:999px;display:flex;align-items:center}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.habits>div{background:#FFFFFF;border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:8px}
+.habits .disp{font-size:22px;color:#CB333B}
+.habits strong{font-size:17px;line-height:1.3;color:#1A1A1A}
+.habits p{margin:0;font-size:15px;line-height:1.55;color:#4A4A4A}
 .contact-grid{display:grid;grid-template-columns:5fr 6fr;gap:72px;align-items:start}
 .cform{background:#FFFFFF;color:#1A1A1A;border-radius:20px;padding:36px;display:flex;flex-direction:column;gap:8px;box-shadow:0 24px 48px rgba(0,0,0,0.18)}
 .cform label{font-size:14px;font-weight:700;color:#1A1A1A;margin-top:10px}
@@ -75,6 +92,8 @@ a{color:#CB333B}a:hover{color:#F9423A}
 .bookcover{width:160px}
 .igfeed{flex-direction:column;gap:6px}
 .contact-grid{grid-template-columns:minmax(0,1fr);gap:40px}
+.freebook{flex-direction:column;align-items:flex-start;padding:28px;gap:24px}
+#closing-a,#closing-a+p{font-size:34px !important}
 .cform{padding:24px}
 .igrow{width:100%;gap:6px}
 .deco{display:none}
@@ -91,7 +110,7 @@ a{color:#CB333B}a:hover{color:#F9423A}
 <img src="img/cmteam-logo-branco.png" alt="CMTeam" style="height: 30px; width: auto; display: block">
 </a>
 <nav class="navlinks" aria-label="Principal">
-<a href="#filosofia" style="color: #D6D6D6; text-decoration: none; font-size: 15px">Filosofia</a>
+<a href="#filosofia" style="color: #D6D6D6; text-decoration: none; font-size: 15px">Manifesto</a>
 <a href="#eco" style="color: #D6D6D6; text-decoration: none; font-size: 15px">Método ECO</a>
 <a href="#coaches" style="color: #D6D6D6; text-decoration: none; font-size: 15px">Coaches</a>
 <a href="#conteudo" style="color: #D6D6D6; text-decoration: none; font-size: 15px">Livros e textos</a>
@@ -139,15 +158,31 @@ a{color:#CB333B}a:hover{color:#F9423A}
 </section>
 
 <section id="filosofia" style="background: #FFFFFF">
-<div class="wrap split" style="padding-top: 120px; padding-bottom: 72px">
+<div class="wrap split" style="padding-top: 120px; padding-bottom: 64px">
 <div style="display: flex; flex-direction: column; gap: 20px">
-<div style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #CB333B">A filosofia CMTeam</div>
-<h2 class="disp sec-title" style="margin: 0">O treino não é um produto. É processo.</h2>
+<div style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #CB333B">O Manifesto CMTeam</div>
+<h2 class="disp sec-title" style="margin: 0">Não somos um time feito de resultados. Somos um time feito de processos.</h2>
 </div>
 <div style="display: flex; flex-direction: column; gap: 22px; font-size: 19px; line-height: 1.65; color: #3A3A3A">
-<p style="margin: 0">Na CMTeam, cada sessão tem contexto, propósito e motivo, sempre conectada ao seu momento de vida, de treino e de evolução. Performance real não nasce no dia da prova: ela é construída na constância, na leitura correta do processo e no respeito ao tempo de adaptação — física e mental.</p>
-<p style="margin: 0">Trabalhamos com método, mas também com escuta. Com dados, mas também com contexto. Com performance, sem abrir mão de saúde, equilíbrio e longevidade esportiva. Aqui, não buscamos atalhos: buscamos clareza, consistência e maturidade no treinamento.</p>
-<div class="disp" style="font-size: 30px; line-height: 1.1; color: #1A1A1A; padding-top: 8px; text-transform: none">bePatient <span style="color: #CB333B">|</span> beHumble <span style="color: #CB333B">|</span> beStrong</div>
+<p style="margin: 0">A CMTeam nasceu da vontade de construir algo diferente: um espaço onde a performance é consequência, não cobrança. Onde a paciência é tão valorizada quanto a intensidade, e onde cada atleta aprende que evoluir é um caminho, não uma meta de calendário.</p>
+<p style="margin: 0">Treinamos com ciência, mas também com alma. Com planilha, mas com propósito. Com técnica, mas com verdade. Acreditamos que disciplina é mais poderosa do que motivação, e que ser consistente é a forma mais pura de ser forte.</p>
+<p style="margin: 0; font-weight: 700; color: #1A1A1A">Nosso objetivo não é ser o melhor time. É ser o time que não desiste de ser melhor.</p>
+</div>
+</div>
+<div class="wrap" style="padding-bottom: 72px">
+<div class="g3">
+<div style="background: #F6F4F1; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 12px; border-top: 4px solid #CB333B">
+<h3 class="disp" style="margin: 0; font-size: 36px; line-height: 1; text-transform: none">bePatient</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3A3A3A">Nada grande nasce apressado. A consistência vale mais do que o talento, e cada adaptação precisa de tempo para se tornar parte de quem você é. Ser paciente é saber esperar enquanto se constrói.</p>
+</div>
+<div style="background: #F6F4F1; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 12px; border-top: 4px solid #CB333B">
+<h3 class="disp" style="margin: 0; font-size: 36px; line-height: 1; text-transform: none">beHumble</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3A3A3A">O aprendizado nunca termina. Humildade não é se diminuir: é ter a grandeza de continuar curioso, de ouvir, de respeitar — e entender que o sucesso individual só tem valor quando soma ao coletivo.</p>
+</div>
+<div style="background: #F6F4F1; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 12px; border-top: 4px solid #CB333B">
+<h3 class="disp" style="margin: 0; font-size: 36px; line-height: 1; text-transform: none">beStrong</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3A3A3A">Ser forte não é vencer sempre. É continuar quando não se tem mais certeza. A força verdadeira não se mede no FTP, no pace ou no ranking: se mede na capacidade de recomeçar.</p>
+</div>
 </div>
 </div>
 <div class="wrap" style="padding-bottom: 120px">
@@ -242,7 +277,10 @@ a{color:#CB333B}a:hover{color:#F9423A}
 <div style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #CB333B">Coaches</div>
 <h2 class="disp sec-title" style="margin: 0">Duas trajetórias. Uma convicção.</h2>
 </div>
-<p style="margin: 0; font-size: 19px; line-height: 1.65; color: #3A3A3A">Por trás da CMTeam existem duas trajetórias construídas no esporte de alto rendimento, guiadas pela mesma ideia: performance só faz sentido quando vem acompanhada de processo, consciência e longevidade.</p>
+<div style="display: flex; flex-direction: column; gap: 18px; font-size: 19px; line-height: 1.65; color: #3A3A3A">
+<p style="margin: 0">Por trás da CMTeam existem duas trajetórias construídas no esporte de alto rendimento, guiadas pela mesma ideia: performance só faz sentido quando vem acompanhada de processo, consciência e longevidade.</p>
+<p style="margin: 0"><strong style="color: #1A1A1A">CMTeam é Carla Moreno Team.</strong> O time nasceu de duas pessoas, San e Carla, e de um grupo que acreditou que a ciência e a alma podem caminhar juntas.</p>
+</div>
 </div>
 <div class="g2">
 <div style="display: flex; flex-direction: column; gap: 22px">
@@ -251,7 +289,7 @@ a{color:#CB333B}a:hover{color:#F9423A}
 <h3 class="disp" style="margin: 0; font-size: 40px; line-height: 1">San Palma</h3>
 <div style="font-size: 15px; font-weight: 700; color: #CB333B">Co-fundador e Head Coach</div>
 </div>
-<p style="margin: 0; font-size: 17px; line-height: 1.65; color: #4A4A4A">Mais de 30 anos de vivência no esporte e mais de 20 como treinador, com certificações USA Triathlon, IRONMAN e TrainingPeaks. Trabalhou com atletas do iniciante ao alto rendimento, em projetos nacionais e internacionais, incluindo Campeonatos Mundiais, Jogos Pan-Americanos e ciclos de formação de elite. Criador do Método ECO, segue em formação contínua em fisiologia do exercício, prescrição de treinamento e corrida de montanha.</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.65; color: #4A4A4A">Treinador desde 2003 e atleta há mais de 30 anos, com certificações USA Triathlon, IRONMAN e TrainingPeaks. Conduziu Carla Moreno em sua fase de supremacia no triathlon nacional — anos vencendo as principais provas olímpicas do Brasil e mais de seis temporadas invicta em Miami. Já classificou atletas para mundiais ITU, Ironman 70.3 e Ironman 140.6 e foi treinador da delegação brasileira em competições internacionais. Especialista em Fisiologia do Esforço e Prescrição do Treinamento, é o criador do Método ECO.</p>
 <p style="margin: 0; font-size: 19px; line-height: 1.5; font-style: italic; color: #1A1A1A; border-left: 3px solid #CB333B; padding-left: 18px">“O contato com a ciência não substitui o campo. Ele qualifica o olhar sobre o campo.”</p>
 <div style="font-size: 13px; color: #6B6B6B">CREF 038340-G/SP</div>
 </div>
@@ -262,7 +300,7 @@ a{color:#CB333B}a:hover{color:#F9423A}
 <div style="font-size: 15px; font-weight: 700; color: #CB333B">Co-fundadora e Coach</div>
 </div>
 <p style="margin: 0; font-size: 17px; line-height: 1.65; color: #4A4A4A">Campeã Mundial Júnior de Triathlon, integrou a Seleção Brasileira por 14 anos consecutivos e representou o Brasil em dois Jogos Olímpicos — Sydney 2000 e Atenas 2004 —, com títulos mundiais, pan-americanos e vitórias em Copas do Mundo. Hoje atua diretamente no atendimento e na orientação dos atletas, traduzindo o treinamento em decisões práticas, estratégia de prova e equilíbrio entre esporte e vida pessoal.</p>
-<p style="margin: 0; font-size: 19px; line-height: 1.5; font-style: italic; color: #1A1A1A; border-left: 3px solid #CB333B; padding-left: 18px">“Contato direto, humano e próximo. Exatamente como acreditamos que o esporte deve ser vivido.”</p>
+<p style="margin: 0; font-size: 19px; line-height: 1.5; font-style: italic; color: #1A1A1A; border-left: 3px solid #CB333B; padding-left: 18px">“Carregar meu nome no time é uma honra que nunca se tornou rotina. A CMTeam é, sim, o meu nome, mas, mais do que isso, é a soma de todas as pessoas que decidiram acreditar no mesmo propósito.”</p>
 </div>
 </div>
 </div>
@@ -318,6 +356,47 @@ a{color:#CB333B}a:hover{color:#F9423A}
 </div>
 </div>
 
+<div class="freebook">
+<img class="bookcover" loading="lazy" decoding="async" src="img/livro-a-cabeca-corre-primeiro.jpg" alt="Capa do livro A cabeça corre primeiro, de San Palma">
+<div style="display: flex; flex-direction: column; gap: 14px; min-width: 0">
+<div style="align-self: flex-start; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; background: #CB333B; color: #FFFFFF; padding: 6px 12px; border-radius: 999px">E-book gratuito</div>
+<h3 class="disp" style="margin: 0; font-size: 40px; line-height: 1; color: #FFFFFF">A cabeça corre primeiro</h3>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #C9C9C9">Lições rápidas para uma mente mais forte no esporte. Um livro de bolso sobre dor, disciplina, fracasso e os pilares da força mental, com um checklist de 8 hábitos para colocar em prática.</p>
+<form id="bookForm" class="bookform" novalidate>
+<input type="hidden" name="_subject" value="Download e-book: A cabeça corre primeiro">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="Origem" value="Site CMTeam — e-book gratuito">
+<input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px">
+<div class="bookform-row">
+<label class="sr" for="bf-nome">Nome</label>
+<input id="bf-nome" name="Nome" type="text" autocomplete="name" placeholder="Seu nome" required>
+<label class="sr" for="bf-email">E-mail</label>
+<input id="bf-email" name="email" type="email" autocomplete="email" placeholder="Seu e-mail" required>
+<button type="submit">Baixar grátis</button>
+</div>
+<p id="bf-status" class="bstatus" role="status" aria-live="polite"></p>
+</form>
+<div id="bookLinks" class="booklinks" hidden>
+<a href="livros/A-cabeca-corre-primeiro.pdf" download>Baixar PDF</a>
+<a href="livros/A-cabeca-corre-primeiro.epub" download>Baixar EPUB</a>
+</div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 24px">
+<h3 class="disp" style="margin: 0; font-size: 40px; line-height: 1">8 hábitos para uma mente forte</h3>
+<div class="g4 habits">
+<div><span class="disp">01</span><strong>Comece o dia com clareza, não com pressa</strong><p>Antes de abrir o celular, respire e lembre por que você está treinando.</p></div>
+<div><span class="disp">02</span><strong>Treine mesmo sem vontade</strong><p>Quando você escolhe a execução, não a emoção, a mente entende quem manda.</p></div>
+<div><span class="disp">03</span><strong>Corrija a voz interna</strong><p>Pegou o “não dá”? Interrompa, respire, troque a frase.</p></div>
+<div><span class="disp">04</span><strong>Execute bem o treino mais simples</strong><p>Foco total até no regenerativo. É isso que constrói excelência.</p></div>
+<div><span class="disp">05</span><strong>Aceite os dias ruins</strong><p>Não se sabote por um treino fraco. Recomece no dia seguinte, sem drama.</p></div>
+<div><span class="disp">06</span><strong>Silêncio ao invés de comparação</strong><p>Enquanto os outros postam, você trabalha. Sua evolução acontece longe da vitrine.</p></div>
+<div><span class="disp">07</span><strong>Feche o dia com uma pergunta</strong><p>“Hoje eu fui quem eu quero ser?” Se sim, celebre. Se não, aprenda.</p></div>
+<div><span class="disp">08</span><strong>Confie no seu treinador e no processo</strong><p>Seu treinador vê o que você ainda não vê. Ouça, execute, aprenda.</p></div>
+</div>
+</div>
+
 <div style="display: flex; flex-direction: column; gap: 28px">
 <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap">
 <h3 class="disp" style="margin: 0; font-size: 40px; line-height: 1">Textos de segunda</h3>
@@ -345,6 +424,20 @@ a{color:#CB333B}a:hover{color:#F9423A}
 </div>
 </div>
 </div>
+<script>
+(function(){
+  var f=document.getElementById('bookForm'); if(!f) return;
+  var st=document.getElementById('bf-status'), links=document.getElementById('bookLinks'), btn=f.querySelector('button');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!f.checkValidity()){ st.textContent='Preencha seu nome e um e-mail válido.'; f.reportValidity(); return; }
+    btn.disabled=true; btn.textContent='Liberando…'; st.textContent='';
+    var done=function(){ f.hidden=true; links.hidden=false; st.textContent=''; };
+    fetch('https://formsubmit.co/ajax/info@cmteam.us',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
+      .then(function(){ done(); }).catch(function(){ done(); });
+  });
+})();
+</script>
 </section>
 
 <section id="miami" style="background: #111111; color: #FFFFFF">
@@ -465,6 +558,14 @@ a{color:#CB333B}a:hover{color:#F9423A}
 <span style="font-size: 19px; line-height: 1.5; color: #1A1A1A">busca performance sem abrir mão de saúde, equilíbrio e longevidade esportiva</span>
 </div>
 </div>
+</div>
+</section>
+
+<section style="background: #111111; color: #FFFFFF">
+<div class="wrap" style="padding-top: 104px; padding-bottom: 104px; display: flex; flex-direction: column; gap: 28px; align-items: center; text-align: center">
+<p class="disp" style="margin: 0; font-size: 52px; line-height: 1.02; color: #FFFFFF; max-width: 900px" id="closing-a">Não buscamos a perfeição, buscamos a <span style="color: #CB333B">constância.</span></p>
+<p class="disp" style="margin: 0; font-size: 52px; line-height: 1.02; color: #FFFFFF; max-width: 900px">Não corremos pra mostrar, corremos pra <span style="color: #CB333B">ser.</span></p>
+<div style="font-size: 18px; font-weight: 700; letter-spacing: 1px; color: #D6D6D6; padding-top: 8px">bePatient | beHumble | beStrong</div>
 </div>
 </section>
 
