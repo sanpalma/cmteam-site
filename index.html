@@ -28,6 +28,7 @@
 <style>
 body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#FFFFFF;color:#1A1A1A;-webkit-font-smoothing:antialiased}
 a{color:#CB333B}a:hover{color:#F9423A}
+.cal-list{display:flex;flex-direction:column;border-top:1px solid #E4E1DD}.cal-race{display:grid;grid-template-columns:150px minmax(0,1fr) auto;gap:24px;align-items:center;padding:22px 0;border-bottom:1px solid #E4E1DD}.rdate{font-size:28px;color:#CB333B;line-height:1}.rname{font-size:20px;font-weight:700;color:#1A1A1A}.rloc{font-size:15px;color:#6B6B6B;margin-top:4px}.rpill{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:8px 14px;border-radius:999px;border:1.5px solid #C9C4BE;color:#6B6B6B;white-space:nowrap}.rpill.ok{background:#1A1A1A;border-color:#1A1A1A;color:#FFC72C}
 .feats{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;border-top:1px solid #E4E1DD;padding-top:18px}.feats li{position:relative;padding-left:20px;font-size:15px;line-height:1.5;color:#3A3A3A}.feats li:before{content:"";position:absolute;left:0;top:.7em;width:10px;height:2px;background:#CB333B}.feats-t{font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#1A1A1A}
 
 .wrap{max-width:1200px;margin:0 auto;padding-left:40px;padding-right:40px;box-sizing:border-box}
@@ -163,6 +164,7 @@ section[id],#formulario{scroll-margin-top:24px}
 .cform{padding:24px}
 .igrow{width:100%;gap:6px}
 .deco{display:none}
+.cal-race{grid-template-columns:minmax(0,1fr) !important;gap:8px !important}.rpill{justify-self:start}.rdate{font-size:22px !important}
 .online-hero{grid-template-columns:minmax(0,1fr) !important;padding:32px 24px !important}.online-hero h3{font-size:34px !important}
 .eco-mind{padding:28px 22px !important}.eco-wave{height:48px !important}
 }
@@ -587,6 +589,30 @@ section[id],#formulario{scroll-margin-top:24px}
 <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #4A4A4A">Testes para definição das suas zonas de treinamento, a base de toda a prescrição.</p>
 </div>
 </div>
+</div>
+</section>
+
+<section id="calendario" style="background: #FFFFFF">
+<div class="wrap" style="padding-top: 120px; padding-bottom: 120px; display: flex; flex-direction: column; gap: 48px">
+<div class="split">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<div style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #CB333B">Calendário do time 2027</div>
+<h2 class="disp sec-title" style="margin: 0">Onde o time se encontra.</h2>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-size: 19px; line-height: 1.65; color: #3A3A3A">Estas são as provas-alvo oficiais da CMTeam em 2027. Nas provas com suporte confirmado, o time está lá com você, da preparação à linha de chegada.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #6B6B6B">Inscrições para IRONMAN e IRONMAN 70.3 têm fechado cada vez mais cedo. Se uma dessas provas está nos seus planos, defina o objetivo e garanta sua vaga com antecedência.</p>
+</div>
+</div>
+<div class="cal-list">
+<div class="cal-race"><div class="disp rdate">31 jan</div><div class="rinfo"><div class="rname">Miami Marathon & Half Marathon</div><div class="rloc">Miami, Flórida · EUA</div></div><span class="rpill ok">Suporte do time confirmado</span></div>
+<div class="cal-race"><div class="disp rdate">18–20 mar</div><div class="rinfo"><div class="rname">INDOMIT Pedra do Baú</div><div class="rloc">São Bento do Sapucaí, SP · Brasil</div></div><span class="rpill ok">Suporte do time confirmado</span></div>
+<div class="cal-race"><div class="disp rdate">22–25 abr</div><div class="rinfo"><div class="rname">Canyons Endurance Runs by UTMB</div><div class="rloc">Auburn, Califórnia · EUA</div></div><span class="rpill ok">Suporte do time confirmado</span></div>
+<div class="cal-race"><div class="disp rdate">8 mai</div><div class="rinfo"><div class="rname">IRONMAN 70.3 Gulf Coast</div><div class="rloc">Panama City Beach, Flórida · EUA</div></div><span class="rpill ok">Suporte do time confirmado</span></div>
+<div class="cal-race"><div class="disp rdate">4–6 jun</div><div class="rinfo"><div class="rname">Ultra Trail Chattanooga by UTMB</div><div class="rloc">Chattanooga, Tennessee · EUA</div></div><span class="rpill">Suporte a confirmar</span></div>
+<div class="cal-race"><div class="disp rdate">Out</div><div class="rinfo"><div class="rname">IRONMAN California</div><div class="rloc">Sacramento, Califórnia · EUA</div></div><span class="rpill">Suporte a confirmar</span></div>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #6B6B6B">O suporte nas provas a confirmar depende do número de atletas inscritos e do interesse do grupo. A data oficial do IRONMAN California 2027 ainda será divulgada. Vai correr alguma delas? <a href="https://wa.me/13053959104?text=Ol%C3%A1!%20Quero%20correr%20uma%20prova%20do%20calend%C3%A1rio%202027%20com%20a%20CMTeam.">Fale com a gente</a>.</p>
 </div>
 </section>
 
