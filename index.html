@@ -30,6 +30,7 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#FFFFFF;color:#1
 a{color:#CB333B}a:hover{color:#F9423A}
 .cal-list{display:flex;flex-direction:column;border-top:1px solid #E4E1DD}.cal-race{display:grid;grid-template-columns:150px minmax(0,1fr) auto;gap:24px;align-items:center;padding:22px 0;border-bottom:1px solid #E4E1DD}.rdate{font-size:28px;color:#CB333B;line-height:1}.rname{font-size:20px;font-weight:700;color:#1A1A1A}.rloc{font-size:15px;color:#6B6B6B;margin-top:4px}.rpill{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:8px 14px;border-radius:999px;border:1.5px solid #C9C4BE;color:#6B6B6B;white-space:nowrap}.rpill.ok{background:#1A1A1A;border-color:#1A1A1A;color:#FFC72C}
 .flow{margin:8px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;counter-reset:f;max-width:720px}.flow li{counter-increment:f;border-top:2px solid #CB333B;padding-top:12px;display:flex;flex-direction:column;gap:4px}.flow li:before{content:counter(f,decimal-leading-zero);font-family:"Barlow Condensed",Arial,sans-serif;font-style:italic;font-weight:900;color:#CB333B;font-size:18px}.flow b{font-size:16px;color:#FFFFFF}.flow span{font-size:14px;line-height:1.45;color:#B5B5B5}
+.faq{border-top:1px solid #E4E1DD}.faq-i{border-bottom:1px solid #E4E1DD}.faq-i summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;align-items:center;padding:22px 0;font-size:19px;font-weight:700;line-height:1.4}.faq-i summary::-webkit-details-marker{display:none}.faq-i summary:after{content:"+";font-family:"Barlow Condensed",Arial,sans-serif;font-weight:900;font-size:28px;line-height:1;color:#CB333B;flex-shrink:0;transition:transform .2s}.faq-i[open] summary:after{transform:rotate(45deg)}.faq-i summary:focus-visible{outline:2px solid #CB333B;outline-offset:4px}.faq-i p{margin:0;padding:0 40px 24px 0;font-size:17px;line-height:1.65;color:#4A4A4A}
 .feats{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;border-top:1px solid #E4E1DD;padding-top:18px}.feats li{position:relative;padding-left:20px;font-size:15px;line-height:1.5;color:#3A3A3A}.feats li:before{content:"";position:absolute;left:0;top:.7em;width:10px;height:2px;background:#CB333B}.feats-t{font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#1A1A1A}
 
 .wrap{max-width:1200px;margin:0 auto;padding-left:40px;padding-right:40px;box-sizing:border-box}
@@ -172,6 +173,7 @@ section[id],#formulario{scroll-margin-top:24px}
 }
 </style>
 <style>html{scroll-behavior:smooth}html,body{overflow-x:clip}img{max-width:100%}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Preciso ser experiente para treinar com a CMTeam?", "acceptedAnswer": {"@type": "Answer", "text": "Não. Treinamos do primeiro 5 km ao Ironman. O plano parte do seu momento, da sua rotina e do seu objetivo, seja ele começar, evoluir ou competir."}}, {"@type": "Question", "name": "Funciona se eu não moro em Miami?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. O acompanhamento online é completo: planilha individual no TrainingPeaks, feedback diário e a Carla no WhatsApp, de segunda a sábado. Temos atletas em mais de 25 países."}}, {"@type": "Question", "name": "Quais modalidades vocês treinam?", "acceptedAnswer": {"@type": "Answer", "text": "Triathlon, corrida de rua, trail e montanha e ultramaratona, sempre com a metodologia ECO."}}, {"@type": "Question", "name": "Como é o começo?", "acceptedAnswer": {"@type": "Answer", "text": "Primeiro a gente conversa sobre seu objetivo e sua rotina. Depois você preenche um cadastro completo, com saúde, histórico e disponibilidade, e faz os testes para definição das suas zonas. A partir daí, sua planilha chega toda semana no TrainingPeaks."}}, {"@type": "Question", "name": "Preciso de relógio com GPS?", "acceptedAnswer": {"@type": "Answer", "text": "Ajuda bastante, porque os treinos vão direto para o TrainingPeaks e o feedback fica mais preciso. Se você ainda não tem, a gente orienta na conversa."}}, {"@type": "Question", "name": "Quanto custa?", "acceptedAnswer": {"@type": "Answer", "text": "Depende do formato, online ou presencial, e do que faz sentido para o seu objetivo. Chame a gente no WhatsApp e montamos juntos o melhor caminho."}}]}</script>
 </head>
 <body>
 <div style="width: 100%; background: #FFFFFF; display: flex; flex-direction: column">
@@ -211,7 +213,7 @@ section[id],#formulario{scroll-margin-top:24px}
 <div class="wrap" style="position: relative; padding-top: 140px; padding-bottom: 140px; display: flex; flex-direction: column; gap: 28px">
 <div style="font-size: 14px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #FFC72C">Triathlon · Corrida · Endurance</div>
 <h1 class="disp hero-title" style="margin: 0; max-width: 760px; color: #FFFFFF">Aqui, cada treino tem motivo.</h1>
-<p style="margin: 0; font-size: 20px; line-height: 1.55; color: #D0D0D0; max-width: 560px">Assessoria especializada em triathlon, corrida e esportes de endurance. Metodologia própria, acompanhamento próximo e visão de longo prazo — do iniciante ao competitivo.</p>
+<p style="margin: 0; font-size: 20px; line-height: 1.55; color: #D0D0D0; max-width: 560px">Assessoria de triathlon e corrida com Carla Moreno, atleta olímpica, e San Palma. Online, de qualquer lugar, e presencial em Miami.</p>
 <div style="display: flex; gap: 14px; flex-wrap: wrap; padding-top: 8px">
 <a href="https://wa.me/13053959104?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20CMTeam." style="background: #CB333B; color: #FFFFFF; text-decoration: none; font-size: 17px; font-weight: 700; padding: 18px 30px; border-radius: 999px"><span style="display:inline-flex;align-items:center;gap:10px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.3z"></path><path d="M9 8.6c0 3.3 3 6.4 6.4 6.4l1.3-1.5-2-1-1 .9c-1-.4-2.2-1.6-2.6-2.6l.9-1-1-2z" fill="currentColor" stroke="none"></path></svg>Falar no WhatsApp</span></a>
 <a href="#eco" style="border: 1.5px solid #8A8A8A; color: #FFFFFF; text-decoration: none; font-size: 17px; font-weight: 700; padding: 18px 30px; border-radius: 999px">Conheça o método</a>
@@ -330,23 +332,6 @@ section[id],#formulario{scroll-margin-top:24px}
 </div>
 </section>
 
-<section style="background: #FFFFFF">
-<div class="wrap split-img" style="padding-top: 120px; padding-bottom: 120px">
-<img loading="lazy" decoding="async" src="img/coach-treino.jpg" alt="Coach da CMTeam orientando atletas antes do treino" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 20px; display: block">
-<div style="display: flex; flex-direction: column; gap: 28px">
-<div style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #CB333B">Como trabalhamos</div>
-<h2 class="disp sec-title" style="margin: 0">Planejamento claro. Acompanhamento de perto.</h2>
-<p style="margin: 0; font-size: 18px; line-height: 1.65; color: #3A3A3A">Todos os treinos são prescritos e acompanhados pelo TrainingPeaks. O feedback pós-treino faz parte ativa do processo e orienta as decisões semana a semana.</p>
-<div style="display: flex; flex-direction: column; gap: 0; border-top: 1px solid #E4E1DD">
-<div style="padding: 16px 0; border-bottom: 1px solid #E4E1DD; font-size: 17px; font-weight: 700">Planejamento semanal claro e organizado</div>
-<div style="padding: 16px 0; border-bottom: 1px solid #E4E1DD; font-size: 17px; font-weight: 700">Treinos explicados, com objetivo e orientação prática</div>
-<div style="padding: 16px 0; border-bottom: 1px solid #E4E1DD; font-size: 17px; font-weight: 700">Acompanhamento contínuo e ajustes frequentes</div>
-<div style="padding: 16px 0; border-bottom: 1px solid #E4E1DD; font-size: 17px; font-weight: 700">Feedback direto dentro do aplicativo</div>
-</div>
-</div>
-</div>
-</section>
-
 <section id="modalidades" style="background: #F6F4F1">
 <div class="wrap" style="padding-top: 112px; padding-bottom: 112px; display: flex; flex-direction: column; gap: 48px">
 <div style="display: flex; flex-direction: column; gap: 20px; max-width: 760px">
@@ -414,6 +399,108 @@ section[id],#formulario{scroll-margin-top:24px}
 <p style="margin: 0; font-size: 19px; line-height: 1.5; font-style: italic; color: #1A1A1A; border-left: 3px solid #CB333B; padding-left: 18px">“Carregar meu nome no time é uma honra que nunca se tornou rotina. A CMTeam é, sim, o meu nome, mas, mais do que isso, é a soma de todas as pessoas que decidiram acreditar no mesmo propósito.”</p>
 </div>
 </div>
+</div>
+</section>
+
+<section id="miami" style="background: #111111; color: #FFFFFF">
+<div class="wrap" style="padding-top: 120px; padding-bottom: 120px; display: flex; flex-direction: column; gap: 56px">
+<div class="split">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<div style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #FFC72C">Treinos presenciais</div>
+<h2 class="disp loc" style="margin: 0; color: #FFFFFF; display: flex; flex-direction: column; gap: 6px">
+<span class="loc1">Miami</span>
+<span class="loc2">Key Biscayne</span>
+<span class="loc3" style="color: #CB333B">Tribeach</span>
+</h2>
+</div>
+<div class="sched" style="border-top: 1px solid #333333">
+<div class="disp" style="font-size: 24px; padding: 20px 0; border-bottom: 1px solid #333333; color: #CB333B">Terça</div>
+<div style="font-size: 17px; line-height: 1.5; padding: 22px 0; border-bottom: 1px solid #333333; color: #E6E6E6">Corrida 6h00–7h20 · Natação 7h20–8h00</div>
+<div class="disp" style="font-size: 24px; padding: 20px 0; border-bottom: 1px solid #333333; color: #CB333B">Quarta</div>
+<div style="font-size: 17px; line-height: 1.5; padding: 22px 0; border-bottom: 1px solid #333333; color: #E6E6E6">Bike 6h00–8h00</div>
+<div class="disp" style="font-size: 24px; padding: 20px 0; border-bottom: 1px solid #333333; color: #CB333B">Quinta</div>
+<div style="font-size: 17px; line-height: 1.5; padding: 22px 0; border-bottom: 1px solid #333333; color: #E6E6E6">Corrida 6h00–7h20 · Natação 7h20–8h00</div>
+<div class="disp" style="font-size: 24px; padding: 20px 0; border-bottom: 1px solid #333333; color: #CB333B">Sábado</div>
+<div style="font-size: 17px; line-height: 1.5; padding: 22px 0; border-bottom: 1px solid #333333; color: #E6E6E6">Longo de corrida · Natação em águas abertas</div>
+</div>
+<div class="transicao">
+<div class="transicao-tag"># Transição</div>
+<div>
+<strong>Todo mês tem transição e simulado de prova.</strong>
+<span>Uma ou duas vezes por mês, na Tribeach: natação + corrida, bike + corrida ou o triathlon completo. Técnica de execução, ritmo e estratégia de prova, treinados juntos. O treino preferido do time.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="online" style="background: #F6F4F1">
+<div class="wrap" style="padding-top: 120px; padding-bottom: 120px; display: flex; flex-direction: column; gap: 56px">
+<div class="split">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<div style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #CB333B">Treino online</div>
+<h2 class="disp sec-title" style="margin: 0">De qualquer lugar do mundo.</h2>
+</div>
+<p style="margin: 0; font-size: 19px; line-height: 1.65; color: #3A3A3A">Quem treina à distância recebe o mesmo acompanhamento de quem está no grupo em Miami: planilha individual, feedback diário e uma atleta olímpica do seu lado. A CMTeam está presente em mais de 25 países.</p>
+</div>
+<div class="online-hero" style="background: #111111; color: #FFFFFF; border-radius: 20px; padding: 48px; display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 40px; align-items: center">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #FFC72C">De segunda a sábado</div>
+<h3 class="disp" style="margin: 0; font-size: 44px; line-height: 1.02; color: #FFFFFF">Carla Moreno no seu WhatsApp.</h3>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #C9C9C9; max-width: 640px">Dúvidas, ajustes e feedbacks direto com a Carla, que trabalha lado a lado com o San. Você não fica sem resposta e mantém o foco nos treinos. E do outro lado está uma atleta olímpica.</p>
+<ol class="flow"><li><b>Você chama a Carla</b><span>no WhatsApp, de segunda a sábado</span></li><li><b>Ela alinha com o San</b><span>tudo passa pela supervisão do coach</span></li><li><b>O ajuste entra no seu plano</b><span>sempre dentro da sua periodização individual</span></li></ol>
+</div>
+<a href="https://wa.me/13053959104?text=Ol%C3%A1!%20Quero%20treinar%20com%20a%20CMTeam." style="background: #25D366; color: #FFFFFF; text-decoration: none; font-size: 17px; font-weight: 700; padding: 18px 30px; border-radius: 999px; white-space: nowrap"><span style="display:inline-flex;align-items:center;gap:10px"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9 1.9 1.9 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zm8.4-18.2C18.1 1.3 15.2.1 12 .1 5.5.1.2 5.4.2 11.9c0 2.1.5 4.1 1.6 5.9L.1 24l6.3-1.7c1.7.9 3.7 1.4 5.6 1.4 6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.1-3.4-8.3z"/></svg><span>Quero treinar com a CMTeam</span></span></a>
+</div>
+<div class="g3">
+<div style="border-top: 3px solid #CB333B; padding-top: 24px; display: flex; flex-direction: column; gap: 12px">
+<div class="disp" style="font-size: 20px; color: #CB333B">01</div>
+<h3 style="margin: 0; font-size: 21px; font-weight: 700">Sua planilha, toda semana</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #4A4A4A">Planejamento individual feito pelo San e publicado aos domingos no TrainingPeaks, com as instruções de cada dia e de cada modalidade.</p>
+</div>
+<div style="border-top: 3px solid #CB333B; padding-top: 24px; display: flex; flex-direction: column; gap: 12px">
+<div class="disp" style="font-size: 20px; color: #CB333B">02</div>
+<h3 style="margin: 0; font-size: 21px; font-weight: 700">Seu feedback move o plano</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #4A4A4A">Cada comentário pós-treino chega na hora para o San e orienta os ajustes da semana seguinte.</p>
+</div>
+<div style="border-top: 3px solid #CB333B; padding-top: 24px; display: flex; flex-direction: column; gap: 12px">
+<div class="disp" style="font-size: 20px; color: #CB333B">03</div>
+<h3 style="margin: 0; font-size: 21px; font-weight: 700">Zonas sob medida</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #4A4A4A">Testes para definição das suas zonas de treinamento, a base de toda a prescrição.</p>
+</div>
+</div>
+<div class="planos" style="border-top: 1px solid #DDD8D2; padding-top: 36px; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between">
+<div style="display: flex; flex-direction: column; gap: 8px; max-width: 680px">
+<div style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #CB333B">Planos</div>
+<p style="margin: 0; font-size: 19px; line-height: 1.55; color: #1A1A1A"><strong>Online, de qualquer lugar, ou presencial em Miami.</strong> Conte seu objetivo e sua rotina, e a gente monta com você o melhor caminho.</p>
+</div>
+<a href="https://wa.me/13053959104?text=Ol%C3%A1!%20Quero%20treinar%20com%20a%20CMTeam." style="border: 1.5px solid #1A1A1A; color: #1A1A1A; text-decoration: none; font-size: 16px; font-weight: 700; padding: 15px 26px; border-radius: 999px; white-space: nowrap">Fale com a gente</a>
+</div>
+</div>
+</section>
+
+<section id="calendario" style="background: #FFFFFF">
+<div class="wrap" style="padding-top: 120px; padding-bottom: 120px; display: flex; flex-direction: column; gap: 48px">
+<div class="split">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<div style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #CB333B">Calendário do time 2027</div>
+<h2 class="disp sec-title" style="margin: 0">Onde o time se encontra.</h2>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-size: 19px; line-height: 1.65; color: #3A3A3A">Estas são as provas-alvo oficiais da CMTeam em 2027. Nas provas com suporte confirmado, o time está lá com você, da preparação à linha de chegada.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #6B6B6B">Inscrições para IRONMAN e IRONMAN 70.3 têm fechado cada vez mais cedo. Se uma dessas provas está nos seus planos, defina o objetivo e garanta sua vaga com antecedência.</p>
+</div>
+</div>
+<div class="cal-list">
+<div class="cal-race"><div class="disp rdate">31 jan</div><div class="rinfo"><div class="rname">Miami Marathon & Half Marathon</div><div class="rloc">Miami, Flórida · EUA</div></div><span class="rpill ok">Suporte do time confirmado</span></div>
+<div class="cal-race"><div class="disp rdate">18–20 mar</div><div class="rinfo"><div class="rname">INDOMIT Pedra do Baú</div><div class="rloc">São Bento do Sapucaí, SP · Brasil</div></div><span class="rpill ok">Suporte do time confirmado</span></div>
+<div class="cal-race"><div class="disp rdate">22–25 abr</div><div class="rinfo"><div class="rname">Canyons Endurance Runs by UTMB</div><div class="rloc">Auburn, Califórnia · EUA</div></div><span class="rpill ok">Suporte do time confirmado</span></div>
+<div class="cal-race"><div class="disp rdate">8 mai</div><div class="rinfo"><div class="rname">IRONMAN 70.3 Gulf Coast</div><div class="rloc">Panama City Beach, Flórida · EUA</div></div><span class="rpill ok">Suporte do time confirmado</span></div>
+<div class="cal-race"><div class="disp rdate">4–6 jun</div><div class="rinfo"><div class="rname">Ultra Trail Chattanooga by UTMB</div><div class="rloc">Chattanooga, Tennessee · EUA</div></div><span class="rpill">Suporte a confirmar</span></div>
+<div class="cal-race"><div class="disp rdate">Out</div><div class="rinfo"><div class="rname">IRONMAN California</div><div class="rloc">Sacramento, Califórnia · EUA</div></div><span class="rpill">Suporte a confirmar</span></div>
+<div class="cal-race"><div class="disp rdate">Nov</div><div class="rinfo"><div class="rname">IRONMAN Cozumel</div><div class="rloc">Cozumel, Quintana Roo · México</div></div><span class="rpill">Suporte a confirmar</span></div>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #6B6B6B">O suporte nas provas a confirmar depende do número de atletas inscritos e do interesse do grupo. As datas oficiais do IRONMAN California e do IRONMAN Cozumel 2027 ainda serão divulgadas. Vai correr alguma delas? <a href="https://wa.me/13053959104?text=Ol%C3%A1!%20Quero%20correr%20uma%20prova%20do%20calend%C3%A1rio%202027%20com%20a%20CMTeam.">Fale com a gente</a>.</p>
 </div>
 </section>
 
@@ -525,108 +612,6 @@ section[id],#formulario{scroll-margin-top:24px}
 </script>
 </section>
 
-<section id="miami" style="background: #111111; color: #FFFFFF">
-<div class="wrap" style="padding-top: 120px; padding-bottom: 120px; display: flex; flex-direction: column; gap: 56px">
-<div class="split">
-<div style="display: flex; flex-direction: column; gap: 20px">
-<div style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #FFC72C">Treinos presenciais</div>
-<h2 class="disp loc" style="margin: 0; color: #FFFFFF; display: flex; flex-direction: column; gap: 6px">
-<span class="loc1">Miami</span>
-<span class="loc2">Key Biscayne</span>
-<span class="loc3" style="color: #CB333B">Tribeach</span>
-</h2>
-</div>
-<div class="sched" style="border-top: 1px solid #333333">
-<div class="disp" style="font-size: 24px; padding: 20px 0; border-bottom: 1px solid #333333; color: #CB333B">Terça</div>
-<div style="font-size: 17px; line-height: 1.5; padding: 22px 0; border-bottom: 1px solid #333333; color: #E6E6E6">Corrida 6h00–7h20 · Natação 7h20–8h00</div>
-<div class="disp" style="font-size: 24px; padding: 20px 0; border-bottom: 1px solid #333333; color: #CB333B">Quarta</div>
-<div style="font-size: 17px; line-height: 1.5; padding: 22px 0; border-bottom: 1px solid #333333; color: #E6E6E6">Bike 6h00–8h00</div>
-<div class="disp" style="font-size: 24px; padding: 20px 0; border-bottom: 1px solid #333333; color: #CB333B">Quinta</div>
-<div style="font-size: 17px; line-height: 1.5; padding: 22px 0; border-bottom: 1px solid #333333; color: #E6E6E6">Corrida 6h00–7h20 · Natação 7h20–8h00</div>
-<div class="disp" style="font-size: 24px; padding: 20px 0; border-bottom: 1px solid #333333; color: #CB333B">Sábado</div>
-<div style="font-size: 17px; line-height: 1.5; padding: 22px 0; border-bottom: 1px solid #333333; color: #E6E6E6">Longo de corrida · Natação em águas abertas</div>
-</div>
-<div class="transicao">
-<div class="transicao-tag"># Transição</div>
-<div>
-<strong>Todo mês tem transição e simulado de prova.</strong>
-<span>Uma ou duas vezes por mês, na Tribeach: natação + corrida, bike + corrida ou o triathlon completo. Técnica de execução, ritmo e estratégia de prova, treinados juntos. O treino preferido do time.</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<section id="online" style="background: #F6F4F1">
-<div class="wrap" style="padding-top: 120px; padding-bottom: 120px; display: flex; flex-direction: column; gap: 56px">
-<div class="split">
-<div style="display: flex; flex-direction: column; gap: 20px">
-<div style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #CB333B">Treino online</div>
-<h2 class="disp sec-title" style="margin: 0">De qualquer lugar do mundo.</h2>
-</div>
-<p style="margin: 0; font-size: 19px; line-height: 1.65; color: #3A3A3A">Quem treina à distância recebe o mesmo acompanhamento de quem está no grupo em Miami: planilha individual, feedback diário e uma atleta olímpica do seu lado. A CMTeam está presente em mais de 25 países.</p>
-</div>
-<div class="online-hero" style="background: #111111; color: #FFFFFF; border-radius: 20px; padding: 48px; display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 40px; align-items: center">
-<div style="display: flex; flex-direction: column; gap: 16px">
-<div style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #FFC72C">De segunda a sábado</div>
-<h3 class="disp" style="margin: 0; font-size: 44px; line-height: 1.02; color: #FFFFFF">Carla Moreno no seu WhatsApp.</h3>
-<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #C9C9C9; max-width: 640px">Dúvidas, ajustes e feedbacks direto com a Carla, que trabalha lado a lado com o San. Você não fica sem resposta e mantém o foco nos treinos. E do outro lado está uma atleta olímpica.</p>
-<ol class="flow"><li><b>Você chama a Carla</b><span>no WhatsApp, de segunda a sábado</span></li><li><b>Ela alinha com o San</b><span>tudo passa pela supervisão do coach</span></li><li><b>O ajuste entra no seu plano</b><span>sempre dentro da sua periodização individual</span></li></ol>
-</div>
-<a href="https://wa.me/13053959104?text=Ol%C3%A1!%20Quero%20treinar%20com%20a%20CMTeam." style="background: #25D366; color: #FFFFFF; text-decoration: none; font-size: 17px; font-weight: 700; padding: 18px 30px; border-radius: 999px; white-space: nowrap"><span style="display:inline-flex;align-items:center;gap:10px"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9 1.9 1.9 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zm8.4-18.2C18.1 1.3 15.2.1 12 .1 5.5.1.2 5.4.2 11.9c0 2.1.5 4.1 1.6 5.9L.1 24l6.3-1.7c1.7.9 3.7 1.4 5.6 1.4 6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.1-3.4-8.3z"/></svg><span>Quero treinar com a CMTeam</span></span></a>
-</div>
-<div class="g3">
-<div style="border-top: 3px solid #CB333B; padding-top: 24px; display: flex; flex-direction: column; gap: 12px">
-<div class="disp" style="font-size: 20px; color: #CB333B">01</div>
-<h3 style="margin: 0; font-size: 21px; font-weight: 700">Sua planilha, toda semana</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #4A4A4A">Planejamento individual feito pelo San e publicado aos domingos no TrainingPeaks, com as instruções de cada dia e de cada modalidade.</p>
-</div>
-<div style="border-top: 3px solid #CB333B; padding-top: 24px; display: flex; flex-direction: column; gap: 12px">
-<div class="disp" style="font-size: 20px; color: #CB333B">02</div>
-<h3 style="margin: 0; font-size: 21px; font-weight: 700">Seu feedback move o plano</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #4A4A4A">Cada comentário pós-treino chega na hora para o San e orienta os ajustes da semana seguinte.</p>
-</div>
-<div style="border-top: 3px solid #CB333B; padding-top: 24px; display: flex; flex-direction: column; gap: 12px">
-<div class="disp" style="font-size: 20px; color: #CB333B">03</div>
-<h3 style="margin: 0; font-size: 21px; font-weight: 700">Zonas sob medida</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #4A4A4A">Testes para definição das suas zonas de treinamento, a base de toda a prescrição.</p>
-</div>
-</div>
-<div class="planos" style="border-top: 1px solid #DDD8D2; padding-top: 36px; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between">
-<div style="display: flex; flex-direction: column; gap: 8px; max-width: 680px">
-<div style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #CB333B">Planos</div>
-<p style="margin: 0; font-size: 19px; line-height: 1.55; color: #1A1A1A"><strong>Online, de qualquer lugar, ou presencial em Miami.</strong> Conte seu objetivo e sua rotina, e a gente monta com você o melhor caminho.</p>
-</div>
-<a href="https://wa.me/13053959104?text=Ol%C3%A1!%20Quero%20treinar%20com%20a%20CMTeam." style="border: 1.5px solid #1A1A1A; color: #1A1A1A; text-decoration: none; font-size: 16px; font-weight: 700; padding: 15px 26px; border-radius: 999px; white-space: nowrap">Fale com a gente</a>
-</div>
-</div>
-</section>
-
-<section id="calendario" style="background: #FFFFFF">
-<div class="wrap" style="padding-top: 120px; padding-bottom: 120px; display: flex; flex-direction: column; gap: 48px">
-<div class="split">
-<div style="display: flex; flex-direction: column; gap: 20px">
-<div style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #CB333B">Calendário do time 2027</div>
-<h2 class="disp sec-title" style="margin: 0">Onde o time se encontra.</h2>
-</div>
-<div style="display: flex; flex-direction: column; gap: 14px">
-<p style="margin: 0; font-size: 19px; line-height: 1.65; color: #3A3A3A">Estas são as provas-alvo oficiais da CMTeam em 2027. Nas provas com suporte confirmado, o time está lá com você, da preparação à linha de chegada.</p>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #6B6B6B">Inscrições para IRONMAN e IRONMAN 70.3 têm fechado cada vez mais cedo. Se uma dessas provas está nos seus planos, defina o objetivo e garanta sua vaga com antecedência.</p>
-</div>
-</div>
-<div class="cal-list">
-<div class="cal-race"><div class="disp rdate">31 jan</div><div class="rinfo"><div class="rname">Miami Marathon & Half Marathon</div><div class="rloc">Miami, Flórida · EUA</div></div><span class="rpill ok">Suporte do time confirmado</span></div>
-<div class="cal-race"><div class="disp rdate">18–20 mar</div><div class="rinfo"><div class="rname">INDOMIT Pedra do Baú</div><div class="rloc">São Bento do Sapucaí, SP · Brasil</div></div><span class="rpill ok">Suporte do time confirmado</span></div>
-<div class="cal-race"><div class="disp rdate">22–25 abr</div><div class="rinfo"><div class="rname">Canyons Endurance Runs by UTMB</div><div class="rloc">Auburn, Califórnia · EUA</div></div><span class="rpill ok">Suporte do time confirmado</span></div>
-<div class="cal-race"><div class="disp rdate">8 mai</div><div class="rinfo"><div class="rname">IRONMAN 70.3 Gulf Coast</div><div class="rloc">Panama City Beach, Flórida · EUA</div></div><span class="rpill ok">Suporte do time confirmado</span></div>
-<div class="cal-race"><div class="disp rdate">4–6 jun</div><div class="rinfo"><div class="rname">Ultra Trail Chattanooga by UTMB</div><div class="rloc">Chattanooga, Tennessee · EUA</div></div><span class="rpill">Suporte a confirmar</span></div>
-<div class="cal-race"><div class="disp rdate">Out</div><div class="rinfo"><div class="rname">IRONMAN California</div><div class="rloc">Sacramento, Califórnia · EUA</div></div><span class="rpill">Suporte a confirmar</span></div>
-<div class="cal-race"><div class="disp rdate">Nov</div><div class="rinfo"><div class="rname">IRONMAN Cozumel</div><div class="rloc">Cozumel, Quintana Roo · México</div></div><span class="rpill">Suporte a confirmar</span></div>
-</div>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #6B6B6B">O suporte nas provas a confirmar depende do número de atletas inscritos e do interesse do grupo. As datas oficiais do IRONMAN California e do IRONMAN Cozumel 2027 ainda serão divulgadas. Vai correr alguma delas? <a href="https://wa.me/13053959104?text=Ol%C3%A1!%20Quero%20correr%20uma%20prova%20do%20calend%C3%A1rio%202027%20com%20a%20CMTeam.">Fale com a gente</a>.</p>
-</div>
-</section>
-
 <section id="instagram" style="background: #FFFFFF">
 <div class="wrap" style="padding-top: 112px; padding-bottom: 40px; display: flex; flex-direction: column; gap: 36px">
 <div style="display: flex; flex-direction: column; gap: 14px">
@@ -698,7 +683,7 @@ section[id],#formulario{scroll-margin-top:24px}
 </div>
 </section>
 
-<section style="background: #FFFFFF">
+<section id="para-quem" style="background: #F6F4F1">
 <div class="wrap split" style="padding-top: 120px; padding-bottom: 120px">
 <div style="display: flex; flex-direction: column; gap: 20px">
 <div style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #CB333B">Para quem é</div>
@@ -722,6 +707,24 @@ section[id],#formulario{scroll-margin-top:24px}
 <span class="disp" style="font-size: 22px; color: #CB333B">04</span>
 <span style="font-size: 19px; line-height: 1.5; color: #1A1A1A">busca performance sem abrir mão de saúde, equilíbrio e longevidade esportiva</span>
 </div>
+</div>
+</div>
+</section>
+
+<section id="faq" style="background: #FFFFFF">
+<div class="wrap split" style="padding-top: 120px; padding-bottom: 120px">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<div style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #CB333B">Perguntas frequentes</div>
+<h2 class="disp sec-title" style="margin: 0">Antes de começar.</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4A4A4A">Ficou alguma dúvida? <a href="https://wa.me/13053959104?text=Ol%C3%A1!%20Quero%20treinar%20com%20a%20CMTeam.">Fale com a gente no WhatsApp</a>.</p>
+</div>
+<div class="faq">
+<details class="faq-i"><summary>Preciso ser experiente para treinar com a CMTeam?</summary><p>Não. Treinamos do primeiro 5 km ao Ironman. O plano parte do seu momento, da sua rotina e do seu objetivo, seja ele começar, evoluir ou competir.</p></details>
+<details class="faq-i"><summary>Funciona se eu não moro em Miami?</summary><p>Sim. O acompanhamento online é completo: planilha individual no TrainingPeaks, feedback diário e a Carla no WhatsApp, de segunda a sábado. Temos atletas em mais de 25 países.</p></details>
+<details class="faq-i"><summary>Quais modalidades vocês treinam?</summary><p>Triathlon, corrida de rua, trail e montanha e ultramaratona, sempre com a metodologia ECO.</p></details>
+<details class="faq-i"><summary>Como é o começo?</summary><p>Primeiro a gente conversa sobre seu objetivo e sua rotina. Depois você preenche um cadastro completo, com saúde, histórico e disponibilidade, e faz os testes para definição das suas zonas. A partir daí, sua planilha chega toda semana no TrainingPeaks.</p></details>
+<details class="faq-i"><summary>Preciso de relógio com GPS?</summary><p>Ajuda bastante, porque os treinos vão direto para o TrainingPeaks e o feedback fica mais preciso. Se você ainda não tem, a gente orienta na conversa.</p></details>
+<details class="faq-i"><summary>Quanto custa?</summary><p>Depende do formato, online ou presencial, e do que faz sentido para o seu objetivo. Chame a gente no WhatsApp e montamos juntos o melhor caminho.</p></details>
 </div>
 </div>
 </section>
@@ -798,7 +801,7 @@ section[id],#formulario{scroll-margin-top:24px}
 </div>
 <div class="foot-col">
 <div class="foot-h">Navegação</div>
-<a href="#filosofia">Manifesto</a><a href="#eco">Método ECO</a><a href="#treinadores">Treinadores</a><a href="#conteudo">Livros e textos</a><a href="#miami">Treinos em Miami</a>
+<a href="#filosofia">Manifesto</a><a href="#eco">Método ECO</a><a href="#treinadores">Treinadores</a><a href="#miami">Treinos em Miami</a><a href="#online">Treino online</a><a href="#calendario">Calendário 2027</a><a href="#conteudo">Livros e textos</a><a href="#faq">Perguntas frequentes</a>
 </div>
 <div class="foot-col">
 <div class="foot-h">Livros</div>
