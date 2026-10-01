@@ -147,7 +147,7 @@ TEXT={
 'Ajuda bastante, porque os treinos vão direto para o TrainingPeaks e o feedback fica mais preciso. Se você ainda não tem, a gente orienta na conversa.':'It helps a lot, because your workouts sync straight to TrainingPeaks and the feedback is more precise. If you don’t have one yet, we will guide you when we talk.',
 'Quanto custa?':'How much does it cost?',
 'Depende do formato, online ou presencial, e do que faz sentido para o seu objetivo. Chame a gente no WhatsApp e montamos juntos o melhor caminho.':'It depends on the format, online or in person, and on what makes sense for your goal. Message us on WhatsApp and we will build the best path together.',
-'Assessoria de triathlon e corrida com Carla Moreno, atleta olímpica, e San Palma, ex-treinador da Seleção Brasileira de Triathlon. Online, de qualquer lugar, e presencial em Miami.':'Triathlon and running coaching with Olympian Carla Moreno and San Palma, former Brazilian National Triathlon Team coach. Online from anywhere, and in person in Miami.',
+'A ciência de San Palma, criador do Método ECO. A experiência olímpica de Carla Moreno. Online, de qualquer lugar, e presencial em Miami.':'The science of San Palma, creator of the ECO Method. The Olympic experience of Carla Moreno. Online from anywhere, and in person in Miami.',
 'Perguntas frequentes':'FAQ',
 'Antes de começar.':'Before you start.',
 'Ficou alguma dúvida?':'Still have a question?',
@@ -199,7 +199,7 @@ TEXT={
 'A cabeça corre primeiro — grátis':'A cabeça corre primeiro — free',
 }
 ATTR={
-'Assessoria de triathlon, corrida e trail com Carla Moreno, atleta olímpica, e San Palma, ex-treinador da Seleção Brasileira. Metodologia ECO, planilha individual no TrainingPeaks e suporte diário no WhatsApp. Online, de qualquer lugar, e presencial em Miami.':'Triathlon, running and trail coaching with Olympian Carla Moreno and San Palma, former Brazilian National Team coach. The ECO Method, an individual plan on TrainingPeaks and daily WhatsApp support. Online from anywhere, and in person in Miami.',
+'Assessoria de triathlon, corrida e trail que une a ciência de San Palma, criador do Método ECO, à experiência olímpica de Carla Moreno. Planilha individual no TrainingPeaks e suporte diário no WhatsApp. Online, de qualquer lugar, e presencial em Miami.':'Triathlon, running and trail coaching that brings together the science of San Palma, creator of the ECO Method, and the Olympic experience of Carla Moreno. An individual plan on TrainingPeaks and daily WhatsApp support. Online from anywhere, and in person in Miami.',
 'Assessoria de triathlon, corrida e esportes de endurance. Metodologia ECO, acompanhamento próximo e visão de longo prazo — do iniciante ao competitivo. Miami e online.':'Triathlon, running and endurance coaching in Miami and online. The ECO Method, close guidance and a long-term vision — from first-timers to competitive athletes.',
 'CMTeam — Aqui, cada treino tem motivo.':'CMTeam — Every session has a reason.',
 'Fechar aviso':'Close','CMTeam — início':'CMTeam — home','Principal':'Main','Falar no WhatsApp':'Message us on WhatsApp','Fale conosco':'Contact us',
@@ -246,7 +246,7 @@ REP=[
 
 ('text=Ol%C3%A1!%20Quero%20treinar%20com%20a%20CMTeam.','text=Hi!%20I%27d%20like%20to%20train%20with%20CMTeam.'),
 ('text=Ol%C3%A1!%20Quero%20correr%20uma%20prova%20do%20calend%C3%A1rio%202027%20com%20a%20CMTeam.','text=Hi!%20I%27m%20planning%20to%20race%20one%20of%20the%202027%20team%20races%20with%20CMTeam.'),
-('"description": "Assessoria de triathlon, corrida e trail com Carla Moreno, atleta olímpica, e San Palma, ex-treinador da Seleção Brasileira. Metodologia ECO, planilha individual no TrainingPeaks e suporte diário no WhatsApp. Online, de qualquer lugar, e presencial em Miami."','"description": "Triathlon, running and trail coaching with Olympian Carla Moreno and San Palma, former Brazilian National Team coach. The ECO Method, an individual plan on TrainingPeaks and daily WhatsApp support. Online from anywhere, and in person in Miami."'),
+('"description": "Assessoria de triathlon, corrida e trail que une a ciência de San Palma, criador do Método ECO, à experiência olímpica de Carla Moreno. Planilha individual no TrainingPeaks e suporte diário no WhatsApp. Online, de qualquer lugar, e presencial em Miami."','"description": "Triathlon, running and trail coaching that brings together the science of San Palma, creator of the ECO Method, and the Olympic experience of Carla Moreno. An individual plan on TrainingPeaks and daily WhatsApp support. Online from anywhere, and in person in Miami."'),
 ('"jobTitle": "Co-fundadora e Treinadora"','"jobTitle": "Co-founder & Coach"'),
 ('"jobTitle": "Co-fundador e Head Coach"','"jobTitle": "Co-founder & Head Coach"'),
 ('ECO <span style="color: #CB333B">|</span> Esforço Contínuo Ondulatório</h2>','ECO <span style="color: #CB333B">|</span> Esforço Contínuo Ondulatório</h2>\n<p style="margin: 0; font-size: 17px; line-height: 1.5; color: #B5B5B5"><em>Continuous Undulating Effort</em> — the methodology keeps its original Portuguese name.</p>'),
