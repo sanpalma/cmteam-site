@@ -231,6 +231,7 @@ for i,p in enumerate(parts):
 s=''.join(parts)
 # script / misc strings
 REP=[
+('data-goatcounter-click="','data-goatcounter-click="en-'),("path:'ebook-cadastro'","path:'en-ebook-cadastro'"),("path:'form-contato'","path:'en-form-contato'"),
 ('Preciso ser experiente para treinar com a CMTeam?','Do I need experience to train with CMTeam?'),
 ('Não. Treinamos do primeiro 5 km ao Ironman. O plano parte do seu momento, da sua rotina e do seu objetivo, seja ele começar, evoluir ou competir.','No. We coach everyone from a first 5K to Ironman. Your plan starts from where you are, your routine and your goal, whether that is getting started, improving or competing.'),
 ('Funciona se eu não moro em Miami?','Does it work if I don’t live in Miami?'),
