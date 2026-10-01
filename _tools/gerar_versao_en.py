@@ -131,6 +131,10 @@ TEXT={
 'tudo passa pela supervisão do coach':'everything goes through the coach',
 'O ajuste entra no seu plano':'The change goes into your plan',
 'sempre dentro da sua periodização individual':'always within your individual periodization',
+'Quero treinar com a CMTeam':'I want to train with CMTeam',
+'Planos':'Plans',
+'Online, de qualquer lugar, ou presencial em Miami.':'Online from anywhere, or in person in Miami.',
+'Conte seu objetivo e sua rotina, e a gente monta com você o melhor caminho.':'Tell us your goal and your routine, and we will build the best path with you.',
 'Co-fundadora e Treinadora':'Co-founder & Coach',
 'Campeã Mundial Júnior de Triathlon, integrou a Seleção Brasileira por 14 anos consecutivos e representou o Brasil em dois Jogos Olímpicos — Sydney 2000 e Atenas 2004 —, com títulos mundiais, pan-americanos e vitórias em Copas do Mundo. Hoje atua diretamente no atendimento e na orientação dos atletas, traduzindo o treinamento em decisões práticas, estratégia de prova e equilíbrio entre esporte e vida pessoal.':'Junior Triathlon World Champion, she was part of the Brazilian national team for 14 consecutive years and represented Brazil at two Olympic Games — Sydney 2000 and Athens 2004 — with world and Pan American titles and World Cup wins. Today she works directly with our athletes, turning training into practical decisions, race strategy and balance between sport and personal life.',
 '“Carregar meu nome no time é uma honra que nunca se tornou rotina. A CMTeam é, sim, o meu nome, mas, mais do que isso, é a soma de todas as pessoas que decidiram acreditar no mesmo propósito.”':'“Having my name on this team is an honor that has never become routine. CMTeam is my name, yes — but more than that, it is the sum of everyone who chose to believe in the same purpose.”',
@@ -208,6 +212,7 @@ for i,p in enumerate(parts):
 s=''.join(parts)
 # script / misc strings
 REP=[
+('text=Ol%C3%A1!%20Quero%20treinar%20com%20a%20CMTeam.','text=Hi!%20I%27d%20like%20to%20train%20with%20CMTeam.'),
 ('text=Ol%C3%A1!%20Quero%20correr%20uma%20prova%20do%20calend%C3%A1rio%202027%20com%20a%20CMTeam.','text=Hi!%20I%27m%20planning%20to%20race%20one%20of%20the%202027%20team%20races%20with%20CMTeam.'),
 ('"description": "Assessoria de triathlon, corrida e trail com Carla Moreno, atleta olímpica, e San Palma. Metodologia ECO, planilha individual no TrainingPeaks e suporte diário no WhatsApp. Online, de qualquer lugar, e presencial em Miami."','"description": "Triathlon, running and trail coaching with Olympian Carla Moreno and San Palma. The ECO Method, an individual plan on TrainingPeaks and daily WhatsApp support. Online from anywhere, and in person in Miami."'),
 ('"jobTitle": "Co-fundadora e Treinadora"','"jobTitle": "Co-founder & Coach"'),
