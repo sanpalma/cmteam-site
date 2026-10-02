@@ -442,32 +442,33 @@ function human(f,v){
  return v;
 }
 function payload(){
- var fd=new FormData(),n=0;
+ var o={},n=0;
+ var add=function(k,v){var key=k,i=2;while(Object.prototype.hasOwnProperty.call(o,key)){key=k+' ('+i+')';i++;}o[key]=v;};
  var perfil={triathlon:'Triathlon',corrida:'Corrida de rua',trail:'Trail running'}[state.perfil]||'';
- fd.append('access_key',ACCESS_KEY);
- fd.append('subject','Cadastro de atleta — '+(state.nome||'')+' — '+perfil);
- fd.append('from_name','Cadastro CMTeam');
- fd.append('email',state.email||'');
- fd.append('botcheck','');
- fd.append('00 · Idioma do formulário',lang==='pt'?'Português':'Inglês');
- fd.append('00 · Fuso horário do aparelho',(Intl.DateTimeFormat().resolvedOptions().timeZone)||'');
+ o.access_key=ACCESS_KEY;
+ o.subject='Cadastro de atleta — '+(state.nome||'')+' — '+perfil;
+ o.from_name='Cadastro CMTeam';
+ o.email=state.email||'';
+ o.botcheck='';
+ add('Idioma do formulário',lang==='pt'?'Português':'Inglês');
+ add('Fuso horário do aparelho',(Intl.DateTimeFormat().resolvedOptions().timeZone)||'');
  STEPS.forEach(function(S,si){S.blocks.forEach(function(b){if(!vis(b))return;b.fields.forEach(function(f){
-  if(!vis(f)||f.type==='alert'||f.id==='email')return;var v=state[f.id],key=(si+1)+' '+S.title.pt+' · '+(b.sub.pt===S.title.pt?'':b.sub.pt+' · ')+label(f);
-  if(f.type==='matrix'){var rows=f.rows(state),m=v||{};rows.forEach(function(r){var ds=DAYS.filter(function(d){return m[r.v+'_'+d.v];}).map(function(d){return d.pt;});if(ds.length)fd.append((si+1)+' '+S.title.pt+' · Disponibilidade · '+r.pt,ds.join(', '));});return;}
-  if(f.type==='races'){(state.provas||[]).forEach(function(p,i){if(p.nome||p.data||p.distancia)fd.append((si+1)+' Provas · Prova '+(i+1),[p.prioridade?'Prioridade '+p.prioridade:'',p.nome,p.data,p.distancia].filter(Boolean).join(' · '));});return;}
+  if(!vis(f)||f.type==='alert'||f.id==='email')return;var v=state[f.id],key=S.title.pt+' › '+(b.sub.pt===S.title.pt?'':b.sub.pt+' › ')+label(f);
+  if(f.type==='matrix'){var rows=f.rows(state),m=v||{};rows.forEach(function(r){var ds=DAYS.filter(function(d){return m[r.v+'_'+d.v];}).map(function(d){return d.pt;});if(ds.length)add(S.title.pt+' › Disponibilidade › '+r.pt,ds.join(', '));});return;}
+  if(f.type==='races'){(state.provas||[]).forEach(function(p,i){if(p.nome||p.data||p.distancia)add('Provas › Prova '+(i+1),[p.prioridade?'Prioridade '+p.prioridade:'',p.nome,p.data,p.distancia].filter(Boolean).join(' · '));});return;}
   if(empty(v))return;
-  if(f.id==='nome')key='01 · Nome';
-  if(f.key)key=(si+1)+' '+S.title.pt+' · '+f.key;
-  fd.append(key,String(human(f,v)));n++;
+  if(f.id==='nome')key='Nome';
+  if(f.key)key=S.title.pt+' › '+f.key;
+  add(key,String(human(f,v)));n++;
  });});});
- return fd;
+ return o;
 }
 document.getElementById('form').addEventListener('submit',function(e){
  e.preventDefault();
  if(!validate())return;
  if(step<STEPS.length-1){step++;save();render();scrollTop();return;}
  var btn=document.getElementById('next'),L=UI[lang];btn.disabled=true;btn.textContent=L.sending;
- fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:payload()})
+ fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload())})
   .then(function(r){return r.json().then(function(j){if(!r.ok||j.success!==true)throw j;return j;});})
   .then(function(){
    try{localStorage.removeItem(STORE);}catch(e){}
