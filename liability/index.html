@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Release of Liability — CMTeam</title>
+<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png?v=3">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png?v=3">
+<meta name="theme-color" content="#111111">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;1,800&amp;display=swap" rel="stylesheet">
+<style>
+:root{--red:#CB333B;--ink:#1A1A1A;--dark:#111111;--sand:#F6F4F1;--line:#E4E1DD;--muted:#5A5A5A;--gold:#FFC72C}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--sand);color:var(--ink);-webkit-font-smoothing:antialiased}
+.disp{font-family:'Barlow Condensed',Arial,sans-serif;font-weight:800;font-style:italic;text-transform:uppercase}
+a{color:var(--red)}
+.top{background:var(--dark)}
+.top .in{max-width:880px;margin:0 auto;padding:16px 20px;display:flex;align-items:center}
+.top img{height:28px;width:auto;display:block}
+.hero{background:var(--dark);color:#fff;padding:28px 20px 40px}
+.hero .in{max-width:880px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold)}
+.hero h1{margin:0;font-size:56px;line-height:.95}
+.hero p{margin:0;font-size:17px;line-height:1.6;color:#C9C9C9;max-width:680px}
+.wrap{max-width:880px;margin:0 auto;padding:0 20px 80px}
+.card{background:#fff;border-radius:20px;padding:36px;margin-top:24px}
+.card h2{margin:0 0 6px;font-size:40px;line-height:1}
+.lead{margin:0 0 8px;font-size:16px;line-height:1.6;color:var(--muted)}
+.doc{border:1.5px solid var(--line);border-radius:14px;padding:6px 24px 18px;margin-top:18px;max-height:520px;overflow-y:auto;background:#FCFBFA}
+.doc h3{margin:22px 0 8px;font-size:15px;letter-spacing:.5px;color:var(--ink)}
+.doc p,.doc li{font-size:15px;line-height:1.6;color:#2A2A2A;margin:0 0 8px}
+.doc ul{margin:0 0 8px;padding-left:20px}
+.doc .hdr{margin:18px 0 0;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+.scrollhint{font-size:13px;color:var(--muted);margin-top:10px}
+.sub{margin:34px 0 4px;font-size:13px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--red);padding-top:22px;border-top:1px solid var(--line)}
+.sub.first{border-top:0;padding-top:0;margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 20px}
+.f{display:flex;flex-direction:column;gap:8px;margin-top:18px;min-width:0}
+.f.full{grid-column:1 / -1}
+.f>label{font-size:15px;font-weight:700;line-height:1.35}
+.req{color:var(--red)}
+.hint{font-size:13px;color:var(--muted);line-height:1.4;margin-top:-2px}
+input[type=text],input[type=email],input[type=tel],input[type=date],textarea{font:inherit;font-size:16px;color:var(--ink);background:var(--sand);border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;min-height:48px;width:100%}
+textarea{min-height:88px;resize:vertical;line-height:1.5}
+input:focus,textarea:focus{outline:none;border-color:var(--red);background:#fff}
+.sigin{font-family:'Brush Script MT','Segoe Script',cursive;font-size:26px !important}
+.consent{display:flex;gap:12px;align-items:flex-start;margin-top:18px;font-size:15px;line-height:1.5;cursor:pointer}
+.consent input{width:22px;height:22px;margin-top:1px;accent-color:var(--red);flex-shrink:0}
+.consent.invalid{color:#B3261E}
+.f.invalid input,.f.invalid textarea{border-color:#B3261E}
+.meta{margin-top:18px;font-size:14px;color:var(--muted)}
+.nav{display:flex;justify-content:flex-end;margin-top:28px}
+.btn{font:inherit;font-size:16px;font-weight:700;border-radius:999px;min-height:54px;padding:0 28px;cursor:pointer;border:0;background:var(--red);color:#fff}
+.btn:hover{background:#B02A31}
+.btn:disabled{opacity:.6;cursor:wait}
+.btn.sec{background:transparent;color:var(--ink);border:1.5px solid #BDB7B0}
+.btn:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.err{color:#B3261E;font-size:14px;margin-top:10px;min-height:1em;text-align:right}
+.done{text-align:center;padding:56px 36px}
+.done h2{font-size:48px}
+.done .btn{margin-top:22px}
+.foot{text-align:center;font-size:13px;color:var(--muted);padding:24px 20px 40px}
+.printonly{display:none}
+@media (max-width:700px){.hero h1{font-size:40px}.card{padding:24px 18px;border-radius:16px}.card h2{font-size:32px}.grid{grid-template-columns:minmax(0,1fr)}.doc{padding:4px 16px 14px;max-height:440px}}
+@media print{
+.top,.hero,.nav,.err,.foot,.noprint,.scrollhint{display:none !important}
+body{background:#fff}.card{padding:0;margin:0}.doc{max-height:none;overflow:visible;border:0;padding:0}
+.printonly{display:block}
+}
+</style>
+</head>
+<body>
+<div class="top"><div class="in"><a href="../" aria-label="CMTeam"><img src="../img/cmteam-logo-branco.png" alt="CMTeam"></a></div></div>
+<header class="hero"><div class="in">
+<div class="eyebrow">CMTeam Miami · In-person training</div>
+<h1 class="disp">Release of Liability</h1>
+<p>Required for every athlete who trains in person with CMTeam in Miami. Please read the full agreement, fill in your details, and sign below. It takes about 3 minutes.</p>
+</div></header>
+
+<main class="wrap">
+<form id="form" novalidate autocomplete="on">
+<div class="card" id="card">
+<h2 class="disp">The agreement</h2>
+<p class="lead">CMTeam Consulting LLC · San Palma · Carla Moreno</p>
+<div class="doc" id="doc" tabindex="0" aria-label="Release of Liability agreement text">
+<p class="hdr">Release of Liability, Waiver and Assumption of Risk</p>
+<section class="cl"><h3>1. PARTIES AND SCOPE</h3><p>I, the undersigned Athlete, am voluntarily participating in training, coaching, group sessions, physical activities, and related services provided by CMTeam Consulting LLC (“CMTeam”), operated by San Palma and Carla Moreno, based in Miami, State of Florida, United States of America.</p><p>In this Agreement, the “Released Parties” means CMTeam Consulting LLC, San Palma, and Carla Moreno.</p><p>This Agreement applies to every CMTeam activity in which I participate, in person or remotely, from the date of my signature until I revoke it in writing.</p></section>
+<section class="cl"><h3>2. ASSUMPTION OF RISK</h3><p>I understand that endurance sports training, including running, trail running, triathlon, swimming, open-water swimming, cycling, strength training, and related activities, involves inherent risks that cannot be eliminated.</p><p>These risks include, but are not limited to:</p><ul><li>physical injury, muscle strains, joint injuries, fractures, illness, or overuse injuries;</li><li>dehydration, heat exhaustion, heat stroke, sunburn, or hypothermia;</li><li>cardiovascular events, including cardiac arrest, and other medical emergencies;</li><li>falls, collisions, or accidents, including with motor vehicles, cyclists, pedestrians, or other athletes during group sessions;</li><li>training on public roads, bridges, sidewalks, trails, and parks with traffic, uneven surfaces, debris, and low visibility, including early-morning or night sessions;</li><li>open-water risks such as currents, waves, boats and watercraft, marine life, poor water quality, and drowning;</li><li>weather conditions, including extreme heat and humidity, lightning, storms, and sudden changes in conditions;</li><li>failure or misuse of my own equipment, such as bicycles, helmets, wetsuits, or devices.</li></ul><p>I understand that sessions take place in public locations and facilities that are not owned, operated, or controlled by CMTeam.</p><p>I knowingly and freely assume all risks, both known and unknown, associated with my participation.</p></section>
+<section class="cl"><h3>3. MEDICAL RESPONSIBILITY</h3><p>I affirm that:</p><ul><li>I am physically and medically able to participate in training activities.</li><li>I will inform CMTeam of any medical condition, injury, medication, or limitation that may affect my safety, and of any change to my health.</li><li>I understand that CMTeam, San Palma, and Carla Moreno are not medical professionals.</li><li>I am solely responsible for seeking medical clearance and professional advice when appropriate.</li></ul><p>I understand that training guidance, nutritional suggestions, hydration strategies, or supplementation discussions are not medical or nutritional prescriptions, and do not replace consultation with a licensed physician or registered dietitian.</p></section>
+<section class="cl"><h3>4. EMERGENCY MEDICAL TREATMENT</h3><p>In the event of an injury or medical emergency, I authorize CMTeam to call emergency services and to arrange medical care on my behalf if I am unable to do so. I understand that CMTeam is not obligated to provide medical care, and that I am responsible for all costs of any emergency transport and medical treatment I receive.</p></section>
+<section class="cl"><h3>5. ATHLETE RESPONSIBILITIES</h3><p>During CMTeam activities, I agree to:</p><ul><li>follow all traffic laws, and wear an approved helmet at all times while cycling;</li><li>use front and rear lights on my bicycle in low-light conditions;</li><li>swim within my ability in open water, and use a brightly colored cap and a safety buoy when recommended;</li><li>keep my equipment in safe working condition;</li><li>carry identification, hydration, and any personal medication I may need;</li><li>follow the coaches’ instructions, and stop immediately and inform a coach if I feel unwell.</li></ul></section>
+<section class="cl"><h3>6. RELEASE AND WAIVER OF LIABILITY</h3><p>I hereby release, waive, and discharge the Released Parties from any and all liability, claims, demands, or causes of action arising from injury, illness, death, damage, or loss that may occur as a result of my participation in training, coaching, or related activities.</p><p>This release applies to claims arising from the negligence of the Released Parties or from any other cause, to the fullest extent permitted by law. It is binding on me, my heirs, executors, and assigns.</p></section>
+<section class="cl"><h3>7. INDEMNIFICATION</h3><p>I agree to indemnify and hold harmless the Released Parties from any claims, losses, or expenses, including reasonable attorney fees, arising from my own actions or conduct during CMTeam activities.</p></section>
+<section class="cl"><h3>8. NO GUARANTEE OF RESULTS</h3><p>I understand that athletic performance outcomes cannot be guaranteed. Training plans and coaching guidance are designed to support development, safety, and progression, but results depend on multiple factors beyond the control of CMTeam.</p></section>
+<section class="cl"><h3>9. PHOTO / MEDIA AUTHORIZATION</h3><p>I grant permission for CMTeam to use photos, videos, or training-related media involving my participation for educational or promotional purposes, unless I notify CMTeam otherwise in writing.</p></section>
+<section class="cl"><h3>10. GOVERNING LAW AND JURISDICTION</h3><p>This Agreement shall be governed by and interpreted in accordance with the laws of the State of Florida, United States of America, without regard to conflict of law principles.</p><p>Any legal action or proceeding arising out of or relating to this Agreement shall be brought exclusively in the courts of Miami-Dade County, Florida.</p></section>
+<section class="cl"><h3>11. SEVERABILITY AND ELECTRONIC SIGNATURE</h3><p>If any part of this Agreement is held invalid or unenforceable, the remaining provisions shall remain in full force and effect.</p><p>I agree that my electronic signature, including a typed name submitted through an online form, has the same legal effect as a handwritten signature.</p></section>
+<section class="cl"><h3>12. ACKNOWLEDGMENT</h3><p>I confirm that I am at least 18 years old, that I have read and fully understand this Agreement, and that I am giving up substantial legal rights, including the right to sue the Released Parties. I sign it voluntarily and acknowledge that it is legally binding.</p></section>
+</div>
+<p class="scrollhint noprint">Scroll to read the whole agreement.</p>
+
+<div class="sub">Your details</div>
+<div class="grid">
+<div class="f full"><label for="name">Full legal name <span class="req">*</span></label><input type="text" id="name" name="name" autocomplete="name" required></div>
+<div class="f"><label for="dob">Date of birth <span class="req">*</span></label><input type="date" id="dob" name="dob" required></div>
+<div class="f"><label for="phone">Phone <span class="req">*</span></label><input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+1 305 555 0000" required></div>
+<div class="f full"><label for="email">Email <span class="req">*</span></label><input type="email" id="email" name="email" autocomplete="email" required></div>
+</div>
+
+<div class="sub">Emergency contact</div>
+<div class="grid">
+<div class="f"><label for="ecname">Name <span class="req">*</span></label><input type="text" id="ecname" name="ecname" required></div>
+<div class="f"><label for="ecrel">Relationship <span class="req">*</span></label><input type="text" id="ecrel" name="ecrel" placeholder="Spouse, parent, friend…" required></div>
+<div class="f full"><label for="ecphone">Phone <span class="req">*</span></label><input type="tel" id="ecphone" name="ecphone" placeholder="+1 305 555 0000" required></div>
+<div class="f full"><label for="med">Medical information for emergencies</label><div class="hint">Conditions, allergies or medications a first responder should know. Optional.</div><textarea id="med" name="med"></textarea></div>
+</div>
+
+<div class="sub">Agreement and signature</div>
+<label class="consent" id="c1"><input type="checkbox" id="agree" required><span>I have read and understand this Release of Liability, Waiver and Assumption of Risk, I am at least 18 years old, and I agree to its terms. <span class="req">*</span></span></label>
+<label class="consent" id="c2"><input type="checkbox" id="waive" required><span>I understand that by signing I am giving up substantial legal rights, including the right to sue CMTeam Consulting LLC, San Palma, and Carla Moreno. <span class="req">*</span></span></label>
+<label class="consent"><input type="checkbox" id="media" checked><span>I authorize CMTeam to use photos and videos of my training for educational and promotional purposes (item 9). Uncheck to opt out.</span></label>
+<div class="grid">
+<div class="f full"><label for="sig">Signature: type your full legal name <span class="req">*</span></label><div class="hint">Your typed name is your electronic signature (item 11).</div><input type="text" id="sig" name="sig" class="sigin" autocomplete="off" required></div>
+</div>
+<p class="meta">Date: <strong id="today"></strong></p>
+</div>
+<div class="nav"><button type="submit" class="btn" id="send">Sign and submit</button></div>
+<p class="err" id="err" role="alert"></p>
+</form>
+</main>
+<div class="foot">CMTeam Consulting LLC · cmteam.us · bePatient | beHumble | beStrong</div>
+
+<script>
+(function(){
+var ACCESS_KEY='4fbd40f7-9888-4961-8a3f-21586cd9a8e8';
+var VERSION="CMTeam Release of Liability — Miami — v2026-10";
+var AGREEMENT_TEXT="RELEASE OF LIABILITY, WAIVER AND ASSUMPTION OF RISK\nCMTeam Consulting LLC | Miami in-person training\nCMTeam Release of Liability — Miami — v2026-10\n\n1. PARTIES AND SCOPE\nI, the undersigned Athlete, am voluntarily participating in training, coaching, group sessions, physical activities, and related services provided by CMTeam Consulting LLC (“CMTeam”), operated by San Palma and Carla Moreno, based in Miami, State of Florida, United States of America.\nIn this Agreement, the “Released Parties” means CMTeam Consulting LLC, San Palma, and Carla Moreno.\nThis Agreement applies to every CMTeam activity in which I participate, in person or remotely, from the date of my signature until I revoke it in writing.\n\n2. ASSUMPTION OF RISK\nI understand that endurance sports training, including running, trail running, triathlon, swimming, open-water swimming, cycling, strength training, and related activities, involves inherent risks that cannot be eliminated.\nThese risks include, but are not limited to:\n  • physical injury, muscle strains, joint injuries, fractures, illness, or overuse injuries;\n  • dehydration, heat exhaustion, heat stroke, sunburn, or hypothermia;\n  • cardiovascular events, including cardiac arrest, and other medical emergencies;\n  • falls, collisions, or accidents, including with motor vehicles, cyclists, pedestrians, or other athletes during group sessions;\n  • training on public roads, bridges, sidewalks, trails, and parks with traffic, uneven surfaces, debris, and low visibility, including early-morning or night sessions;\n  • open-water risks such as currents, waves, boats and watercraft, marine life, poor water quality, and drowning;\n  • weather conditions, including extreme heat and humidity, lightning, storms, and sudden changes in conditions;\n  • failure or misuse of my own equipment, such as bicycles, helmets, wetsuits, or devices.\nI understand that sessions take place in public locations and facilities that are not owned, operated, or controlled by CMTeam.\nI knowingly and freely assume all risks, both known and unknown, associated with my participation.\n\n3. MEDICAL RESPONSIBILITY\nI affirm that:\n  • I am physically and medically able to participate in training activities.\n  • I will inform CMTeam of any medical condition, injury, medication, or limitation that may affect my safety, and of any change to my health.\n  • I understand that CMTeam, San Palma, and Carla Moreno are not medical professionals.\n  • I am solely responsible for seeking medical clearance and professional advice when appropriate.\nI understand that training guidance, nutritional suggestions, hydration strategies, or supplementation discussions are not medical or nutritional prescriptions, and do not replace consultation with a licensed physician or registered dietitian.\n\n4. EMERGENCY MEDICAL TREATMENT\nIn the event of an injury or medical emergency, I authorize CMTeam to call emergency services and to arrange medical care on my behalf if I am unable to do so. I understand that CMTeam is not obligated to provide medical care, and that I am responsible for all costs of any emergency transport and medical treatment I receive.\n\n5. ATHLETE RESPONSIBILITIES\nDuring CMTeam activities, I agree to:\n  • follow all traffic laws, and wear an approved helmet at all times while cycling;\n  • use front and rear lights on my bicycle in low-light conditions;\n  • swim within my ability in open water, and use a brightly colored cap and a safety buoy when recommended;\n  • keep my equipment in safe working condition;\n  • carry identification, hydration, and any personal medication I may need;\n  • follow the coaches’ instructions, and stop immediately and inform a coach if I feel unwell.\n\n6. RELEASE AND WAIVER OF LIABILITY\nI hereby release, waive, and discharge the Released Parties from any and all liability, claims, demands, or causes of action arising from injury, illness, death, damage, or loss that may occur as a result of my participation in training, coaching, or related activities.\nThis release applies to claims arising from the negligence of the Released Parties or from any other cause, to the fullest extent permitted by law. It is binding on me, my heirs, executors, and assigns.\n\n7. INDEMNIFICATION\nI agree to indemnify and hold harmless the Released Parties from any claims, losses, or expenses, including reasonable attorney fees, arising from my own actions or conduct during CMTeam activities.\n\n8. NO GUARANTEE OF RESULTS\nI understand that athletic performance outcomes cannot be guaranteed. Training plans and coaching guidance are designed to support development, safety, and progression, but results depend on multiple factors beyond the control of CMTeam.\n\n9. PHOTO / MEDIA AUTHORIZATION\nI grant permission for CMTeam to use photos, videos, or training-related media involving my participation for educational or promotional purposes, unless I notify CMTeam otherwise in writing.\n\n10. GOVERNING LAW AND JURISDICTION\nThis Agreement shall be governed by and interpreted in accordance with the laws of the State of Florida, United States of America, without regard to conflict of law principles.\nAny legal action or proceeding arising out of or relating to this Agreement shall be brought exclusively in the courts of Miami-Dade County, Florida.\n\n11. SEVERABILITY AND ELECTRONIC SIGNATURE\nIf any part of this Agreement is held invalid or unenforceable, the remaining provisions shall remain in full force and effect.\nI agree that my electronic signature, including a typed name submitted through an online form, has the same legal effect as a handwritten signature.\n\n12. ACKNOWLEDGMENT\nI confirm that I am at least 18 years old, that I have read and fully understand this Agreement, and that I am giving up substantial legal rights, including the right to sue the Released Parties. I sign it voluntarily and acknowledge that it is legally binding.\n";
+var $=function(id){return document.getElementById(id);};
+var now=new Date();
+var todayStr=now.toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
+$('today').textContent=todayStr;
+var maxDob=new Date(now.getFullYear()-18,now.getMonth(),now.getDate());
+$('dob').max=maxDob.toISOString().slice(0,10);
+function norm(s){return (s||'').trim().replace(/\s+/g,' ').toLowerCase();}
+function mark(el,bad){var f=el.closest('.f')||el.closest('.consent');if(f)f.classList.toggle('invalid',bad);}
+function check(){
+  var ok=true,first=null,msg='';
+  ['name','dob','phone','email','ecname','ecrel','ecphone','sig'].forEach(function(id){
+    var el=$(id),bad=!el.value.trim()||(el.type==='email'&&!el.checkValidity());
+    mark(el,bad);if(bad){ok=false;if(!first)first=el;}
+  });
+  ['agree','waive'].forEach(function(id){var el=$(id);mark(el,!el.checked);if(!el.checked){ok=false;if(!first)first=el;}});
+  if(!ok)msg='Please complete the highlighted fields.';
+  if(ok&&$('dob').value){var d=new Date($('dob').value+'T12:00:00');if(d>maxDob){ok=false;mark($('dob'),true);first=$('dob');msg='This agreement is for athletes 18 or older. Please contact CMTeam for the form for minors.';}}
+  if(ok&&norm($('sig').value)!==norm($('name').value)){ok=false;mark($('sig'),true);first=$('sig');msg='Your signature must match your full legal name exactly.';}
+  if(first)first.focus();
+  $('err').textContent=msg;return ok;
+}
+$('form').addEventListener('submit',function(e){
+  e.preventDefault();
+  if(!check())return;
+  var btn=$('send');btn.disabled=true;btn.textContent='Submitting…';
+  var o={
+    access_key:ACCESS_KEY,
+    subject:'Release of Liability signed — '+$('name').value.trim(),
+    from_name:'CMTeam Release of Liability',
+    email:$('email').value.trim(),
+    botcheck:'',
+    'Athlete':$('name').value.trim(),
+    'Date of birth':$('dob').value,
+    'Phone':$('phone').value.trim(),
+    'Email':$('email').value.trim(),
+    'Emergency contact':$('ecname').value.trim()+' ('+$('ecrel').value.trim()+') · '+$('ecphone').value.trim(),
+    'Medical information':$('med').value.trim()||'—',
+    'Agreed to terms (18+)':'Yes',
+    'Acknowledged waiver of legal rights':'Yes',
+    'Photo / media authorization':$('media').checked?'Yes':'No (opted out)',
+    'Electronic signature':$('sig').value.trim(),
+    'Signed on':new Date().toISOString()+' ('+(Intl.DateTimeFormat().resolvedOptions().timeZone||'')+')',
+    'Device':navigator.userAgent,
+    'Agreement version':VERSION,
+    'Agreement text':AGREEMENT_TEXT
+  };
+  fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(o)})
+   .then(function(r){return r.json().then(function(j){if(!r.ok||j.success!==true)throw j;return j;});})
+   .then(function(){
+     var name=$('name').value.trim(), sig=$('sig').value.trim(), media=$('media').checked;
+     var copy='<div class="printonly"><h2 class="disp">Release of Liability — signed copy</h2><p>'+VERSION+'</p>'+$('doc').innerHTML+
+       '<p><strong>Athlete:</strong> '+esc(name)+'<br><strong>Date of birth:</strong> '+esc($('dob').value)+'<br><strong>Photo / media authorization:</strong> '+(media?'Yes':'No')+'<br><strong>Electronic signature:</strong> '+esc(sig)+'<br><strong>Date:</strong> '+esc(todayStr)+'</p></div>';
+     $('card').innerHTML='<div class="done noprint"><h2 class="disp">Thank you, '+esc(name.split(' ')[0])+'!</h2><p class="lead">Your Release of Liability was signed and sent to CMTeam. See you at training.</p><button type="button" class="btn sec" id="print">Save or print my copy</button></div>'+copy;
+     document.querySelector('.nav').style.display='none';$('err').textContent='';
+     $('print').addEventListener('click',function(){window.print();});
+     window.scrollTo(0,0);
+   })
+   .catch(function(err){if(window.console)console.warn(err);btn.disabled=false;btn.textContent='Sign and submit';$('err').innerHTML='Could not submit right now. Please try again, or message us on <a href="https://wa.me/13053959104">WhatsApp</a>.';});
+});
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+})();
+</script>
+</body>
+</html>
