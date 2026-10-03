@@ -154,6 +154,7 @@ TEXT={
 'Fale com a gente no WhatsApp':'Message us on WhatsApp',
 'Treino online':'Online coaching',
 'Calendário 2027':'2027 calendar',
+'Ver os planos →':'See the plans →',
 'Co-fundadora e Treinadora':'Co-founder & Coach',
 'Campeã Mundial Júnior de Triathlon, integrou a Seleção Brasileira por 14 anos consecutivos e representou o Brasil em dois Jogos Olímpicos — Sydney 2000 e Atenas 2004 —, com títulos mundiais, pan-americanos e vitórias em Copas do Mundo. Hoje atua diretamente no atendimento e na orientação dos atletas, traduzindo o treinamento em decisões práticas, estratégia de prova e equilíbrio entre esporte e vida pessoal.':'Junior Triathlon World Champion, she was part of the Brazilian national team for 14 consecutive years and represented Brazil at two Olympic Games — Sydney 2000 and Athens 2004 — with world and Pan American titles and World Cup wins. Today she works directly with our athletes, turning training into practical decisions, race strategy and balance between sport and personal life.',
 '“Carregar meu nome no time é uma honra que nunca se tornou rotina. A CMTeam é, sim, o meu nome, mas, mais do que isso, é a soma de todas as pessoas que decidiram acreditar no mesmo propósito.”':'“Having my name on this team is an honor that has never become routine. CMTeam is my name, yes — but more than that, it is the sum of everyone who chose to believe in the same purpose.”',

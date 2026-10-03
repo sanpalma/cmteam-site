@@ -12,4 +12,16 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://cmteam.us/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://cmteam.us/en/"/>
   </url>
+  <url>
+    <loc>https://cmteam.us/planos/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://cmteam.us/planos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cmteam.us/en/planos/"/>
+  </url>
+  <url>
+    <loc>https://cmteam.us/en/planos/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://cmteam.us/planos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cmteam.us/en/planos/"/>
+  </url>
 </urlset>
