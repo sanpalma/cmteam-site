@@ -270,9 +270,13 @@ html[data-u="km"] .u-mi,html[data-u="mi"] .u-km{display:none}
 .tbc{display:inline-block;vertical-align:1px;background:#FFF1C2;border:1px solid #E7B416;color:#6B4E00;font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:1px 7px;border-radius:999px;white-space:nowrap}
 /* hero */
 .hero{position:relative;background:var(--dark);color:#fff;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:url(img/hero-natacao-aerea.jpg) center 35%/cover;opacity:.5}
-.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(17,17,17,.2) 0%,rgba(17,17,17,.92) 78%)}
-.hero .in{position:relative;z-index:1;padding-top:72px;padding-bottom:48px;display:flex;flex-direction:column;gap:16px}
+.hero-bg{position:absolute;left:0;right:0;top:0;height:clamp(330px,46vw,600px);background:url(img/hero-capa-2026.jpg) center 68%/cover}
+.hero:after{content:"";position:absolute;left:0;right:0;top:0;height:clamp(330px,46vw,600px);background:linear-gradient(180deg,rgba(17,17,17,.05) 0%,rgba(17,17,17,.2) 45%,rgba(17,17,17,1) 100%)}
+.racelogo{width:340px;max-width:78%;height:auto;margin:6px 0 34px;filter:drop-shadow(0 4px 18px rgba(0,0,0,.35))}
+.hero h1.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.hero-sub{font-family:'Barlow Condensed',Arial,sans-serif;font-style:italic;font-weight:800;text-transform:uppercase;font-size:34px;line-height:1;color:#fff}
+.hero-sub span{color:var(--red2)}
+.hero .in{position:relative;z-index:1;padding-top:clamp(150px,30vw,400px);padding-bottom:48px;display:flex;flex-direction:column;gap:16px}
 .eyebrow{font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold)}
 .hero h1{margin:0;font-size:68px;line-height:.9;letter-spacing:-.5px}
 .hero h1 small{display:block;font-size:.5em;color:var(--red2);letter-spacing:0}
@@ -423,6 +427,8 @@ footer b{color:#fff}
 .totop.show{opacity:1;pointer-events:auto}
 @media (max-width:760px){
  .hero h1{font-size:48px}
+ .racelogo{width:240px;margin-bottom:24px}
+ .hero-sub{font-size:28px}
  h2{font-size:40px}
  section{padding:44px 0}
  .legs,.segs,.maps,.bags,.cols,.ck-grid,.pl-grid,.gold-rules{grid-template-columns:minmax(0,1fr)}
@@ -446,6 +452,7 @@ footer b{color:#fff}
  body,section,section.alt,section.darkband,.hero,footer{background:#fff !important;color:#000 !important}
  .hero-bg,.hero:after,.photos,.maps,.fotos{display:none !important}
  .hero .in{padding-top:0}
+ .racelogo{filter:invert(1)}
  .hero h1,.darkband h2,.gold-rules li,.mantra p,.final p,.motto,.letter p,.letter .sig,.stat b,.hero-meta{color:#000 !important}
  .verb,.kick,.seg-n,.ag-r.team .ag-t,.box.warn .box-t,.ck-h,.hero h1 small,.motto span,.gold-rules li:before{color:#000 !important}
  .seg,.leg,.box,.ck,.pl,.bag,.stat,.wx div{border:1px solid #999;background:#fff !important}
@@ -529,8 +536,10 @@ def build():
 
     # hero
     a('<header class="hero"><div class="hero-bg"></div><div class="in">'
-      f'<div class="eyebrow">{L("Guia de prova · material exclusivo CMTeam", "Race guide · CMTeam athletes only")}</div>'
-      '<h1 class="disp">IRONMAN 70.3<small>North Carolina 2026</small></h1>'
+      '<img class="racelogo" src="img/logo-703nc-branco.png" alt="IRONMAN 70.3 North Carolina">'
+      f'<div class="eyebrow">{L("Material exclusivo dos atletas CMTeam", "For CMTeam athletes only")}</div>'
+      '<h1 class="sr">IRONMAN 70.3 North Carolina 2026</h1>'
+      f'<div class="hero-sub">{L("Guia de prova", "Race guide")} <span>2026</span></div>'
       f'<div class="hero-meta">{L("Sábado, 17 de outubro · Wilmington, NC", "Saturday, October 17 · Wilmington, NC")}</div>'
       '<div class="letter">'
       + P('Race week chegou. North Carolina não é uma prova de força: é uma prova de consciência. Começa fria, com a água te despertando. Na bike, o vento conversa e pede paciência. Na corrida, o sol volta, a sombra do lago ajuda e o calor é leve, quase um presente depois de um verão inteiro treinando em Miami.',
