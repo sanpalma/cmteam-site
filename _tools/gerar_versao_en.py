@@ -224,6 +224,11 @@ def txt(m):
     raw=m.group(1); k=raw.strip()
     if k in TEXT: return '>'+raw.replace(k,TEXT[k])+'<'
     return m.group(0)
+PRE=[('Também é escritor: autor de <a href="#conteudo">Nossa Jornada 2025</a> e do livro de bolso <a href="#ebook">A cabeça corre primeiro</a>, escreve toda semana para os atletas do time, e o próximo livro, Nossa Jornada 2026, já está a caminho.','He is also a writer: author of <a href="#conteudo">Nossa Jornada 2025</a> and the pocket book <a href="#ebook">A cabeça corre primeiro</a>. He writes every week for the team’s athletes, and his next book, Nossa Jornada 2026, is on the way.'),
+]
+for a,b in PRE:
+    if a not in s: print('missing pre:',a[:50])
+    s=s.replace(a,b)
 # split out scripts/styles so we don't touch them in the text pass
 parts=re.split(r'(<script[\s\S]*?</script>|<style[\s\S]*?</style>)',s)
 for i,p in enumerate(parts):
@@ -237,7 +242,6 @@ for i,p in enumerate(parts):
 s=''.join(parts)
 # script / misc strings
 REP=[
-('Também é escritor: autor de <a href="#conteudo">Nossa Jornada 2025</a> e do livro de bolso <a href="#ebook">A cabeça corre primeiro</a>, escreve toda semana para os atletas do time, e o próximo livro, Nossa Jornada 2026, já está a caminho.','He is also a writer: author of <a href="#conteudo">Nossa Jornada 2025</a> and the pocket book <a href="#ebook">A cabeça corre primeiro</a>. He writes every week for the team’s athletes, and his next book, Nossa Jornada 2026, is on the way.'),
 ('data-goatcounter-click="','data-goatcounter-click="en-'),("path:'ebook-cadastro'","path:'en-ebook-cadastro'"),("path:'form-contato'","path:'en-form-contato'"),
 ('Preciso ser experiente para treinar com a CMTeam?','Do I need experience to train with CMTeam?'),
 ('Não. Treinamos do primeiro 5 km ao Ironman. O plano parte do seu momento, da sua rotina e do seu objetivo, seja ele começar, evoluir ou competir.','No. We coach everyone from a first 5K to Ironman. Your plan starts from where you are, your routine and your goal, whether that is getting started, improving or competing.'),
