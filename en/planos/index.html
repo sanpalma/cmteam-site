@@ -27,6 +27,11 @@ a{color:#CB333B}
 .top{position:sticky;top:0;z-index:20;background:#111111}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
 .top img{height:30px;width:auto;display:block}
+.flag{width:28px;height:20px;display:block;border-radius:3px;box-shadow:0 0 0 1px rgba(255,255,255,.25)}
+.langsw{display:flex;align-items:center;gap:2px}
+.langsw a{display:flex;align-items:center;justify-content:center;width:36px;height:44px;border-radius:8px;opacity:.45;filter:grayscale(.6);transition:opacity .2s,filter .2s;padding:0 !important;border:0 !important}
+.langsw a:hover,.langsw a.on{opacity:1;filter:none}
+.topr{display:flex;align-items:center;gap:12px}
 .back{display:inline-flex;align-items:center;gap:8px;color:#FFFFFF;text-decoration:none;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border:1.5px solid #555;border-radius:999px;padding:11px 18px}
 .back:hover{border-color:#FFFFFF;color:#FFFFFF}
 .cover{position:relative;background:#111111;color:#FFFFFF;overflow:hidden}
@@ -104,7 +109,7 @@ a.logo{text-decoration:none}a.logo:hover{opacity:.75}
 .foot .back{border-color:rgba(255,255,255,.6)}
 @media (max-width:900px){
 .wrap{padding-left:20px;padding-right:20px}
-.top .wrap{height:64px}.top img{height:24px}.back{padding:9px 14px;font-size:12px}
+.top .wrap{height:64px}.top img{height:24px}.topr{gap:6px}.langsw a{width:30px}.back{padding:9px 14px;font-size:12px}
 .cover img{position:static;width:100%;height:auto;aspect-ratio:16/10;object-position:center 30%}.cover:after{display:none}.cover .wrap{min-height:0;padding-top:28px;padding-bottom:44px}
 .cover h1{font-size:54px;max-width:none}.cover p{font-size:18px;max-width:none}
 .sec{padding-top:64px;padding-bottom:64px}
@@ -122,7 +127,7 @@ a.logo{text-decoration:none}a.logo:hover{opacity:.75}
 <header class="top">
 <div class="wrap">
 <a href="../" aria-label="CMTeam — home"><img src="../../img/cmteam-logo-branco.png" alt="CMTeam"></a>
-<a class="back" href="../#online" data-back>← Back to site</a>
+<div class="topr"><nav class="langsw" aria-label="Language / Idioma"><a href="../../planos/" lang="pt-BR" hreflang="pt-BR" title="Português" aria-label="Português"><svg class="flag" viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="3" fill="#009C3B"></rect><path d="M14 3 25 10 14 17 3 10Z" fill="#FFDF00"></path><circle cx="14" cy="10" r="4.2" fill="#002776"></circle><path d="M10 9.2c2.6-.6 5.4-.3 7.9 1" stroke="#FFFFFF" stroke-width="1" fill="none"></path></svg></a><a href="./" class="on" aria-current="page" lang="en" title="English" aria-label="English"><svg class="flag" viewBox="0 0 28 20" aria-hidden="true"><defs><clipPath id="fr"><rect width="28" height="20" rx="3"></rect></clipPath></defs><g clip-path="url(#fr)"><rect width="28" height="20" fill="#FFFFFF"></rect><g fill="#B22234"><rect y="0" width="28" height="1.54"></rect><rect y="3.08" width="28" height="1.54"></rect><rect y="6.15" width="28" height="1.54"></rect><rect y="9.23" width="28" height="1.54"></rect><rect y="12.31" width="28" height="1.54"></rect><rect y="15.38" width="28" height="1.54"></rect><rect y="18.46" width="28" height="1.54"></rect></g><rect width="12" height="10.77" fill="#3C3B6E"></rect></g></svg></a></nav><a class="back" href="../#online" data-back>← Back to site</a></div>
 </div>
 </header>
 
