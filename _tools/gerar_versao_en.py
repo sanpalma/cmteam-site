@@ -155,6 +155,11 @@ TEXT={
 'Treino online':'Online coaching',
 'Calendário 2027':'2027 calendar',
 'Ver os planos →':'See the plans →',
+'por San Palma':'by San Palma',
+'Também é escritor: autor de ':'He is also a writer: author of ',
+', escreve toda semana para os atletas do time, e o próximo livro, Nossa Jornada 2026, já está a caminho.':', he writes every week for the team’s athletes, and his next book, Nossa Jornada 2026, is on the way.',
+' e do livro de bolso ':' and the pocket book ',
+'Autor dos livros Nossa Jornada 2025 e A cabeça corre primeiro':'Author of the books Nossa Jornada 2025 and A cabeça corre primeiro',
 'Co-fundadora e Treinadora':'Co-founder & Coach',
 'Campeã Mundial Júnior de Triathlon, integrou a Seleção Brasileira por 14 anos consecutivos e representou o Brasil em dois Jogos Olímpicos — Sydney 2000 e Atenas 2004 —, com títulos mundiais, pan-americanos e vitórias em Copas do Mundo. Hoje atua diretamente no atendimento e na orientação dos atletas, traduzindo o treinamento em decisões práticas, estratégia de prova e equilíbrio entre esporte e vida pessoal.':'Junior Triathlon World Champion, she was part of the Brazilian national team for 14 consecutive years and represented Brazil at two Olympic Games — Sydney 2000 and Athens 2004 — with world and Pan American titles and World Cup wins. Today she works directly with our athletes, turning training into practical decisions, race strategy and balance between sport and personal life.',
 '“Carregar meu nome no time é uma honra que nunca se tornou rotina. A CMTeam é, sim, o meu nome, mas, mais do que isso, é a soma de todas as pessoas que decidiram acreditar no mesmo propósito.”':'“Having my name on this team is an honor that has never become routine. CMTeam is my name, yes — but more than that, it is the sum of everyone who chose to believe in the same purpose.”',
@@ -232,6 +237,7 @@ for i,p in enumerate(parts):
 s=''.join(parts)
 # script / misc strings
 REP=[
+('Também é escritor: autor de <a href="#conteudo">Nossa Jornada 2025</a> e do livro de bolso <a href="#ebook">A cabeça corre primeiro</a>, escreve toda semana para os atletas do time, e o próximo livro, Nossa Jornada 2026, já está a caminho.','He is also a writer: author of <a href="#conteudo">Nossa Jornada 2025</a> and the pocket book <a href="#ebook">A cabeça corre primeiro</a>. He writes every week for the team’s athletes, and his next book, Nossa Jornada 2026, is on the way.'),
 ('data-goatcounter-click="','data-goatcounter-click="en-'),("path:'ebook-cadastro'","path:'en-ebook-cadastro'"),("path:'form-contato'","path:'en-form-contato'"),
 ('Preciso ser experiente para treinar com a CMTeam?','Do I need experience to train with CMTeam?'),
 ('Não. Treinamos do primeiro 5 km ao Ironman. O plano parte do seu momento, da sua rotina e do seu objetivo, seja ele começar, evoluir ou competir.','No. We coach everyone from a first 5K to Ironman. Your plan starts from where you are, your routine and your goal, whether that is getting started, improving or competing.'),
